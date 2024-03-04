@@ -31,7 +31,7 @@ span {
 }
 
 #header .heading {
-  padding: 0.75rem 0;
+  padding: 0.75rem 0 0.75rem 1.5rem;
 
   float: none;
 }
@@ -43,8 +43,6 @@ span {
   align-items: center;
   justify-content: center;
   /*   gap: 0.2rem; */
-
-  padding: 0 0 0 1.5rem;
 }
 
 #header .heading img.logo {
@@ -224,7 +222,7 @@ span {
 
 /* INNER */
 #inner {
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem;
 }
 
 #inner #main {
@@ -243,26 +241,31 @@ span {
 
 /* HOME PAGE */
 #inner #main .splash {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   /*   gap: 1rem; */
 
-  margin: unset;
+  column-count: auto;
+  column-width: 60ch;
+  column-gap: 1rem;
+
+  margin: 0 auto;
 
   max-width: unset;
 }
 
-#inner #main .splash div {
-  margin: 0 1rem 1rem;
+#inner #main .splash div.module {
+  margin: 1rem auto 1.5rem;
+  /* break-inside: avoid-column; */
+  page-break-inside: avoid;
 
   float: none;
 
   width: 100%;
-  max-width: 65ch;
+  max-width: 60ch;
 }
-
 /* module headers */
 #inner #main .splash div h3 {
   display: flex;
