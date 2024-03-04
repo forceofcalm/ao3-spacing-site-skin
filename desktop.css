@@ -1,5 +1,7 @@
-html {
+html, body {
   font-size: 16px;
+
+  height: 100%;
 }
 
 html,
@@ -15,6 +17,20 @@ span {
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
 }
 
+/* CONTAINER */
+#outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+  box-sizing: border-box;
+
+  float: none;
+
+  min-height: 100%;
+}
+
 /* HEADER */
 #header {
   display: flex;
@@ -28,6 +44,8 @@ span {
   /* resets */
   margin: 0;
   padding: 0;
+
+  width: 100%;
 }
 
 #header .heading {
@@ -222,6 +240,8 @@ span {
 
 /* INNER */
 #inner {
+  flex: 1 1 0;
+
   padding: 1.5rem;
 }
 
@@ -383,15 +403,27 @@ span {
 }
 
 #inner #main .latest.messages li.comment.group h4 a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   border: none;
   text-decoration: underline;
 
   margin: 0 0.25rem;
+
+  max-width: 25%;
 }
 
 #inner #main .latest.messages li.comment.group h4 a:last-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   font-style: italic;
   margin: 0 0 0 0.25rem;
+
+  max-width: 50%;
 }
 
 #inner #main .latest.messages li.comment.group h4 .posted.datetime {
@@ -399,6 +431,8 @@ span {
 
   font-size: 0.75rem;
   text-align: right;
+
+  min-width: max-content
 }
 
 /* comment user icon */
@@ -494,3 +528,56 @@ span {
   max-width: fit-content;
 }
 /* END HOME PAGE */
+
+/* FOOTER */
+#footer {
+  border: none;
+  box-sizing: border-box;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  padding: 1rem 1.5rem;
+
+  float: none;
+}
+
+#footer ul.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+
+  float: none;
+  clear: unset;
+
+  width: unset;
+}
+
+
+#footer ul li.module.group {
+  padding: 0;
+
+  float: none;
+
+  width: unset;
+  max-width: unset;
+}
+
+#footer ul li.module.group h4 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+#footer ul li.module.group ul.menu li a {
+  display: inline-block;
+
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  max-width: 25ch;
+}
+/* END FOOTER */
