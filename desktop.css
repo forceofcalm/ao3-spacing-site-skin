@@ -221,3 +221,273 @@ span {
   padding: 0.25rem 0.75rem;
 }
 /* END HEADER */
+
+/* INNER */
+#inner {
+  padding: 1.5rem 2.5rem;
+}
+
+#inner #main {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0;
+
+  position: relative;
+
+  /* TODO: make body flex 100% */
+  /* and make this fill the remaining space */
+  min-height: unset;
+}
+/* END INNER */
+
+/* HOME PAGE */
+#inner #main .splash {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*   gap: 1rem; */
+
+  margin: unset;
+
+  max-width: unset;
+}
+
+#inner #main .splash div {
+  margin: 0 1rem 1rem;
+
+  float: none;
+
+  width: 100%;
+  max-width: 65ch;
+}
+
+/* module headers */
+#inner #main .splash div h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  margin: 0 0 0.75rem;
+  padding: 0 0 0.5rem;
+  text-transform: capitalize;
+
+  height: 2.25rem;
+}
+
+/* "find your favorites" module */
+#inner #main .favorite.module {
+  order: 0;
+}
+
+#inner #main .favorite.module ul li a {
+  padding: 0.5rem;
+}
+
+/* "news" module */
+#inner #main .latest.news.module h3 .link {
+  display: flex;
+
+  border-bottom: unset;
+
+  float: unset;
+}
+
+/* "all news" button */
+#inner #main .latest.news.module {
+  order: 2;
+}
+
+#inner #main .latest.news.module h3 .link a {  
+  background-color: #900;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+
+/* news posts */
+#inner #main .latest.news.module li.post.group {
+  margin: 0 0 1.25rem;
+}
+
+#inner #main .latest.news.module li.post.group:last-of-type {
+  margin: 0;
+}
+
+#inner #main .latest.news.module li.post.group .header.module {
+  margin: 0 0 0.25rem;
+
+  float: none;
+}
+
+#inner #main .latest.news.module li.post.group .header.module h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: unset;
+}
+
+#inner #main .latest.news.module li.post.group .userstuff p {
+  hyphens: auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* "unread messages" module */
+#inner #main .latest.messages {
+  order: 1;
+}
+
+#inner #main .latest.messages h3 .link {
+  display: flex;
+
+  border-bottom: unset;
+
+  float: unset;
+}
+
+/* "my inbox" button */
+#inner #main .latest.messages h3 .link a {
+  background-color: #900;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+
+/* comment heading */
+#inner #main .latest.messages li.comment.group h4 {
+  display: flex;
+  align-items: center;
+
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 1.5rem 1rem 1.5rem 4.5rem;
+}
+
+#inner #main .latest.messages li.comment.group h4 a {
+  border: none;
+  text-decoration: underline;
+
+  margin: 0 0.25rem;
+}
+
+#inner #main .latest.messages li.comment.group h4 a:last-of-type {
+  font-style: italic;
+  margin: 0 0 0 0.25rem;
+}
+
+#inner #main .latest.messages li.comment.group h4 .posted.datetime {
+  flex: 1 1 0;
+
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+/* comment user icon */
+#inner #main .latest.messages li.comment.group .icon {
+  border-bottom: none;
+  margin: 0;
+
+  width: unset;
+  height: unset;
+}
+
+#inner #main .latest.messages li.comment.group .icon img {
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  position: absolute;
+  top: 0.45rem;
+  left: 1rem;
+
+  width: 3rem;
+  height: 3rem;
+}
+
+/* comment text */
+#inner #main .latest.messages li.comment.group .userstuff {
+  font-size: 0.95rem;
+  hyphens: auto;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* comment action buttons */
+#inner #main .latest.messages li.comment.group .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  /*   gap: 0.2rem; */
+
+  margin: 0;
+  padding: 0 1rem 1rem 0;
+}
+
+#inner #main .latest.messages li.comment.group .actions li a,
+#inner #main .latest.messages li.comment.group .actions li form input {
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 0.25rem;
+}
+
+/* "follow us" module */
+#inner #main .social.module {
+  order: 3;
+}
+
+#inner #main .social.module p {
+  hyphens: auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#inner #main .social.module ul li {
+  margin: 0;
+}
+
+#inner #main .social.module ul li .resp-sharing-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*   gap: 0.2rem; */
+
+  margin: 0;
+
+  width: unset;
+}
+
+#inner
+  #main
+  .social.module
+  ul
+  li
+  .resp-sharing-button
+  .resp-sharing-button__icon {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  max-width: fit-content;
+}
+/* END HOME PAGE */
