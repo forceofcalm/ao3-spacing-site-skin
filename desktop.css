@@ -375,7 +375,7 @@ span {
 
 /* news posts */
 #inner #main .latest.news.module li.post.group {
-  margin: 0 0 1.25rem;
+  margin: 1rem 0;
 }
 
 #inner #main .latest.news.module li.post.group:last-of-type {
@@ -389,15 +389,30 @@ span {
 }
 
 #inner #main .latest.news.module li.post.group .header.module h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.2;
-  margin: unset;
+  margin: 0 0 0.25rem;
+}
+
+#inner #main .latest.news.module li.post.group .header.module p.meta {
+  font-size: 0.8rem;
 }
 
 #inner #main .latest.news.module li.post.group .userstuff p {
   hyphens: auto;
   line-height: 1.5;
   text-align: justify;
+}
+
+#inner #main .latest.news.module li.post.group p {
+  margin: 0 0 1rem;
+}
+
+#inner #main .latest.news.module li.post.group p a {
+  border: none;
+  font-size: 0.9rem;
+  margin: 0 0 1.25rem;
+  text-decoration: underline;
 }
 
 /* "unread messages" module */
@@ -529,7 +544,16 @@ span {
 #inner #main .social.module p {
   hyphens: auto;
   line-height: 1.5;
+  margin: 0 0 1.25rem;
   text-align: justify;
+}
+
+#inner #main .social.module ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-size: 0.75rem;
 }
 
 #inner #main .social.module ul li {
@@ -548,13 +572,7 @@ span {
   width: unset;
 }
 
-#inner
-  #main
-  .social.module
-  ul
-  li
-  .resp-sharing-button
-  .resp-sharing-button__icon {
+#inner #main .social.module ul li .resp-sharing-button .resp-sharing-button__icon {
   display: flex;
   align-items: center;
   margin: 0;
@@ -585,6 +603,7 @@ span {
   float: none;
   clear: unset;
 
+  width: 100%;
   max-width: 1270px;
 }
 
@@ -614,5 +633,3 @@ span {
   max-width: 25ch;
 }
 /* END FOOTER */
-
-/* 1270-1280 */
