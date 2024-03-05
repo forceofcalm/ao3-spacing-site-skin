@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   font-size: 16px;
 
   height: 100%;
@@ -23,7 +24,7 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  
+
   box-sizing: border-box;
 
   float: none;
@@ -46,6 +47,7 @@ span {
   padding: 0;
 
   width: 100%;
+  max-width: 1270px;
 }
 
 #header .heading {
@@ -175,7 +177,39 @@ span {
   flex-direction: row;
   align-items: center;
 
+  box-sizing: border-box;
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
   padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+
+  height: 3.25rem;
+}
+
+#header ul.primary.navigation.actions::before {
+  background: #900 url(/images/skins/textures/tiles/red-ao3.png);
+  content: '';
+
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 3.25rem;
+}
+
+#header ul.primary.navigation.actions::after {
+  background: #900 url(/images/skins/textures/tiles/red-ao3.png);
+  content: '';
+
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+
+  width: 100%;
+  height: 3.25rem;
 }
 
 #header ul.primary.navigation.actions li.dropdown,
@@ -232,8 +266,9 @@ span {
   padding: 0;
 }
 
-#header ul.primary.navigation.actions li.search span.submit input {
+#header ul.primary.navigation.actions li.search span.submit input.button {
   cursor: pointer;
+  margin: 0 0 0 0.25rem !important;
   padding: 0.25rem 0.75rem;
 }
 /* END HEADER */
@@ -242,34 +277,36 @@ span {
 #inner {
   flex: 1 1 0;
 
-  padding: 1.5rem;
+  box-sizing: border-box;
+
+  width: 100%;
 }
 
 #inner #main {
+  box-sizing: border-box;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 auto;
-  padding: 0;
+  padding: 1rem 1.75rem;
 
   position: relative;
 
-  /* TODO: make body flex 100% */
-  /* and make this fill the remaining space */
+  max-width: 1270px;
   min-height: unset;
 }
 /* END INNER */
 
 /* HOME PAGE */
 #inner #main .splash {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap; */
+  justify-content: space-between;
+  flex-wrap: wrap;
   /*   gap: 1rem; */
 
-  column-count: auto;
+  /*   column-count: auto;
   column-width: 60ch;
-  column-gap: 1rem;
+  column-gap: 1rem; */
 
   margin: 0 auto;
 
@@ -277,9 +314,9 @@ span {
 }
 
 #inner #main .splash div.module {
-  margin: 1rem auto 1.5rem;
+  margin: 1rem 0 1.5rem;
   /* break-inside: avoid-column; */
-  page-break-inside: avoid;
+  /* page-break-inside: avoid; */
 
   float: none;
 
@@ -324,12 +361,11 @@ span {
   order: 2;
 }
 
-#inner #main .latest.news.module h3 .link a {  
+#inner #main .latest.news.module h3 .link a {
   background-color: #900;
   border: none;
   border-radius: 0.25rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -1px,rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   box-sizing: border-box;
   color: white;
   font-size: 0.95rem;
@@ -382,8 +418,7 @@ span {
   background-color: #900;
   border: none;
   border-radius: 0.25rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 3px -1px,rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   box-sizing: border-box;
   color: white;
   font-size: 0.95rem;
@@ -432,7 +467,7 @@ span {
   font-size: 0.75rem;
   text-align: right;
 
-  min-width: max-content
+  min-width: max-content;
 }
 
 /* comment user icon */
@@ -446,8 +481,7 @@ span {
 
 #inner #main .latest.messages li.comment.group .icon img {
   border-radius: 100%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
   position: absolute;
   top: 0.45rem;
@@ -545,15 +579,14 @@ span {
   justify-content: space-between;
 
   font-size: 0.75rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   float: none;
   clear: unset;
 
-  width: unset;
+  max-width: 1270px;
 }
-
 
 #footer ul li.module.group {
   padding: 0;
@@ -577,7 +610,9 @@ span {
   text-overflow: ellipsis;
   text-decoration: none;
   white-space: nowrap;
-  
+
   max-width: 25ch;
 }
 /* END FOOTER */
+
+/* 1270-1280 */
