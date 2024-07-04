@@ -176,6 +176,10 @@ span {
 }
 
 /* nav bar */
+#header nav:not(#greeting) {
+  width: 100%;
+}
+
 #header ul.primary.navigation.actions {
   display: flex;
   flex-direction: row;
@@ -537,7 +541,7 @@ span {
   cursor: pointer;
   font-size: 0.85rem;
   padding: 0.5rem 0.75rem;
-  margin: 0 0 0 0.25rem;
+  margin: 0 0 0 0.5rem;
 }
 
 /* "follow us" module */
@@ -585,71 +589,65 @@ span {
 }
 /* END HOME PAGE */
 
-/* FOOTER */
-#footer {
-  border: none;
-  box-sizing: border-box;
-  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  padding: 1rem 1.5rem;
-
-  float: none;
-}
-
-#footer ul.navigation.actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-  font-size: 0.75rem;
-  margin: 0 auto;
-  padding: 0 1.75rem;
-
-  float: none;
-  clear: unset;
-
-  width: 100%;
-  max-width: 1270px;
-}
-
-#footer ul li.module.group {
-  padding: 0;
-
-  float: none;
-
-  width: unset;
-  max-width: unset;
-}
-
-#footer ul li.module.group h4 {
-  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  text-decoration: underline;
-}
-
-#footer ul li.module.group ul.menu li a {
-  display: inline-block;
-
-  border: none;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-decoration: none;
-  white-space: nowrap;
-
-  max-width: 25ch;
-}
-/* END FOOTER */
-
-/* END HOME PAGE */
-
 /* WORKS INDEX */
 /* hide muted user notice */
 p.muted.notice {
   display: none;
 }
 
+/* heading */
 #main.works-index h2.heading {
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
   font-size: 1.25rem;
+}
+
+/* heading buttons */
+#main.works-index .navigation.actions.module ul.user.navigation.actions {
+  padding: 0;
+  margin: 0;
+
+  float: none;
+}
+
+#main.works-index .navigation.actions.module h3 {
+  display: none;
+}
+
+#main.works-index .navigation.actions.module ul.user.navigation.actions {
+  margin: 0.5rem 0;
+}
+
+#main.works-index .navigation.actions.module ul.user.navigation.actions li span {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+}
+
+#main.works-index .navigation.actions.module ul.user.navigation.actions li a,
+#main.works-index .navigation.actions.module ul.user.navigation.actions li form input {
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 0.25rem;
+}
+
+#main.works-index .navigation.actions.module ul.user.navigation.actions li a.rss {
+  display: none;
+}
+
+/* pagination (affects top and bottom) */
+#main.works-index ol.pagination {
+  display: block;
+
+  margin: 1rem 0;
+  text-align: center;
+}
+
+#main.works-index ol.pagination li a {
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 0.25rem;
 }
 
 /* work container */
@@ -698,13 +696,10 @@ p.muted.notice {
 }
 
 #main.works-index ol.work.index.group .datetime {
-  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-family: monospace;
   font-size: 0.85rem;
   letter-spacing: 0.015rem;
   text-transform: uppercase;
-
-  top: -0.5rem;
-  right: -0.5rem;
 }
 
 #main.works-index ol.work.index.group .tag {
@@ -717,7 +712,7 @@ p.muted.notice {
   /* background-color: #e2e2e2; */
   background-color: #f0f0f0;
   font-size: 0.85rem;
-  line-height: 2;
+  line-height: 1.8;
   padding: 0.5rem;
   text-align: justify;
 }
@@ -780,3 +775,288 @@ p.muted.notice {
   box-shadow: none;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
 }
+
+#main.works-index form#work-filters.narrow-hidden fieldset .submit.actions input {
+  margin: 0 0 1rem;
+}
+/* END WORKS INDEX */
+
+/* ACTUAL WORK PAGE */
+/* nav buttons */
+#main .work ul.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#main .work ul.navigation.actions li {
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+#main .work ul.navigation.actions li a,
+#main .work ul.navigation.actions li form input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 0.5rem;
+  white-space: nowrap;
+}
+
+#main .work ul.navigation.actions li a::after,
+#main .work ul.navigation.actions li form input::after {
+  margin: -0.25rem 0 0 0.25rem;
+}
+
+#main .work ul.navigation.actions li a::before,
+#main .work ul.navigation.actions li form input::before {
+  margin: -0.25rem 0.25rem 0 0;
+}
+/* work details */
+#main .work .wrapper {
+  box-shadow: none;
+  margin: 0.75rem 0;
+}
+
+/* work preface/notes */
+#main #workskin .preface {
+  margin: 0 auto;
+  padding: 0.5rem 0;
+
+  width: 70ch;
+  max-width: 100%;
+}
+
+#main #workskin .preface blockquote p {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  width: unset;
+  max-width: 100%;
+}
+
+#main #workskin .preface p.jump {
+  font-size: 1rem;
+  margin: 2.5rem auto 1.5rem;
+  text-align: center;
+}
+
+#main #workskin .preface p.jump a {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+/* chapter header */
+#main #workskin .preface h3.title {
+  display: block;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+}
+
+#main #workskin .chapter.preface h3.title a {
+  border-bottom: none;
+  color: inherit;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* work body text */
+#main #workskin .userstuff.module {
+  margin: 0 auto;
+}
+
+#main #workskin p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+
+  width: 65ch;
+  max-width: 100%;
+}
+
+/* feedback section */
+#main #feedback {
+  margin: 0 auto;
+}
+
+/* feedback buttons */
+#main #feedback ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  float: unset;
+}
+
+#main #feedback ul.actions li {
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+#main #feedback ul.actions li a,
+#main #feedback ul.actions li form input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 0.5rem;
+  white-space: nowrap;
+}
+
+#main #feedback #kudos_message.notice {
+  display: block;
+
+  border-radius: 0.25rem;
+  box-shadow: none;
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+}
+
+#main #kudos p.kudos {
+  font-size: 0.85rem;
+}
+
+/* comment box */
+#main #feedback #add_comment fieldset {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  margin: 0;
+  padding: 2rem;
+}
+
+#main #feedback #add_comment fieldset h4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0;
+}
+
+#main #feedback #add_comment fieldset .byline {
+  margin: 0 0 0 0.25rem;
+}
+
+#main #feedback #add_comment fieldset p.footnote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin: 0;
+  padding: 0;
+}
+
+#main #feedback #add_comment fieldset p.footnote a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 0 0.25rem;
+}
+
+#main #feedback #add_comment fieldset p {
+  clear: unset;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#main #feedback #add_comment fieldset p.notice {
+  display: block;
+
+  border-radius: 0.25rem;
+  box-shadow: none;
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+}
+
+#main #feedback #add_comment fieldset p textarea {
+  box-shadow: none;
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+}
+
+#main #feedback #add_comment .LV_validation_message {
+  display: none;
+}
+
+#main #feedback #add_comment p.submit.actions input {
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 0.25rem;
+}
+/* END ACTUAL WORK PAGE */
+
+/* FOOTER */
+#footer {
+  border: none;
+  box-sizing: border-box;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  padding: 1rem 1.5rem;
+
+  float: none;
+}
+
+#footer ul.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+
+  float: none;
+  clear: unset;
+
+  width: 100%;
+  max-width: 1270px;
+}
+
+#footer ul li.module.group {
+  padding: 0;
+
+  float: none;
+
+  width: unset;
+  max-width: unset;
+}
+
+#footer ul li.module.group h4 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+#footer ul li.module.group ul.menu li a {
+  display: inline-block;
+
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+
+  max-width: 25ch;
+}
+/* END FOOTER */

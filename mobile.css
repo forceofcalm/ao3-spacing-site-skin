@@ -180,9 +180,12 @@ span {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   font-size: 0.95rem;
   padding: 0.5rem 0.75rem;
+
+  height: unset;
 }
 
 #header ul.primary.navigation.actions li.dropdown,
@@ -231,8 +234,39 @@ span {
   align-items: center;
   justify-content: center;
   flex: 1 1 0;
-  
-  display: none;
+}
+
+#header ul.primary.navigation.actions li.search form {
+  float: none;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions li.search form fieldset {
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions li.search form fieldset p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions li.search form input#site_search {
+  flex: 1 1 0;
+
+  padding: 0.5rem;
+}
+
+/* search bar button */
+#header ul.primary.navigation.actions li.search span.submit input.button {
+  margin: 0 0 0 1rem !important;
+  padding: 0.5rem 0.75rem;
 }
 /* END HEADER */
 
@@ -512,6 +546,55 @@ span {
   max-width: fit-content;
 }
 /* END HOME PAGE */
+
+/* WORKS INDEX */
+#main.works-index ol.work.index.group .header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main.works-index ol.work.index.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 70%;
+}
+
+#main.works-index ol.work.index.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main.works-index ol.work.index.group .tags.commas {
+  text-align: unset;
+}
+/* END WORKS INDEX */
+
+/* ACTUAL WORK PAGE */
+#main #workskin p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* action buttons */
+#main .work ul.navigation.actions {
+  justify-content: center;
+}
+
+/* feedback buttons */
+#main #feedback ul.actions {
+  justify-content: center;
+}
+
+#main #feedback #add_comment fieldset p.footnote {
+  margin: 0.5rem 0 0;
+}
+
+/* comment box */
+#main #feedback #add_comment fieldset {
+  padding: 1rem;
+}
+/* END ACTUAL WORK PAGE */
 
 /* FOOTER */
 #footer {
