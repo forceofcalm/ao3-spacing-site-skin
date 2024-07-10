@@ -284,7 +284,7 @@ span {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
 
   position: relative;
 
@@ -571,13 +571,15 @@ span {
 /* END WORKS INDEX */
 
 /* ACTUAL WORK PAGE */
-#main #workskin p {
-  font-size: 1.1rem;
-  line-height: 1.4;
+#main #workskin #chapters .userstuff p,
+#main #workskin #chapters .userstuff blockquote,
+#main #workskin #chapters .userstuff span {
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 /* action buttons */
-#main .work ul.navigation.actions {
+#main ul.navigation.actions {
   justify-content: center;
 }
 
@@ -595,6 +597,70 @@ span {
   padding: 1rem;
 }
 /* END ACTUAL WORK PAGE */
+
+/* USER PAGES */
+/* user dashboard header */
+#main .user.home .primary.header.module {
+  margin: 0;
+
+  clear: unset;
+  float: none;
+
+  min-height: unset;
+}
+
+/* user name */
+#main .user.home .primary.header.module h2 {
+  font-size: 36px;
+  margin: 15px 0 1rem 0;
+}
+
+/* user actions */
+#main .user.home .primary.header.module ul.navigation.actions {
+  justify-content: flex-end;
+  max-width: 80%;
+}
+
+/* user works container */
+#main #user-works ul.index.group {
+  padding: 0.5rem 0.75rem;
+}
+
+/* user work */
+#main #user-works ul.index.group li.work.blurb.group {
+ padding: 1.2rem;
+}
+
+#main #user-works ul.index.group .header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main #user-works ul.index.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 75%;
+}
+
+#main #user-works ul.index.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main #user-works ul.index.group .tags.commas {
+  text-align: unset;
+}
+
+/* user's works buttons */
+#main #user-works ul.index.group li.work.own ul.actions {
+  justify-content: flex-end;
+}
+
+#main #user-works ul.index.group li.work.own ul.actions li a, 
+#main #user-works ul.index.group li.work.own ul.actions li form input {
+  margin: 0 0 0 0.5rem;
+}
 
 /* FOOTER */
 #footer {
