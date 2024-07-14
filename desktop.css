@@ -199,7 +199,7 @@ span {
   box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
 
   position: absolute;
-  bottom: 0;
+  top: 3.5rem;
   left: -100%;
 
   width: 100%;
@@ -213,7 +213,7 @@ span {
   box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
 
   position: absolute;
-  bottom: 0;
+  top: 3.5rem;
   right: -100%;
 
   width: 100%;
@@ -649,6 +649,10 @@ p.muted.notice {
 
 #main.works-index ol.pagination li a {
   cursor: pointer;
+}
+
+#main.works-index ol.pagination li a,
+#main.works-index ol.pagination li span.current {
   font-size: 0.85rem;
   padding: 0.5rem 0.75rem;
   margin: 0 0 0 0.25rem;
@@ -1123,6 +1127,224 @@ p.muted.notice {
 }
 /* END COMMENTS */
 
+/* COLLECTIONS */
+#header h2.collections {
+  background-size: contain;
+  border: none;
+  padding: 0;
+
+  width: 100%;
+  height: 10rem;
+}
+
+/* collection's random works container */
+#main #collection-page #collection-works.listbox {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+#main #collection-page #collection-works ul.index.group {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5rem 1rem;
+
+  clear: unset;
+  float: none;
+}
+
+#main #collection-page #collection-works h3.heading {
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+/* user's recent works */
+#main #collection-page #collection-works ul.index.group li.work.blurb.group {
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  overflow: none;
+  padding: 1.25rem 1.75rem;
+
+  clear: none;
+}
+
+#main #collection-page #collection-works ul.index.group .header.module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 0 0.5rem;
+
+  min-height: 55px;
+}
+
+#main #collection-page #collection-works ul.index.group .header.module ul.required-tags {
+  width: 55px;
+  height: 55px;
+}
+
+#main #collection-page #collection-works ul.index.group .header.module h4 {
+  border: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 65px;
+
+  max-width: 80%;
+}
+
+#main #collection-page #collection-works ul.index.group .header.module h4 a {
+  border: none;
+  text-decoration: underline;
+}
+
+#main #collection-page #collection-works ul.index.group .header.module h5 {
+  font-size: 0.75rem;
+  margin: 0 0 0 65px;
+
+  max-width: 80%;
+}
+
+#main #collection-page #collection-works ul.index.group .datetime {
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}
+
+#main #collection-page #collection-works ul.index.group .tag {
+  /* border: none; */
+  box-sizing: border-box;
+  /* text-decoration: underline; */
+}
+
+#main #collection-page #collection-works ul.index.group .tags.commas {
+  /* background-color: #e2e2e2; */
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+#main #collection-page #collection-works ul.index.group .tags .relationships .tag {
+  /* background-color: #a8a8a8; */
+  background-color: #d5d5d5;
+  /* padding: 0.25rem; */
+}
+
+#main #collection-page #collection-works ul.index.group .userstuff.summary {
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main #collection-page #collection-works ul.index.group .series {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0 0 1.75em 0;
+  text-transform: uppercase;
+}
+
+#main #collection-page #collection-works ul.index.group .series a {
+  border: none;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: initial;
+}
+
+#main #collection-page #collection-works ul.index.group .stats {
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: unset;
+
+  float: none;
+}
+
+#main #collection-page #collection-works ul.index.group .stats dt {
+  font-weight: bold;
+  padding: 0;
+}
+
+#main #collection-page #collection-works ul.index.group .stats dd {
+  padding: 0 0.5 0 0;
+}
+
+/* edit buttons on user's works */
+#main #collection-page #collection-works ul.index.group li.work.own ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  float: unset;
+  padding: 0;
+}
+
+#main #collection-page #collection-works ul.index.group li.work.own ul.actions li {
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+#main #collection-page #collection-works ul.index.group li.work.own ul.actions li a,
+#main #collection-page #collection-works ul.index.group li.work.own ul.actions li form input,
+#main #collection-page #collection-works ul.index.group li.work.own ul.actions li span.current {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font: unset;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
+/* expand works list button */
+#main #collection-page #collection-works ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  float: unset;
+  padding: 0.5rem;
+}
+
+#main #collection-page #collection-works ul.actions li {
+  margin: 0;
+  padding: 0;
+}
+
+#main #collection-page #collection-works ul.actions li a,
+#main #collection-page #collection-workss ul.actions li form input,
+#main #collection-page #collection-works ul.actions li span.current {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+/* END COLLECTIONS */
+
 /* USER PAGES */
 /* user profile navigation */
 #inner #dashboard {
@@ -1230,6 +1452,7 @@ p.muted.notice {
 #main #user-fandoms ol.index.group li {
   margin: 0.25rem 0;
 }
+
 /* user's recent works container */
 #main #user-works.listbox {
   display: flex;
@@ -1789,7 +2012,12 @@ p.muted.notice {
 }
 /* END FOOTER */
 
-/* COLLECTIONS
+/* COLLECTIONS (profile page)
 /* FORMS
 /* FILTERS (mobile + tablet)
-/* TUNING
+/* TUNING (user names on profile page, consistency, fix inbox on home page, remove box shadows)
+/* USER WORKS PAGE (buttons and filters)
+/* INBOX
+/* VIEWING BOOKMARKS
+/* NAVIGATION (hide disabled)
+/* "ABOUT" PAGES
