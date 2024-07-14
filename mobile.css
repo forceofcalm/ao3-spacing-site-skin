@@ -599,6 +599,57 @@ span {
 /* END ACTUAL WORK PAGE */
 
 /* USER PAGES */
+/* user profile navigation */
+#inner #dashboard {
+  display: block;
+
+  border-bottom: 0.5rem solid #900;
+  border-top: 0.5rem solid #900;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 0;
+
+  height: unset;
+}
+
+#inner #dashboard ul.navigation.actions {
+  display: unset;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: unset;
+
+  float: none;
+
+  width: 100%;
+}
+
+#inner #dashboard ul.navigation.actions:not(:last-of-type) {
+  border-bottom: unset;
+}
+
+#inner #dashboard ul.navigation.actions li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#inner #dashboard ul.navigation.actions li .current {
+  background-color: #900;
+  color: white;
+}
+
+#inner #dashboard ul.navigation.actions li a,
+#inner #dashboard ul.navigation.actions li span {
+  display: inline-block;
+
+  font: unset;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+}
+
 /* user dashboard header */
 #main .user.home .primary.header.module {
   margin: 0;
@@ -661,6 +712,7 @@ span {
 #main #user-works ul.index.group li.work.own ul.actions li form input {
   margin: 0 0 0 0.5rem;
 }
+/* END USER PAGE */
 
 /* FOOTER */
 #footer {
