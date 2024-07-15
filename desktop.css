@@ -1065,7 +1065,8 @@ p.muted.notice {
 
 /* comment user icon */
 #comments_placeholder ol.thread li.comment .icon {
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   box-sizing: border-box;
 
   width: 5rem;
@@ -1087,6 +1088,16 @@ p.muted.notice {
   text-align: justify;
 
   min-height: unset;
+}
+
+/* comment editted date */
+#comments_placeholder ol.thread li.comment .userstuff p.edited {
+  font-size: 0.85rem;
+  hyphens: auto;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem 1rem 0.75rem 1rem;
+  text-align: justify;
 }
 
 /* comment action buttons */
@@ -2016,8 +2027,14 @@ p.muted.notice {
 /* FORMS
 /* FILTERS (mobile + tablet)
 /* TUNING (user names on profile page, consistency, fix inbox on home page, remove box shadows)
+/* COMMENTS (top and left border of icon, "last editted" text, (GUEST) comments, etc)
 /* USER WORKS PAGE (buttons and filters)
 /* INBOX
 /* VIEWING BOOKMARKS
 /* NAVIGATION (hide disabled)
 /* "ABOUT" PAGES
+/* OTHERS PROFILES.... (bookmarks, expand fandoms button, icons, series...)
+/* USER GIFTS PAGES
+/* SEARCH RESULTS PAGE
+/* NEWS COMMENTS
+/* FANDOMS PAGE

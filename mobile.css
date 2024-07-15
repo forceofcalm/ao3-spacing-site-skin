@@ -596,6 +596,36 @@ span {
 #main #feedback #add_comment fieldset {
   padding: 1rem;
 }
+
+/* comments */
+#comments_placeholder ol.thread li.comment h4 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 0.25rem 0.5rem 0.25rem 5.5rem;
+}
+
+/* comment actions */
+#comments_placeholder ol.thread li.comment ul.actions {
+  justify-content: flex-end;
+}
+
+/* guest comment */
+#comments_placeholder ol.thread li.comment.guest div.icon span.visitor.icon {
+  background: url('/images/skins/iconsets/default/icon_user.png');
+  background-size: contain;
+}
+
+#comments_placeholder ol.thread li.comment.guest h4 .role {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.5rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
 /* END ACTUAL WORK PAGE */
 
 /* USER PAGES */
