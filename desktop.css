@@ -896,6 +896,25 @@ p.muted.notice {
   text-decoration: none;
 }
 
+/* chapter summary & notes */
+#main #workskin .chapters .userstuff #summary,
+#main #workskin .chapters .userstuff #notes {
+  margin: 0 auto;
+  padding: 0.5rem 0;
+
+  width: 70ch;
+  max-width: 100%;
+}
+
+#main #workskin .chapters #summary .userstuff blockquote p,
+#main #workskin .chapters #notes .userstuff blockquote p {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  width: unset;
+  max-width: 100%;
+}
+
 /* work body text */
 #main #workskin .userstuff.module {
   margin: 0 auto;

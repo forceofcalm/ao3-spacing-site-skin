@@ -491,6 +491,16 @@ span {
   padding: 1rem;
 }
 
+/* comment editted date */
+#comments_placeholder ol.thread li.comment p.edited {
+  font-size: 0.85rem;
+  hyphens: auto;
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem 1rem 0.75rem 1rem;
+  text-align: justify;
+}
+
 /* comment action buttons */
 #inner #main .latest.messages li.comment.group .actions {
   display: flex;
@@ -585,7 +595,7 @@ span {
 
 /* feedback buttons */
 #main #feedback ul.actions {
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 #main #feedback #add_comment fieldset p.footnote {
@@ -702,6 +712,10 @@ span {
   max-width: 80%;
 }
 
+#main .user.home .primary.header.module ul.navigation.actions li {
+  margin: 0 0 0.5rem;
+}
+
 /* user works container */
 #main #user-works ul.index.group {
   padding: 0.5rem 0.75rem;
@@ -731,6 +745,10 @@ span {
 
 #main #user-works ul.index.group .tags.commas {
   text-align: unset;
+}
+
+#main #user-works ul.index.group li blockquote.summary blockquote {
+  margin: 0 0.5rem;
 }
 
 /* user's works buttons */
