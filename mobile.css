@@ -580,6 +580,56 @@ span {
 }
 /* END WORKS INDEX */
 
+/* SERIES INDEX */
+#main.series-index ul.series.index.group .header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main.series-index ul.series.index.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 70%;
+}
+
+#main.series-index ul.series.index.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main.series-index ul.series.index.group .tags.commas {
+  text-align: unset;
+}
+/* END SERIES INDEX */
+
+/* BOOKMARKS INDEX */
+#main.bookmarks-index ol.bookmark.index.group li.bookmark.blurb.group.header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main.bookmarks-index ol.bookmark.index.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 70%;
+}
+
+#main.bookmarks-index ol.bookmark.index.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main.bookmarks-index ol.bookmark .tags.commas {
+  text-align: unset;
+}
+
+#main.bookmarks-index ol.bookmark li.bookmark.blurb.group .user.module.group h5 {
+  margin: 1rem 0 0;
+}
+/* END BOOKMARKS INDEX */
+
 /* ACTUAL WORK PAGE */
 #main #workskin #chapters .userstuff p,
 #main #workskin #chapters .userstuff blockquote,

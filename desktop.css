@@ -2379,6 +2379,121 @@ p.muted.notice {
 #main.series-index ul.index.group .stats dd {
   padding: 0 0.5 0 0;
 }
+
+/* user's challenges/collections */
+#main.works-collected ol.index.group li.work.blurb.group {
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  overflow: none;
+  padding: 1.25rem 1.75rem;
+
+  clear: none;
+}
+
+#main.works-collected ol.index.group .header.module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 0 0.5rem;
+
+  min-height: 55px;
+}
+
+#main.works-collected ol.index.group .header.module ul.required-tags {
+  width: 55px;
+  height: 55px;
+}
+
+#main.works-collected ol.index.group .header.module h4 {
+  border: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 65px;
+
+  max-width: 80%;
+}
+
+#main.works-collected ol.index.group .header.module h4 a {
+  border: none;
+  text-decoration: underline;
+}
+
+#main.works-collected ol.index.group .header.module h5 {
+  font-size: 0.75rem;
+  margin: 0 0 0 65px;
+
+  max-width: 80%;
+}
+
+#main.works-collected ol.index.group .datetime {
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}
+
+#main.works-collected ol.index.group .tag {
+  /* border: none; */
+  box-sizing: border-box;
+  /* text-decoration: underline; */
+}
+
+#main.works-collected ol.index.group .tags.commas {
+  /* background-color: #e2e2e2; */
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+#main.works-collected ol.index.group .tags .relationships .tag {
+  /* background-color: #a8a8a8; */
+  background-color: #d5d5d5;
+  /* padding: 0.25rem; */
+}
+
+#main.works-collected ol.index.group .userstuff.summary {
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main.works-collected ol.index.group .series {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0 0 1.75em 0;
+  text-transform: uppercase;
+}
+
+#main.works-collected ol.index.group .series a {
+  border: none;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: initial;
+}
+
+#main.works-collected ol.index.group .stats {
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: unset;
+
+  float: none;
+}
+
+#main.works-collected ol.index.group .stats dt {
+  font-weight: bold;
+  padding: 0;
+}
+
+#main.works-collected ol.index.group .stats dd {
+  padding: 0 0.5 0 0;
+}
 /* END USER PAGES */
 
 /* BOOKMARKS PAGE */
