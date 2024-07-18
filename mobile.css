@@ -702,8 +702,8 @@ span {
 
 /* user name */
 #main .user.home .primary.header.module h2 {
-  font-size: 36px;
-  margin: 15px 0 1rem 0;
+  font-size: 24px;
+  margin: 15px 0 1rem 100px;
 }
 
 /* user actions */
@@ -794,6 +794,45 @@ span {
 
 #main #user-series ol.index.group li blockquote.summary blockquote {
   margin: 0 0.5rem;
+}
+
+/* user's recent bookmarks container */
+#main #user-bookmarks ol.index.group {
+  padding: 0.5rem 0.75rem;
+}
+
+/* user's recent bookmrks */
+#main #user-bookmarks ol.index.group li.bookmark.blurb.group {
+ padding: 1.2rem;
+}
+
+#main #user-bookmarks ol.index.group .header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main #user-bookmarks ol.index.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 65%;
+}
+
+#main #user-bookmarks ol.index.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main #user-bookmarks ol.index.group .tags.commas {
+  text-align: unset;
+}
+
+#main #user-bookmarks ol.index.group li blockquote.summary blockquote {
+  margin: 0 0.5rem;
+}
+
+#main #user-bookmarks li.bookmark.blurb.group .user.module.group h5 {
+  margin: 0.75rem 0 0;
 }
 /* END USER PAGE */
 

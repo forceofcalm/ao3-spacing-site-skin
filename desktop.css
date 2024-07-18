@@ -27,6 +27,10 @@ li .disabled {
   display: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* CONTAINER */
 #outer {
   display: flex;
@@ -600,12 +604,6 @@ li .disabled {
 /* hide muted user notice */
 p.muted.notice {
   display: none;
-}
-
-/* heading */
-#main.works-index h2.heading {
-  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 1.25rem;
 }
 
 /* heading buttons */
@@ -1528,7 +1526,6 @@ p.muted.notice {
   white-space: nowrap;
 }
 
-
 /* user's recent works container */
 #main #user-works.listbox {
   display: flex;
@@ -1871,6 +1868,302 @@ p.muted.notice {
   padding: 0 0.5 0 0;
 }
 
+/* user's series action buttons */
+#main #user-series ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  float: unset;
+  padding: 0.5rem;
+}
+
+#main #user-series ul.actions li {
+  margin: 0;
+  padding: 0;
+}
+
+#main #user-series ul.actions li a,
+#main #user-series ul.actions li form input,
+#main #user-series ul.actions li span.current {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
+/* user's recent bookmarks container */
+#main #user-bookmarks.listbox {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+#main #user-bookmarks ol.index.group {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5rem 1rem;
+
+  clear: unset;
+  float: none;
+}
+
+#main #user-bookmarks h3.heading {
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+/* user's recent bookmarks */
+#main #user-bookmarks ol.index.group li.bookmark.blurb.group {
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  overflow: none;
+  padding: 1.25rem 1.75rem;
+
+  clear: none;
+}
+
+#main #user-bookmarks ol.index.group .header.module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 0 0.5rem;
+
+  min-height: 55px;
+}
+
+#main #user-bookmarks ol.index.group .header.module ul.required-tags {
+  width: 55px;
+  height: 55px;
+}
+
+#main #user-bookmarks ol.index.group .header.module h4 {
+  border: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 65px;
+
+  max-width: 80%;
+}
+
+#main #user-bookmarks ol.index.group .header.module h4 a {
+  border: none;
+  text-decoration: underline;
+}
+
+#main #user-bookmarks ol.index.group .header.module h5 {
+  font-size: 0.75rem;
+  margin: 0 0 0 65px;
+
+  max-width: 80%;
+}
+
+#main #user-bookmarks ol.index.group .datetime {
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: normal;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}
+
+/* bookmark/private/rec + number icons */
+#main #user-bookmarks li.bookmark p.status {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: inherit;
+  
+  top: 0;
+  right: 0;
+
+  width: 53px;
+}
+
+#main #user-bookmarks li.bookmark p.status .count  {
+  line-height: 1;
+  text-align: center;
+
+  position: unset;
+  top: 0;
+  left: 0;
+}
+
+#main #user-bookmarks li.bookmark p.status .count a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.85rem;
+}
+
+/* bookmark work tags */
+#main #user-bookmarks ol.index.group .tag {
+  /* border: none; */
+  box-sizing: border-box;
+  /* text-decoration: underline; */
+}
+
+#main #user-bookmarks ol.index.group .tags.commas {
+  /* background-color: #e2e2e2; */
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+#main #user-bookmarks ol.index.group .tags .relationships .tag {
+  /* background-color: #a8a8a8; */
+  background-color: #d5d5d5;
+  /* padding: 0.25rem; */
+}
+
+#main #user-bookmarks ol.index.group .userstuff.summary {
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main #user-bookmarks ol.index.group .series a {
+  border: none;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: initial;
+}
+
+#main #user-bookmarks ol.index.group .stats {
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: unset;
+
+  float: none;
+}
+
+#main #user-bookmarks ol.index.group .stats dt {
+  font-weight: bold;
+  padding: 0;
+}
+
+#main #user-bookmarks ol.index.group .stats dd {
+  font-weight: normal;
+  padding: 0 0.5 0 0;
+}
+
+/* bookmark actions for non bookmark owner user */
+#main #user-bookmarks li.bookmark.blurb.group ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  float: unset;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+#main #user-bookmarks li.bookmark.blurb.group ul.actions li {
+  margin: 0;
+  padding: 0;
+} 
+
+#main #user-bookmarks li.bookmark.blurb.group ul.actions li a,
+#main #user-bookmarks li.bookmark.blurb.group ul.actions li form input,
+#main #user-bookmarks li.bookmark.blurb.group ul.actions li span.current {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
+/* bookmark notes */
+#main #user-bookmarks li.bookmark.blurb.group .user.module.group {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0.75rem 0;
+  padding: 1rem;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main #user-bookmarks li.bookmark.blurb.group .user.module.group h5 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+#main #user-bookmarks li.bookmark.blurb.group .user.module.group h6.meta {
+  display: block;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0.75rem 0 0.25rem;
+  text-transform: uppercase;
+}
+
+#main #user-bookmarks li.bookmark.blurb.group .user.module.group blockquote.userstuff.notes {
+  margin: 1rem 0 0;
+}
+
+/* expand user's recent bookmarks button */
+#main #user-bookmarks ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+
+  float: unset;
+  padding: 0.5rem;
+}
+
+#main #user-bookmarks ul.actions li {
+  margin: 0;
+  padding: 0;
+}
+
+#main #user-bookmarks ul.actions li a,
+#main #user-bookmarks ul.actions li form input,
+#main #user-bookmarks ul.actions li span.current {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
 /* user drafts */
 #main.works-drafts ul.index.group li.work.blurb.group {
   box-sizing: border-box;
@@ -1983,6 +2276,107 @@ p.muted.notice {
 }
 
 #main.works-drafts ul.index.group .stats dd {
+  padding: 0 0.5 0 0;
+}
+
+/* user's series */
+#main.series-index ul.index.group li.series.blurb.group {
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  overflow: none;
+  padding: 1.25rem 1.75rem;
+
+  clear: none;
+}
+
+#main.series-index ul.index.group .header.module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 0 0.5rem;
+
+  min-height: 55px;
+}
+
+#main.series-indexs ul.index.group .header.module ul.required-tags {
+  width: 55px;
+  height: 55px;
+}
+
+#main.series-index ul.index.group .header.module h4 {
+  border: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 65px;
+
+  max-width: 80%;
+}
+
+#main.series-index ul.index.group .header.module h4 a {
+  border: none;
+  text-decoration: underline;
+}
+
+#main.series-index ul.index.group .header.module h5 {
+  font-size: 0.75rem;
+  margin: 0 0 0 65px;
+
+  max-width: 80%;
+}
+
+#main.series-index ul.index.group .datetime {
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}
+
+#main.series-index ul.index.group .tag {
+  /* border: none; */
+  box-sizing: border-box;
+  /* text-decoration: underline; */
+}
+
+#main.series-index ul.index.group .tags.commas {
+  /* background-color: #e2e2e2; */
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+#main.series-index ul.index.group .tags .relationships .tag {
+  /* background-color: #a8a8a8; */
+  background-color: #d5d5d5;
+  /* padding: 0.25rem; */
+}
+
+#main.series-index ul.index.group .userstuff.summary {
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main.series-index ul.index.group .stats {
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: unset;
+
+  float: none;
+}
+
+#main.series-index ul.index.group .stats dt {
+  font-weight: bold;
+  padding: 0;
+}
+
+#main.series-index ul.index.group .stats dd {
   padding: 0 0.5 0 0;
 }
 /* END USER PAGES */
@@ -2167,6 +2561,35 @@ p.muted.notice {
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
 }
+
+/* bookmark notes */
+#main ol.bookmark li.bookmark.blurb.group .user.module.group {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main ol.bookmark li.bookmark.blurb.group .user.module.group h5 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+#main ol.bookmark li.bookmark.blurb.group .user.module.group h6.meta {
+  display: block;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0.75rem 0 0.25rem;
+  text-transform: uppercase;
+}
+
+#main ol.bookmark li.bookmark.blurb.group .user.module.group blockquote.userstuff.notes {
+  margin: 1rem 0 0;
+}
 /* END BOOKMARK PAGE */
 
 /* FOOTER */
@@ -2227,11 +2650,8 @@ p.muted.notice {
 /* FORMS
 /* FILTERS (mobile + tablet)
 /* TUNING (user names on profile page, consistency, fix inbox on home page, remove box shadows)
-/* USER WORKS PAGE (buttons and filters)
 /* INBOX
-/* VIEWING BOOKMARKS
 /* "ABOUT" PAGES
-/* OTHERS PROFILES.... (bookmarks, expand fandoms button, icons, series...)
 /* USER GIFTS PAGES
 /* SEARCH RESULTS PAGE
 /* NEWS COMMENTS
