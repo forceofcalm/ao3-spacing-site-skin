@@ -760,6 +760,41 @@ span {
 #main #user-works ul.index.group li.work.own ul.actions li form input {
   margin: 0 0 0 0.5rem;
 }
+
+/* user's recent series container */
+#main #user-series ol.index.group {
+  padding: 0.5rem 0.75rem;
+}
+
+/* user's recent series */
+#main #user-series ol.index.group li.series.blurb.group {
+ padding: 1.2rem;
+}
+
+#main #user-series ol.index.group .header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main #user-series ol.index.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 65%;
+}
+
+#main #user-series ol.index.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main #user-series ol.index.group .tags.commas {
+  text-align: unset;
+}
+
+#main #user-series ol.index.group li blockquote.summary blockquote {
+  margin: 0 0.5rem;
+}
 /* END USER PAGE */
 
 /* FOOTER */

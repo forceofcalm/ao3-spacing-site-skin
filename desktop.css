@@ -897,17 +897,17 @@ p.muted.notice {
 }
 
 /* chapter summary & notes */
-#main #workskin .chapters .userstuff #summary,
-#main #workskin .chapters .userstuff #notes {
+#main #workskin #chapters #summary .userstuff,
+#main #workskin #chapters #notes .userstuff {
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
 
   width: 70ch;
   max-width: 100%;
 }
 
-#main #workskin .chapters #summary .userstuff blockquote p,
-#main #workskin .chapters #notes .userstuff blockquote p {
+#main #workskin #chapters #summary .userstuff p,
+#main #workskin #chapters #notes .userstuff p {
   font-size: 1rem;
   line-height: 1.5;
 
@@ -1734,6 +1734,141 @@ p.muted.notice {
   margin: 0 0 0 0.5rem;
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
+}
+
+/* user's recent series container */
+#main #user-series.listbox {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+#main #user-series ul.index.group {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5rem 1rem;
+
+  clear: unset;
+  float: none;
+}
+
+#main #user-series h3.heading {
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+/* user recent series */
+#main #user-series ol.index.group li.series.blurb.group {
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  overflow: none;
+  padding: 1.25rem 1.75rem;
+
+  clear: none;
+}
+
+#main #user-series ol.index.group .header.module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 0 0.5rem;
+
+  min-height: 55px;
+}
+
+#main #user-series ol.index.group .header.module ul.required-tags {
+  width: 55px;
+  height: 55px;
+}
+
+#main #user-series ol.index.group .header.module h4 {
+  border: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 65px;
+
+  max-width: 80%;
+}
+
+#main #user-series ol.index.group .header.module h4 a {
+  border: none;
+  text-decoration: underline;
+}
+
+#main #user-series ol.index.group .header.module h5 {
+  font-size: 0.75rem;
+  margin: 0 0 0 65px;
+
+  max-width: 80%;
+}
+
+#main #user-series ol.index.group .datetime {
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: normal;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}
+
+#main #user-series ol.index.group .tag {
+  /* border: none; */
+  box-sizing: border-box;
+  /* text-decoration: underline; */
+}
+
+#main #user-series ol.index.group .tags.commas {
+  /* background-color: #e2e2e2; */
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+#main #user-series ol.index.group .tags .relationships .tag {
+  /* background-color: #a8a8a8; */
+  background-color: #d5d5d5;
+  /* padding: 0.25rem; */
+}
+
+#main #user-series ol.index.group .userstuff.summary {
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main #user-series ol.index.group .series a {
+  border: none;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: initial;
+}
+
+#main #user-series ol.index.group .stats {
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: unset;
+
+  float: none;
+}
+
+#main #user-series ol.index.group .stats dt {
+  font-weight: bold;
+  padding: 0;
+}
+
+#main #user-series ol.index.group .stats dd {
+  font-weight: normal;
+  padding: 0 0.5 0 0;
 }
 
 /* user drafts */
