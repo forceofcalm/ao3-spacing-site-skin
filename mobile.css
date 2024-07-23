@@ -557,6 +557,12 @@ span {
 }
 /* END HOME PAGE */
 
+/* USER'S INBOX */
+#main.inbox-show fieldset.comments li.comment.group h4 a:last-of-type {
+  max-width: 50%;
+}
+/* END USER'S INBOX */
+
 /* WORKS INDEX */
 #main.works-index ol.work.index.group .header.module h4 {
   font-size: 0.85rem;
@@ -604,7 +610,7 @@ span {
 /* END SERIES INDEX */
 
 /* BOOKMARKS INDEX */
-#main.bookmarks-index ol.bookmark.index.group li.bookmark.blurb.group.header.module h4 {
+#main.bookmarks-index ol.bookmark.index.group li.bookmark.blurb.group .header.module h4 {
   font-size: 0.85rem;
 }
 
@@ -629,6 +635,42 @@ span {
   margin: 1rem 0 0;
 }
 /* END BOOKMARKS INDEX */
+
+/* DRAFTS INDEX */
+#main.works-drafts ul.index.group li.work.blurb.group .header.module h4 a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 70%;
+}
+
+#main.works-drafts ul.index.group li.work.blurb.group .header.module h4 {
+  font-size: 0.85rem;
+}
+
+#main.works-drafts ul.index.group li.work.blurb.group .header.module h4a:first-of-type {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 70%;
+}
+
+#main.works-drafts ul.index.group li.work.blurb.group .datetime {
+  font-size: 0.65rem;
+}
+
+#main.works-drafts ul.index.group li.work.blurb.group .tags.commas {
+  text-align: unset;
+}
+
+#main.works-drafts ul.index.group li.work.blurb.group .user.module.group h5 {
+  margin: 1rem 0 0;
+}
+/* END DRAFTS INDEX */
 
 /* ACTUAL WORK PAGE */
 #main #workskin #chapters .userstuff p,

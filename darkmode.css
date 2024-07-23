@@ -1,24 +1,45 @@
+/*********************************************
+ * Dark Mode
+ * 
+ * background: #111111;
+ * text: #f3f3f3;
+ * border color: #ffffff;
+ * group headers: #3e3c3c;
+ * group body: #222222;
+ * accent color: green;
+ * link: #c9c9c9;
+ * link hover: #eeeeee;
+*************************************************/
+
 html, body {
   color: #f3f3f3;
 }
 
 #header { 
-  background-color: #000;
+  background-color: #111111;
 }
 
 #outer {
-  background-color: #000;
+  background-color: #111111;
 }
 
 #inner {
-  background-color: #000;
+  background-color: #111111;
 }
 
-a {
-  color: #f3f3f3
+a, a:link, a:visited {
+  color: #c9c9c9;
+}
+
+a:hover, a:visited:hover {
+  color: #eeeeee;
 }
 
 /* HEADER */
+#header .heading a {
+  color: #f3f3f3;
+}
+
 /* header user actions */
 #header ul.dropdown-menu li,
 #header .actions a:hover,
@@ -37,12 +58,12 @@ a {
 #header .primary .open a, 
 #header .primary .dropdown:hover a, 
 #header .primary .dropdown a:focus {
-  background-color: #171718;
+  background-color: #111111;
   color: #f3f3f3;
 }
 
 #header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
-  background: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.15);
 }
 
 /* search bar */
@@ -58,12 +79,79 @@ a {
 label.action:hover, 
 .action:hover, 
 .action:focus {
-  box-shadow: inset 1px 1px 1px #aaa;
+  box-shadow: none;
 }
 
 /* search button */
 .actions a, .actions a:link, .action, .action:link, .actions input, input[type="submit"], button, .current, .actions label {
   color: #f3f3f3;
-  background-image: linear-gradient(#404040 2%,#2a2a2a 95%,#000 100%);
+  background-image: linear-gradient(#404040 2%,#2a2a2a 95%,#111111 100%);
 }
 /* END HEADER */
+
+/* HOME PAGE */
+#inner #main .favorite.module ul li a {
+  background-color: #222;
+}
+
+#inner #main .favorite.module ul li:nth-of-type(2n+1) a {
+  background-color: #3e3c3c;
+}
+/* END HOME PAGE */
+
+/* COMMENTS */
+#main ul.comment.group li.comment h4.heading {
+  background-color: #3e3c3c;
+  color: white;
+}
+
+#main ul.comment.group li.comment {
+  background-color: #222;
+}
+/* END COMMENTS */
+
+/* BUTTONS */
+/* buttons */
+#main .actions ul li span 
+#main .actions ul li a,
+#main .actions ul li form input,
+#main .actions li input,
+#main .actions ul li span.current,
+#main ul.actions li a,
+#main ul.actions li form input,
+#main p.actions a {
+  border: 0.5px solid;
+}
+
+/* ~accent color~ */
+#main .actions ul li:hover span 
+#main .actions ul li:hover a,
+#main .actions ul li:hover form input,
+#main .actions li:hover input,
+#main .actions ul li:hover span.current,
+#main ul.actions li:hover a,
+#main ul.actions li:hover form input,
+#main p.actions a:hover,
+.splash .module h3 {
+  color: green;
+}
+
+/* ~accent color~ but background */
+#header ul.primary.navigation.actions,
+#header ul.primary.navigation.actions::before,
+#header ul.primary.navigation.actions::after,
+#inner #main .favorite.module ul li a:hover,
+#inner #main .latest.messages h3 .link a,
+#inner #main .latest.news.module h3 .link a,
+#footer {
+  background-image: none;
+  background-color: green;
+  box-shadow: none;
+}
+/* END BUTTONS */
+
+/* WORKS */
+#main ol.work.index.group .tags.commas,
+#main ul.work.index.group .tags.commas {
+  background-color: #3e3c3c;
+}
