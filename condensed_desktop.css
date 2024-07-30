@@ -549,21 +549,21 @@ p.muted.notice {
   clear: none;
 }
 
-#main ol.index.group .series,
-#main ul.index.group .series {
+#main ol.index.group li ul.series,
+#main ul.index.group li ul.series {
   font-size: 0.85rem;
   font-weight: bold;
   margin: 0 0 1.75em 0;
   text-transform: uppercase;
 }
 
-#main ol.index.group .series li,
-#main ul.index.group .series li {
+#main ol.index.group li ul.series li,
+#main ul.index.group li ul.series li {
   display: block;
 }
 
-#main ol.index.group .series a
-#main ul.index.group .series a {
+#main ol.index.group li ul.series a
+#main ul.index.group li ul.series a {
   border: none;
   font-weight: normal;
   text-decoration: underline;
@@ -800,6 +800,137 @@ form.filters fieldset {
 }
 /*** END WORKS FILTER ***/
 
+/*** ACTUAL WORK PAGE ***/
+/* work details */
+#main .work .wrapper {
+  box-shadow: none;
+  margin: 0.75rem 0;
+}
+
+#main .work .wrapper .work.meta {
+  box-sizing: border-box;
+  padding: 1.75rem;
+}
+/* work title */
+#main #workskin .preface h2.title {
+  font-size: 2rem;
+}
+
+/* work author */
+#main #workskin .preface h3.byline {
+  font-size: 1.2rem;
+}
+
+/* work preface/notes */
+#main #workskin .preface {
+  margin: 0 auto;
+  padding: 0.5rem 0;
+
+  width: 70ch;
+  max-width: 100%;
+}
+#main #workskin .preface blockquote p {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  width: unset;
+  max-width: 100%;
+}
+
+#main #workskin .preface p.jump {
+  font-size: 1rem;
+  margin: 2.5rem auto 1.5rem;
+  text-align: center;
+}
+
+#main #workskin .preface p.jump a {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+/* chapter header */
+#main #workskin .preface h3.title {
+  display: block;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+}
+
+#main #workskin .chapter.preface h3.title a {
+  border-bottom: none;
+  color: inherit;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* chapter summary & notes */
+#main #workskin #chapters blockquote.userstuff,
+#main #workskin #chapters #summary .userstuff,
+#main #workskin #chapters #notes .userstuff {
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 0.5rem 0.75rem;
+
+  width: 70ch;
+  max-width: 100%;
+}
+
+/* "see more notes" */
+#main #workskin #chapters #notes p {
+  text-align: center;
+}
+
+#main #workskin #chapters #summary .userstuff p,
+#main #workskin #chapters #notes .userstuff p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+
+  width: unset;
+  max-width: 100%;
+}
+
+/* work body text */
+#main #workskin .userstuff.module {
+  margin: 0 auto;
+}
+
+#main #workskin #chapters .userstuff p,
+#main #workskin #chapters .userstuff blockquote,
+#main #workskin #chapters .userstuff span {
+  font-family: 'Lucida Grande','Lucida Sans Unicode', Verdana, Helvetica, sans-serif,'GNU Unifont';
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+
+  width: 65ch;
+  max-width: 100%;
+}
+
+/* feedback section */
+#main #feedback {
+  margin: 0 auto;
+}
+
+/* feedback buttons */
+#main #feedback #kudos_message.notice {
+  display: block;
+
+  border-radius: 0.25rem;
+  box-shadow: none;
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+}
+
+#main #kudos p.kudos {
+  font-size: 0.85rem;
+}
+/*** END ACTUAL WORK PAGE ***/
+
 /*** COMMENTS ***/
 /* comment heading */
 #main ul.comment li.comment.group h4,
@@ -894,6 +1025,7 @@ form.filters fieldset {
 
 #main ul.comment li.comment.group h4 .posted.datetime,
 #main ol.comment li.comment.group h4 .posted.datetime,
+#main ol.thread li.comment.group h4 .posted.datetime,
 #main ol.thread li.comment.user.module.group h4 .posted.datetime {
   flex: 1 1 0;
 
@@ -910,7 +1042,7 @@ form.filters fieldset {
 /* comment user icon */
 #main ul.comment li.comment.group .icon,
 #main ol.comment li.comment.group .icon {
-  border-bottom: none;
+  border: none;
   margin: 0;
 
   width: unset;
@@ -920,7 +1052,6 @@ form.filters fieldset {
 #main ul.comment li.comment.group .icon img,
 #main ol.comment li.comment.group .icon img,
 #main ol.thread li.comment.group .icon {
-  border: 1px solid #ddd;
   box-sizing: border-box;
   margin: 0;
 
@@ -1005,8 +1136,7 @@ ul.thread li.comment {
 }
 
 .listbox.group h3,
-.listbox.group h4,
-.listbox.group h5 {
+.statistics .listbox.group h5{
   background-color: #ddd;
   box-sizing: border-box;
   padding: 0.75rem;
