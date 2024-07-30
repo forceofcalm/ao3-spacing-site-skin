@@ -1,0 +1,405 @@
+/*** OUTER ***/
+#outer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/*** END OUTER ***/
+
+/*** HEADER ***/
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  font-size: 1rem;
+
+  /* resets */
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+#header .heading {
+  padding: 1rem 0rem 1rem 1.5rem;
+
+  float: none;
+}
+
+/* ao3 brand */
+#header .heading a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .heading img.logo {
+  order: -1;
+
+  float: none;
+
+  height: 1.5rem;
+}
+
+#header .heading a span,
+#header .heading a sup {
+  display: none;
+}
+
+/* account info */
+#header .clear,
+#header .landmark,
+#header #greeting .landmark {
+  display: none;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*   gap: 0.2rem; */
+
+  margin: 0;
+
+  float: none;
+}
+
+#greeting ul.navigation.actions {
+  font-size: 0.95rem;
+  padding: 0 0.75rem 0 0.25rem;
+
+  float: none;
+}
+
+#greeting p.icon {
+  order: -1;
+
+  padding: 0;
+
+  float: none;
+}
+
+#greeting p.icon a {
+  display: flex;
+  align-items: center;
+}
+
+#greeting img.icon {
+  border-radius: 100%;
+
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* buttons */
+#greeting ul.navigation.actions li {
+  margin: 0 0.15rem;
+}
+
+#greeting ul.navigation.actions li:last-of-type {
+  margin: 0 0 0 0.15rem;
+}
+
+#greeting ul.navigation.actions a {
+  border-radius: 0.25rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 0.5rem 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  max-width: 25vw;
+}
+
+#greeting ul.navigation.actions a.dropdown-toggle {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+#greeting ul.navigation.actions ul.dropdown-menu li a {
+  max-width: unset;
+}
+
+/* user dropdowns */
+#greeting ul li ul.menu.dropdown-menu {
+  border-radius: 0 0 0.25rem 0.25rem;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+#greeting ul li ul.menu.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+#greeting ul li ul.menu.dropdown-menu li a {
+  margin: 0;
+  padding: 0.75rem 1rem;
+
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+#greeting ul li ul.menu.dropdown-menu li a:hover {
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* nav bar */
+#header ul.primary.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  font-size: 0.95rem;
+  padding: 0.5rem 0.75rem;
+
+  height: unset;
+}
+
+#header ul.primary.navigation.actions li.dropdown,
+#header ul.primary.navigation.actions li.search {
+  display: inline;
+
+  margin: 0;
+
+  float: none;
+}
+
+/* dropdowns */
+#header .primary.navigation.actions li.dropdown a {
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+}
+
+#header .primary.navigation.actions li.dropdown ul {
+  border-radius: 0 0 0.25rem 0.25rem;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li {
+  margin: 0;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a {
+  margin: 0;
+  padding: 0.75rem 1rem;
+
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* search bar */
+#header ul.primary.navigation.actions li.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+}
+
+#header ul.primary.navigation.actions li.search form {
+  float: none;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions li.search form fieldset {
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions li.search form fieldset p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions li.search form input#site_search {
+  flex: 1 1 0;
+
+  padding: 0.5rem;
+}
+
+/* search bar button */
+#header ul.primary.navigation.actions li.search span.submit input.button {
+  margin: 0 0 0 1rem !important;
+  padding: 0.5rem 0.75rem;
+}
+/*** END HEADER ***/
+
+/*** DASHBOARD ***/
+#inner:has(#dashboard) {
+  flex-direction: column;
+}
+
+#inner #dashboard {
+  display: block;
+
+  border-bottom: 0.5rem solid #900;
+  border-top: 0.5rem solid #900;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 0;
+
+  height: unset;
+}
+
+#inner #dashboard ul.navigation.actions {
+  display: unset;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: unset;
+
+  float: none;
+
+  width: 100%;
+}
+
+#inner #dashboard ul.navigation.actions:not(:last-of-type) {
+  border-bottom: unset;
+}
+
+#inner #dashboard ul.navigation.actions li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#inner #dashboard ul.navigation.actions li .current {
+  background-color: #900;
+  color: white;
+}
+
+#inner #dashboard ul.navigation.actions li a,
+#inner #dashboard ul.navigation.actions li span {
+  display: inline-block;
+
+  font: unset;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+}
+
+/* user dashboard header */
+#main .user.home .primary.header.module {
+  margin: 0;
+
+  clear: unset;
+  float: none;
+
+  min-height: unset;
+}
+/*** END DASHBOARD ***/
+
+/*** (IN INDEX) WORK CONTAINERS ***/
+#main ol.index.group li.blurb.group,
+#main ul.index.group li.blurb.group {
+  padding: 0.75rem;
+}
+
+#main ol.index.group .header.module h4,
+#main ul.index.group .header.module h4 {
+  font-size: 0.85rem;
+  margin: 0 0 0.25rem 60px;
+}
+
+#main ol.index.group .header.module h5,
+#main ul.index.group .header.module h5 {
+    margin: 0 0 0 60px;
+}
+
+#main ol.index.group .header.module h4 a:first-of-type,
+#main ul.index.group .header.module h4 a:first-of-type  {
+  display: block;
+
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem;
+
+  max-width: 65%;
+}
+
+#main ol.index.group .header.module .datetime,
+#main ul.index.group .header.module .datetime {
+  font-size: 0.65rem;
+}
+
+/* blockquote in work summary */
+#main ul.index.group li.blurb.group blockquote.summary blockquote {
+  margin: 0 0.5rem;
+}
+/*** END (IN INDEX) WORK CONTAINERS ***/
+
+/*** FOOTER ***/
+#footer {
+  border: none;
+  box-sizing: border-box;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  padding: 1rem 1.5rem;
+
+  float: none;
+}
+
+#footer ul.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  font-size: 0.75rem;
+  margin: 0 auto;
+  padding: 0;
+
+  float: none;
+  clear: unset;
+
+  width: 100%;
+  max-width: 1270px;
+}
+
+#footer ul li.module.group {
+  padding: 0;
+
+  float: none;
+
+  width: 40%;
+  max-width: 40%;
+}
+
+#footer ul li.module.group h4 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+#footer ul li.module.group ul.menu li a {
+  display: inline-block;
+
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+
+  max-width: 25ch;
+}
+/*** END FOOTER ***/
+
+/*** TODO: comments, work pages with filters, filter on mobile, scrollbar on works? fix header with overflow-x scrolling ***/
