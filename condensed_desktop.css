@@ -88,7 +88,9 @@ p.muted.notice {
 #main ul.actions li a,
 #main ul.actions li form input,
 #main p.actions a,
-#main .actions li label {
+#main ol.actions li a,
+#main .actions li label,
+#main dd form input {
   border: 1px solid #bbb;
   cursor: pointer;
   font-size: 0.85rem;
@@ -96,7 +98,25 @@ p.muted.notice {
   padding: 0.5rem 0.75rem;
 }
 
-/* button with input inside */
+#main .actions ul li a:not(.selected, .current):hover,
+#main .actions ul li form input:not(.selected, .current):hover,
+#main .actions li input:not(.selected, .current):hover,
+#main .actions li span.current:not(.selected, .current):hover,
+#main .actions ul li span:not(.selected, .current):hover,
+#main .actions ul li span.current:not(.selected, .current):hover,
+#main .actions li span.unread:not(.selected, .current):hover,
+#main .actions li span.replied:not(.selected, .current):hover,
+#main ul.actions li a:not(.selected, .current):hover,
+#main ul.actions li form input:not(.selected, .current):hover,
+#main p.actions a:not(.selected, .current):hover,
+#main ol.actions li a:not(.selected, .current):hover,
+#main .actions li label:not(.selected, .current):hover,
+#main dd form input:not(.selected, .current):hover {
+  color: #900;
+  box-shadow: inset 2px 2px 2px #bbb;
+}
+
+/* button with input inside (like a checkbox, for some reason) */
 #main .actions li label {
   display: flex;
   flex-direction: row;
@@ -719,7 +739,7 @@ p.muted.notice {
   width: 100%;
 }
 
-/* user works page (accounting for dashboard) */
+/* user works/bookmarks/drafts/etc page (accounting for dashboard + filter) */
 #inner:has(#dashboard) {
   display: flex;
   flex-direction: row;
@@ -737,6 +757,36 @@ p.muted.notice {
 
   position: sticky;
   top: 0.5rem;
+}
+
+/* user stats page */
+.statistics .listbox .index li:nth-of-type(2n) {
+  background-color: inherit;
+}
+
+/* user subscriptions page */
+.subscription.index.group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.subscription.index.group dt,
+.subscription.index.group dd {
+  flex: 0 0 50%;
+
+  background-color: unset;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.subscription.index.group dt:nth-of-type(2n),
+.subscription.index.group dd:nth-of-type(2n) {
+  background-color: #f0f0f0;
+}
+.subscription.index.group dd form input {
+  width: 100%;
 }
 /*** END USER PAGE ***/
 
@@ -954,7 +1004,9 @@ ul.thread li.comment {
   width: 100%;
 }
 
-.listbox.group h3 {
+.listbox.group h3,
+.listbox.group h4,
+.listbox.group h5 {
   background-color: #ddd;
   box-sizing: border-box;
   padding: 0.75rem;
