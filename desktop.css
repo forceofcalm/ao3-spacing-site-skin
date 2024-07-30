@@ -606,8 +606,8 @@ h2.heading {
   height: 4.5rem;
 }
 
-/* guest identifier */
-#comments_placeholder ol.thread li.comment.guest h4 .role {
+/* guest/staff identifier */
+#comments_placeholder ol.thread li.comment h4 .role {
   font-size: 0.75rem;
   padding-top: inherit;
   text-transform: uppercase;
@@ -710,61 +710,6 @@ h2.heading {
 /* END NEWS POSTS */
 
 /* USER INBOX */
-/* actions & navigation */
-#main.inbox-show .actions ul {
-  padding: 0;
-  margin: 0;
-
-  float: none;
-}
-
-#main.inbox-show .actions h3 {
-  display: none;
-}
-
-#main.inbox-show .actions ul {
-  margin: 0.5rem 0;
-}
-
-#main.inbox-show .actions ul li span {
-  font-size: 0.85rem;
-  padding: 0.5rem 0.75rem;
-  margin: 0;
-}
-
-#main.inbox-show .actions ul li a,
-#main.inbox-show .actions ul li form input,
-#main.inbox-show .actions li input,
-#main.inbox-show .actions ul li span.current {
-  cursor: pointer;
-  font-size: 0.85rem;
-  line-height: 1.3;
-  margin: 0 0 0 0.25rem;
-  padding: 0.5rem 0.75rem;
-}
-
-#main.inbox-show .actions ul li a.rss {
-  display: none;
-}
-
-/* pagination (affects top and bottom) */
-#main.inbox-show ol.pagination {
-  display: block;
-
-  margin: 1rem 0;
-  text-align: center;
-}
-
-#main.inbox-show ol.pagination li a {
-  cursor: pointer;
-}
-
-#main.inbox-show ol.pagination li a,
-#main.inbox-show ol.pagination li span.current {
-  font-size: 0.85rem;
-  padding: 0.5rem 0.75rem;
-  margin: 0 0 0 0.25rem;
-}
 
 /* comments container */
 #main.inbox-show fieldset.comments ol.comment.index {
@@ -980,7 +925,7 @@ p.muted.notice {
 }
 
 /* work container */
-#main.works-index ol.work.index.group li.work.blurb.group {
+#main.works-index ol.index.group li.work.blurb.group {
   box-sizing: border-box;
   padding: 1.25rem 1.75rem;
   overflow: none;

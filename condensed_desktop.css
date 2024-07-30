@@ -1,0 +1,1025 @@
+html,
+body {
+  font-size: 16px;
+  letter-spacing: 0.0025rem;
+  word-spacing: 0.0rem;
+
+  overflow-x: hidden;
+
+  height: 100%;
+}
+
+html,
+body,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+}
+
+/*** DEFAULTS ***/
+li .disabled {
+  display: none;
+}
+
+h2.heading {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.css.module {
+  display: none;
+}
+
+/* hide muted user notice */
+p.muted.notice {
+  display: none;
+}
+/*** END DEFAULTS ***/
+
+/*** BUTTONS ***/
+#main .actions ul {
+  padding: 0;
+  margin: 0;
+
+  float: none;
+}
+
+#main .actions h3 {
+  display: none;
+}
+
+#main ul.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: flex-end;
+  flex-wrap: wrap;
+
+
+  float: unset;
+}
+
+#main .actions ul {
+  margin: 0.5rem 0;
+}
+
+#main .actions ul li,
+#main ul.actions li {
+  margin: 0 0 0.25rem 0;
+  padding: 0 0 0 0.5rem;
+}
+
+#main .actions ul li a,
+#main .actions ul li form input,
+#main .actions li input,
+#main .actions li span.current,
+#main .actions ul li span,
+#main .actions ul li span.current,
+#main .actions li span.unread,
+#main .actions li span.replied,
+#main ul.actions li a,
+#main ul.actions li form input,
+#main p.actions a,
+#main .actions li label {
+  border: 1px solid #bbb;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  padding: 0.5rem 0.75rem;
+}
+
+/* button with input inside */
+#main .actions li label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main .actions li label input {
+  margin: 0 0.5rem 0 0;
+}
+
+/* pagination (affects top and bottom) */
+#main ol.pagination {
+  display: block;
+
+  margin: 1rem 0;
+  text-align: center;
+}
+
+#main ol.pagination li {
+  margin: 0 0 0 0.25rem;
+}
+
+#main ol.pagination li a {
+  cursor: pointer;
+}
+
+#main ol.pagination li a,
+#main ol.pagination li span.current {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+}
+/*** END BUTTONS ***/
+
+/*** CONTAINER ***/
+#outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+
+  float: none;
+
+  min-height: 100%;
+}
+
+#inner {
+  flex: 1 1 0;
+
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+#inner #main {
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 1rem 1.75rem;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 1270px;
+  min-height: unset;
+}
+/*** END CONTAINER ***/
+
+/*** HEADER ***/
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  font-size: 1rem;
+
+  /*** resets ***/
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  max-width: 1270px;
+}
+
+#header .heading {
+  padding: 0.75rem 0 0.75rem 1.5rem;
+
+  float: none;
+}
+
+/* ao3 brand */
+#header .heading a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /***   gap: 0.2rem; ***/
+}
+
+#header .heading img.logo {
+  order: -1;
+
+  float: none;
+
+  height: 2rem;
+}
+
+#header .heading span {
+  font-size: 1.25rem;
+  line-height: initial;
+}
+
+#header .heading sup {
+  display: inline;
+
+  font-size: 0.75rem;
+  line-height: initial;
+  margin: 0 0 0.5rem;
+}
+
+/* account info */
+#header .clear,
+#header .landmark,
+#header #greeting .landmark {
+  display: none;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /***   gap: 0.2rem; ***/
+
+  margin: 0;
+
+  float: none;
+}
+
+#greeting ul.navigation.actions {
+  padding: 0 0.75rem 0 0.5rem;
+
+  float: none;
+}
+
+#greeting p.icon {
+  order: -1;
+
+  padding: 0;
+
+  float: none;
+}
+
+#greeting p.icon a {
+  display: flex;
+  align-items: center;
+}
+
+#greeting img.icon {
+  border-radius: 100%;
+
+  height: 2rem;
+  width: 2rem;
+}
+
+/* buttons */
+#greeting ul.navigation.actions li {
+  margin: 0 0.25rem;
+}
+
+#greeting ul.navigation.actions a {
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+#greeting ul.navigation.actions a.dropdown-toggle {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* user dropdowns */
+#greeting ul li ul.menu.dropdown-menu {
+  border-radius: 0 0 0.25rem 0.25rem;
+  margin: 0;
+  padding: 0;
+
+  width: 20rem;
+}
+
+#greeting ul li ul.menu.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+#greeting ul li ul.menu.dropdown-menu li a {
+  margin: 0;
+  padding: 0.75rem 1rem;
+
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+#greeting ul li ul.menu.dropdown-menu li a:hover {
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* nav bar */
+#header nav:not(#greeting) {
+  width: 100%;
+}
+
+#header ul.primary.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  box-sizing: border-box;
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+
+  height: 3.25rem;
+}
+
+#header ul.primary.navigation.actions::before {
+  background: #900 url(/images/skins/textures/tiles/red-ao3.png);
+  content: '';
+
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+  position: absolute;
+  top: 3.5rem;
+  left: -100%;
+
+  width: 100%;
+  height: 3.25rem;
+}
+
+#header ul.primary.navigation.actions::after {
+  background: #900 url(/images/skins/textures/tiles/red-ao3.png);
+  content: '';
+
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+  position: absolute;
+  top: 3.5rem;
+  right: -100%;
+
+  width: 100%;
+  height: 3.25rem;
+}
+
+#header ul.primary.navigation.actions li.dropdown,
+#header ul.primary.navigation.actions li.search {
+  display: inline;
+
+  margin: 0;
+
+  float: none;
+}
+
+/* dropdowns */
+#header .primary.navigation.actions li.dropdown a {
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+#header .primary.navigation.actions li.dropdown ul {
+  border-radius: 0 0 0.25rem 0.25rem;
+  margin: 0;
+  padding: 0;
+
+  width: 20rem;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li {
+  margin: 0;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a {
+  margin: 0;
+  padding: 0.75rem 1rem;
+
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
+  transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* search bar */
+#header ul.primary.navigation.actions li.search {
+  flex: 1 1 0;
+}
+
+#header ul.primary.navigation.actions li.search input#site_search {
+  border-radius: 0.75rem;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+}
+
+#header ul.primary.navigation.actions li.search span.submit {
+  padding: 0;
+}
+
+#header ul.primary.navigation.actions li.search span.submit input.button {
+  cursor: pointer;
+  margin: 0 0 0 0.25rem !important;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  font: unset;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+/*** END HEADER ***/
+
+/*** (IN INDEX) WORK CONTAINERS ***/
+#main ol.index.group,
+#main ul.index.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#main ol.index.group li.blurb.group,
+#main ul.index.group li.blurb.group {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1.25rem 1.75rem;
+  overflow: none;
+
+  clear: none;
+}
+
+#main ol.index.group li.blurb.group:not(:first-of-type),
+#main ul.index.group li.blurb.group:not(:first-of-type) {
+  margin: 0.75rem 0 0;
+}
+
+#main ol.index.group .header.module,
+#main ul.index.group .header.module {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0 0 0.5rem;
+
+  min-height: 55px;
+}
+
+#main ol.index.group .header.module ul.required-tags,
+#main ul.index.group .header.module ul.required-tags {
+  width: 55px;
+  height: 55px;
+}
+
+#main ol.index.group .header.module h4,
+#main ul.index.group .header.module h4 {
+  border: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 65px;
+
+  max-width: 80%;
+}
+
+#main ol.index.group .header.module h4 a,
+#main ul.index.group .header.module h4 a {
+  border: none;
+  text-decoration: underline;
+}
+
+#main ol.index.group .header.module h5,
+#main ul.index.group .header.module h5 {
+  font-size: 0.75rem;
+  margin: 0 0 0 65px;
+
+  max-width: 80%;
+}
+
+#main ol.index.group .datetime,
+#main ul.index.group .datetime {
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}
+
+#main ol.index.group .tag,
+#main ul.index.group .tag {
+  /* border: none; */
+  box-sizing: border-box;
+  /* text-decoration: underline; */
+}
+
+#main ol.index.group .tags.commas,
+#main ul.index.group .tags.commas {
+  /* background-color: #e2e2e2; */
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+#main ol.index.group .tags .relationships .tag,
+#main ul.index.group .tags .relationships .tag {
+  /* background-color: #a8a8a8; */
+  background-color: #d5d5d5;
+  /* padding: 0.25rem; */
+}
+
+#main ol.index.group .userstuff.summary,
+#main ul.index.group .userstuff.summary {
+  font-size: 0.95rem;
+  margin: 1.75rem 0;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main ol.index.group .series,
+#main ul.index.group .series {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0 0 1.75em 0;
+  text-transform: uppercase;
+}
+
+#main ol.index.group .series li,
+#main ul.index.group .series li {
+  display: block;
+}
+
+#main ol.index.group .series a
+#main ul.index.group .series a {
+  border: none;
+  font-weight: normal;
+  text-decoration: underline;
+  text-transform: initial;
+}
+
+#main ol.index.group .stats,
+#main ul.index.group .stats {
+  background-color: #f0f0f0;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: unset;
+
+  float: none;
+}
+
+#main ol.index.group .stats dt,
+#main ul.index.group .stats dt {
+  font-weight: bold;
+  padding: 0;
+}
+
+#main ol.index.group .stats dd,
+#main ul.index.group .stats dd {
+  padding: 0 0.5 0 0;
+}
+/*** END (IN INDEX) WORK CONTAINERS ***/
+
+/*** BOOKMARK SPECIFIC RULES ***/
+/* bookmark/private/rec + number icons */
+#main ol.bookmark.index.group p.status,
+#main ul.bookmark.index.group p.status {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: inherit;
+  
+  top: 0;
+  right: 0;
+
+  width: 53px;
+}
+
+#main ol.bookmark.index.group p.status .count,
+#main ul.bookmark.index.group p.status .count {
+  line-height: 1;
+  text-align: center;
+
+  position: unset;
+  top: 0;
+  left: 0;
+}
+
+#main ol.bookmark.index.group p.status .count a,
+#main ul.bookmark.index.group p.status .count a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.85rem;
+}
+
+/* bookmark notes */
+#main ol.bookmark.index.group .user.module.group {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  text-align: justify;
+
+  clear: none;
+}
+
+#main ol.bookmark.index.group .user.module.group h5 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+#main ol.bookmark.index.group .user.module.group h6.meta {
+  display: block;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0.75rem 0 0.25rem;
+  text-transform: uppercase;
+}
+
+#main ol.bookmark.index.group .user.module.group blockquote.userstuff.notes {
+  margin: 1rem 0 0;
+}
+/*** END BOOKMARK SPECIFIC RULES ***/
+
+/*** USER DASHBOARD ***/
+/* user profile navigation */
+#dashboard,
+#dashboard.own {
+  border: none;
+  border-radius: 0;;
+  margin: 0 1.2rem 0 0;
+  padding: 1rem 0.5rem;
+
+  width: auto;
+  height: 100%;
+}
+
+#dashboard ul.navigation.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: right;
+
+  float: none;
+
+  width: 100%;
+}
+
+#dashboard ul.navigation.actions:not(:last-of-type) {
+  border-bottom: 2px solid #ddd;
+}
+
+#dashboard ul.navigation.actions li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#dashboard ul.navigation.actions li .current {
+  background-color: #900;
+  color: white;
+}
+
+#dashboard ul.navigation.actions li a,
+#dashboard ul.navigation.actions li span {
+  display: inline-block;
+
+  box-sizing: border-box;
+  font: unset;
+  line-height: 1.5;
+  margin: 0 0 0.25rem;
+  padding: 0.5rem 0.75rem;
+
+  width: 100%;
+}
+/*** END USER DASHBOARD ***/
+
+/*** USER PAGE ***/
+.user.home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.user.home .header.module {
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+/* user profile */
+.profile-show .wrapper {
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+/* user works page (accounting for dashboard) */
+#inner:has(#dashboard) {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#inner:has(#dashboard) #main.filtered .index.group {
+  display: block;
+  width: 70%;
+}
+
+#inner:has(#dashboard) #main.filtered form.filters {
+  width: 25%;
+
+  position: sticky;
+  top: 0.5rem;
+}
+/*** END USER PAGE ***/
+
+/*** WORKS FILTER ***/
+form.filters fieldset {
+  box-sizing: border-box;
+  box-shadow: unset;
+
+  margin: 0;
+  padding: 0.75rem;
+}
+/*** END WORKS FILTER ***/
+
+/*** COMMENTS ***/
+/* comment heading */
+#main ul.comment li.comment.group h4,
+#main ol.comment li.comment.group h4,
+#main ol.thread li.comment.group h4 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 1rem 1rem 1rem 5.5rem;
+
+  height: 4.5rem;
+}
+
+#main ul.comment li.comment.group h4 a,
+#main ol.comment li.comment.group h4 a,
+#main ol.thread li.comment.group h4 a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  border: none;
+  text-decoration: underline;
+
+  margin: 0 0.25rem;
+
+  max-width: 25%;
+}
+
+#main ul.comment li.comment.group h4 a[href*="/users/"],
+#main ol.comment li.comment.group h4 a[href*="/users/"],
+#main ol.thread li.comment.group h4 a[href*="/users/"],
+#main ul.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time),
+#main ol.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time),
+#main ol.thread li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time) {
+  flex: 0 0 100%;
+
+  font-size: 1rem;
+  margin: 0;
+
+  max-width: unset;
+}
+
+#main ul.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
+#main ol.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
+#main ol.thread li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
+#main ul.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent),
+#main ol.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent),
+#main ol.thread li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent) {
+  margin: 0 0 0.5rem 0;
+}
+
+#main ul.comment li.comment.group h4 a[href*="/works/"],
+#main ol.comment li.comment.group h4 a[href*="/works/"],
+#main ol.thread li.comment.group h4.heading.byline span.parent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0;
+
+  max-width: 70%;
+}
+
+#main ul.comment li.comment.group h4 a[href*="/works/"],
+#main ol.comment li.comment.group h4 a[href*="/works/"] {
+  margin: 0 0 0 0.25rem;
+}
+
+/* guest/staff identifier */
+#main ul.comment li.comment.group h4 .role,
+#main ol.comment li.comment.group h4 .role,
+#main ol.thread li.comment.group h4 .role,
+#main ul.thread li.comment.group h4 .role {
+  font-size: 0.75rem;
+  margin: -0.25rem 0 0;
+  padding: 0;
+  padding-top: inherit;
+  padding-right: inherit;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#main ul.comment li.comment.group h4 .posted.datetime,
+#main ol.comment li.comment.group h4 .posted.datetime,
+#main ol.thread li.comment.user.module.group h4 .posted.datetime {
+  flex: 1 1 0;
+
+  font-size: 0.75rem;
+  padding: inherit;
+  text-align: right;
+
+  position: absolute;
+  right: 0;
+
+  min-width: max-content;
+} 
+
+/* comment user icon */
+#main ul.comment li.comment.group .icon,
+#main ol.comment li.comment.group .icon {
+  border-bottom: none;
+  margin: 0;
+
+  width: unset;
+  height: unset;
+}
+
+#main ul.comment li.comment.group .icon img,
+#main ol.comment li.comment.group .icon img,
+#main ol.thread li.comment.group .icon {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  margin: 0;
+
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+/* comment text */
+#main ul.comment li.comment.group .userstuff,
+#main ol.comment li.comment.group .userstuff,
+#main ol.thread li.comment .userstuff {
+  font-size: 0.95rem;
+  hyphens: auto;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+  padding: 1rem 1rem 0.75rem 1rem;
+
+  min-height: unset;
+}
+
+/* comment action buttons container */
+#main ul.comment li.comment.group .actions,
+#main ol.comment li.comment.group .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  /*   gap: 0.2rem; */
+
+  margin: 0;
+  padding: 0 1rem 0.5rem 0;
+}
+
+/* comments on work pages */
+#main ol.thread li.comment h4::after {
+  content: none;
+}
+
+/* comment editted date */
+#main ol.thread li.comment .userstuff p.edited {
+  font-size: 0.85rem;
+  hyphens: auto;
+  line-height: 1.5;
+  margin: 0;
+  padding: inherit;
+  text-align: justify;
+}
+/*** END COMMENTS ***/
+
+/* NEWS POSTS */
+/* news posts comments */
+#main.admin_posts-show #add_comment_placeholder div.comment,
+#main.admin_posts-show #main li.comment {
+  overflow: hidden;
+}
+
+#main.admin_posts-show #add_comment_placeholder .clear {
+  display: none;
+}
+
+/* fixes strange overflow bug on news post comment */
+ol.thread li.comment,
+ul.thread li.comment {
+  overflow: hidden;
+}
+/* END NEWS POSTS */
+
+/*** INDEX CONTAINERS ***/
+.listbox.group {
+  box-shadow: unset;
+  box-sizing: border-box;
+  clear: unset;
+  margin: 0.5rem auto;
+  padding: 0;
+
+  width: 100%;
+}
+
+.listbox.group h3 {
+  background-color: #ddd;
+  box-sizing: border-box;
+  padding: 0.75rem;
+
+  width: 100%;
+}
+
+.listbox .index {
+  box-sizing: border-box;
+  padding: 0.75rem;
+
+  width: 100%;
+}
+/*** END INDEX CONTAINERS ***/
+
+/*** FOOTER ***/
+#footer {
+  border: none;
+  box-sizing: border-box;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  padding: 1rem 1.5rem;
+
+  float: none;
+}
+
+#footer ul.navigation.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+
+  float: none;
+  clear: unset;
+
+  width: 100%;
+  max-width: 1270px;
+}
+
+#footer ul li.module.group {
+  padding: 0;
+
+  float: none;
+
+  width: unset;
+  max-width: unset;
+}
+
+#footer ul li.module.group h4 {
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+#footer ul li.module.group ul.menu li a {
+  display: inline-block;
+
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+
+  max-width: 25ch;
+}
+/*** END FOOTER ***/
