@@ -380,6 +380,29 @@ p.narrow-shown {
 }
 /*** END (IN INDEX) WORK CONTAINERS ***/
 
+/*** WORK ***/
+/* title */
+#main #workskin .preface h2.title {
+  font-size: 1.75rem;
+}
+
+/* author */
+#main #workskin .preface h3.byline {
+  font-size: 0.95rem;
+}
+
+/* chapter title */
+#main #workskin .preface h3.title {
+  font-size: 1.5rem;
+}
+/* actual work text */
+#main #workskin #chapters .userstuff p, 
+#main #workskin #chapters .userstuff blockquote, 
+#main #workskin #chapters .userstuff span {
+  font-size: 1.05rem;
+}
+/*** END WORK ***/
+
 /*** COMMENTS ***/
 #main ul.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
 #main ol.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),

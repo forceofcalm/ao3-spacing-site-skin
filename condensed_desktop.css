@@ -883,22 +883,30 @@ form.filters fieldset {
 }
 /* work title */
 #main #workskin .preface h2.title {
-  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.75rem;
 }
 
 /* work author */
 #main #workskin .preface h3.byline {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
 }
 
 /* work preface/notes */
 #main #workskin .preface {
+  border: none;
   margin: 0 auto;
   padding: 0.5rem 0;
 
   width: 70ch;
   max-width: 100%;
 }
+#main #workskin .preface .module h3.heading {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  margin: 1.2rem 0 0;
+}
+
 #main #workskin .preface blockquote p {
   font-size: 1rem;
   line-height: 1.5;
@@ -909,7 +917,7 @@ form.filters fieldset {
 
 #main #workskin .preface p.jump {
   font-size: 1rem;
-  margin: 2.5rem auto 1.5rem;
+  margin: 1rem auto 1.5rem;
   text-align: center;
 }
 
@@ -1222,6 +1230,10 @@ ul.thread li.comment {
   padding: 0.75rem;
 
   width: 100%;
+}
+
+#main .listbox ul.actions {
+  padding: 0 0.75rem 0.25rem 0;
 }
 /*** END INDEX CONTAINERS ***/
 
