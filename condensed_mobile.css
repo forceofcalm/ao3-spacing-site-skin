@@ -285,7 +285,7 @@ html, body {
 
 #inner #dashboard ul.navigation.actions li {
   display: inline-block;
-  margin: 0;
+  margin: 0.125rem 0;
   padding: 0;
 }
 
@@ -338,8 +338,6 @@ html, body {
 
   font-size: 0.95rem;
   margin: 0 0 0.25rem;
-
-  max-width: 65%;
 }
 
 #main ol.index.group .header.module .datetime,
@@ -391,8 +389,7 @@ p.narrow-shown {
 #main ol.thread li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent) {
   font-size: 0.95rem;
   margin: 0 0 0.05rem 0;
-
-  max-width: 65%;
+  width: 100%;
 }
 
 #main ul.comment li.comment.group h4 .posted.datetime,
@@ -414,8 +411,6 @@ p.narrow-shown {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-  max-width: 50%;
 }
 
 /* guest user icon */

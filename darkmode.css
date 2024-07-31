@@ -2,17 +2,17 @@
  * Dark Mode
  * 
  * background: #111111;
- * text: #f3f3f3;
- * border color: #ffffff;
+ * text: #f0f0f0;
+ * border color: #f0f0f0;
  * group headers: #3e3c3c;
  * group body: #222222;
- * accent color: green;
+ * accent color: #133909;
  * link: #c9c9c9;
  * link hover: #eeeeee;
 *************************************************/
 
 html, body {
-  color: #f3f3f3;
+  color: #f0f0f0;
 }
 
 #header { 
@@ -27,17 +27,24 @@ html, body {
   background-color: #111111;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   color: #c9c9c9;
 }
 
-a:hover, a:visited:hover {
-  color: #eeeeee;
+a:hover,
+a:visited:hover,
+.actions a:visited,
+.action:visited,
+.action a:link,
+.action a:visited {
+  color: #f0f0f0;
 }
 
 /* HEADER */
 #header .heading a {
-  color: #f3f3f3;
+  color: #f0f0f0;
 }
 
 /* header user actions */
@@ -51,7 +58,7 @@ a:hover, a:visited:hover {
 
 #header ul.dropdown-menu li a,
 #header ul.user.actions li a {
-  color: #f3f3f3;
+  color: #f0f0f0;
 }
 
 /* header fandom actions */
@@ -59,7 +66,7 @@ a:hover, a:visited:hover {
 #header .primary .dropdown:hover a, 
 #header .primary .dropdown a:focus {
   background-color: #111111;
-  color: #f3f3f3;
+  color: #f0f0f0;
 }
 
 #header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
@@ -69,7 +76,7 @@ a:hover, a:visited:hover {
 /* search bar */
 #header ul.primary.navigation.actions li.search input#site_search {
   background: rgba(255,255,255,.25);
-  color: #f3f3f3;
+  color: #f0f0f0;
 }
 
 .actions a:hover, 
@@ -83,15 +90,21 @@ label.action:hover,
 }
 
 /* search button */
-.actions a, .actions a:link, .action, .action:link, .actions input, input[type="submit"], button, .current, .actions label {
-  color: #f3f3f3;
+.actions a, 
+.actions a:link, 
+.action, .action:link, 
+.actions input, input[type="submit"], 
+button, 
+.current, 
+.actions label {
+  color: #f0f0f0;
   background-image: linear-gradient(#404040 2%,#2a2a2a 95%,#111111 100%);
 }
 /* END HEADER */
 
 /* HOME PAGE */
 #inner #main .favorite.module ul li a {
-  background-color: #222;
+  background-color: #222222;
 }
 
 #inner #main .favorite.module ul li:nth-of-type(2n+1) a {
@@ -99,41 +112,94 @@ label.action:hover,
 }
 /* END HOME PAGE */
 
-/* COMMENTS */
-#main ul.comment.group li.comment h4.heading {
+/* COMMENTS & FORMS */
+#main ul.comment li.comment.group h4,
+#main ol.comment li.comment.group h4,
+#main ol.thread li.comment.group h4 {
   background-color: #3e3c3c;
-  color: white;
+  color: #f0f0f0;
 }
 
-#main ul.comment.group li.comment {
-  background-color: #222;
+#main ul.comment li.comment.group,
+#main ol.comment li.comment.group,
+#main ol.thread li.comment.group,
+fieldset, 
+form dl, 
+fieldset dl dl, 
+fieldset fieldset fieldset, 
+fieldset fieldset dl dl, 
+dd.hideme,
+form blockquote.userstuff,
+#main ol.index.group li.blurb.group, 
+#main ul.index.group li.blurb.group {
+  background-color: #222222;
+  border: 1px solid #3e3c3c;
+  box-shadow: none;
 }
-/* END COMMENTS */
+
+#main ol.index.group, 
+#main ul.index.group {
+  background-color: #131313;
+  box-shadow: none;
+}
+
+.listbox, 
+fieldset fieldset.listbox {
+  background-color: transparent;
+}
+
+#main ol.index.group li.blurb.group, 
+#main ul.index.group li.blurb.group,
+.listbox, 
+fieldset fieldset.listbox {
+  border: 1px solid #3e3c3c;
+}
+/* END COMMENTS & FORMS */
 
 /* BUTTONS */
 /* buttons */
-#main .actions ul li span 
 #main .actions ul li a,
 #main .actions ul li form input,
 #main .actions li input,
+#main .actions li span.current,
+#main .actions ul li span,
 #main .actions ul li span.current,
+#main .actions li span.unread,
+#main .actions li span.replied,
 #main ul.actions li a,
 #main ul.actions li form input,
-#main p.actions a {
+#main p.actions a,
+#main ol.actions li a,
+#main .actions li label,
+#main dd form input {
   border: 0.5px solid;
 }
 
 /* ~accent color~ */
-#main .actions ul li:hover span 
-#main .actions ul li:hover a,
-#main .actions ul li:hover form input,
-#main .actions li:hover input,
-#main .actions ul li:hover span.current,
-#main ul.actions li:hover a,
-#main ul.actions li:hover form input,
-#main p.actions a:hover,
+#header .actions input:hover
+#main .actions ul li a:not(.selected, .current):hover,
+#main .actions ul li form input:not(.selected, .current):hover,
+#main .actions li input:not(.selected, .current):hover,
+#main .actions li span.current:not(.selected, .current):hover,
+#main .actions ul li span:not(.selected, .current):hover,
+#main .actions ul li span.current:not(.selected, .current):hover,
+#main .actions li span.unread:not(.selected, .current):hover,
+#main .actions li span.replied:not(.selected, .current):hover,
+#main ul.actions li a:not(.selected, .current):hover,
+#main ul.actions li form input:not(.selected, .current):hover,
+#main p.actions a:not(.selected, .current):hover,
+#main ol.actions li a:not(.selected, .current):hover,
+#main .actions li label:not(.selected, .current):hover,
+#main dd form input:not(.selected, .current):hover,
+#dashboard ul.navigation.actions a:hover,
+#dashboard ul.navigation.actions li:hover,
+.blurb h4 a:link,
+.blurb h4 a:link:visited,
+.listbox > .heading,
+.listbox .heading a,
+.listbox .heading a:visited,
 .splash .module h3 {
-  color: green;
+  color: #649c55;
 }
 
 /* ~accent color~ but background */
@@ -141,17 +207,45 @@ label.action:hover,
 #header ul.primary.navigation.actions::before,
 #header ul.primary.navigation.actions::after,
 #inner #main .favorite.module ul li a:hover,
-#inner #main .latest.messages h3 .link a,
-#inner #main .latest.news.module h3 .link a,
+#dashboard ul.navigation.actions li .current,
+#main ol.index.group .tags .relationships .tag, 
+#main ul.index.group .tags .relationships .tag,
+#main ol.index.group .tags .relationships .tag:hover, 
+#main ul.index.group .tags .relationships .tag:hover,
+a.tag:hover, 
+.listbox .heading a.tag:hover,
 #footer {
   background-image: none;
-  background-color: green;
+  background-color: #133909;
   box-shadow: none;
+  color: #f0f0f0;
 }
 /* END BUTTONS */
 
 /* WORKS */
-#main ol.work.index.group .tags.commas,
-#main ul.work.index.group .tags.commas {
+#main ol.index.group .tags.commas,
+#main ul.index.group .tags.commas {
   background-color: #3e3c3c;
+}
+
+#main ol.index.group .tags.commas a,
+#main ul.index.group .tags.commas a,
+#dashboard ul.navigation.actions li a, 
+#dashboard ul.navigation.actions li span,
+.filters .expander,
+.listbox.group h3, 
+.statistics .listbox.group h5 {
+  color: #f0f0f0;
+}
+
+#main ol.index.group .stats, 
+#main ul.index.group .stats,
+.listbox.group h3, 
+.statistics .listbox.group h5 {
+  background-color: #0a0a0a;
+}
+
+/*** LEGENDS ***/
+legend {
+  color: #111111;
 }
