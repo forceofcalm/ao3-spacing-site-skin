@@ -1,9 +1,6 @@
-/*** OUTER ***/
-#outer {
-  overflow-y: scroll;
-  overflow-x: hidden;
+html, body {
+  overflow-x: scroll;
 }
-/*** END OUTER ***/
 
 /*** HEADER ***/
 #header {
@@ -162,6 +159,14 @@
   height: unset;
 }
 
+#header ul.primary.navigation.actions::before {
+  content: none;
+}
+
+#header ul.primary.navigation.actions::after {
+  content: none;
+}
+
 #header ul.primary.navigation.actions li.dropdown,
 #header ul.primary.navigation.actions li.search {
   display: inline;
@@ -316,8 +321,8 @@
   padding: 0.75rem;
 }
 
-#main ol.index.group .header.module h4,
-#main ul.index.group .header.module h4 {
+#main ol.index.group:not(.news) .header.module h4,
+#main ul.index.group:not(.news) .header.module h4 {
   font-size: 0.85rem;
   margin: 0 0 0.25rem 60px;
 }
@@ -346,7 +351,77 @@
 #main ul.index.group li.blurb.group blockquote.summary blockquote {
   margin: 0 0.5rem;
 }
+
+#inner #main {
+  /* this is so we can set top: 0 on the filters */
+  position: unset;
+}
+
+/* for pages with a filter form */
+#inner:has(#dashboard) #main.filtered .index.group {
+  display: block;
+
+  width: 100%;
+}
+
+#inner:has(#dashboard) #main.filtered form.filters {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+
+  position: absolute;
+  top: 0;
+  right: -13rem;
+
+  width: unset;
+  height: 100vh;
+}
+
+p.narrow-shown {
+  padding: 0;
+}
 /*** END (IN INDEX) WORK CONTAINERS ***/
+
+/*** COMMENTS ***/
+#main ul.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
+#main ol.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
+#main ol.thread li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
+#main ul.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent),
+#main ol.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent),
+#main ol.thread li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time):has(+ a[href*="/works/"], + span.parent) {
+  font-size: 0.95rem;
+  margin: 0 0 0.05rem 0;
+
+  max-width: 65%;
+}
+
+#main ul.comment li.comment.group h4 .posted.datetime,
+#main ol.comment li.comment.group h4 .posted.datetime,
+#main ol.thread li.comment.group h4 .posted.datetime,
+#main ol.thread li.comment.user.module.group h4 .posted.datetime {
+  font-size: 0.65rem;
+
+  max-width: 25%;
+  min-width: unset;
+}
+
+#main ul.comment li.comment.group h4 a[href*="/users/"],
+#main ol.comment li.comment.group h4 a[href*="/users/"],
+#main ol.thread li.comment.group h4 a[href*="/users/"],
+#main ul.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time),
+#main ol.comment li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time),
+#main ol.thread li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  max-width: 50%;
+}
+
+/* guest user icon */
+.comment .icon .visitor {
+  background: url(/images/imageset.png) no-repeat 0 -635px;
+}
 
 /*** FOOTER ***/
 #footer {
@@ -401,5 +476,3 @@
   max-width: 25ch;
 }
 /*** END FOOTER ***/
-
-/*** TODO: comments, work pages with filters, filter on mobile, scrollbar on works? fix header with overflow-x scrolling ***/

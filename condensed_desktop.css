@@ -484,8 +484,8 @@ p.muted.notice {
   height: 55px;
 }
 
-#main ol.index.group .header.module h4,
-#main ul.index.group .header.module h4 {
+#main ol.index.group:not(.news) .header.module h4,
+#main ul.index.group:not(.news) .header.module h4 {
   border: none;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
   font-size: 1rem;
