@@ -27,19 +27,28 @@ html, body {
   background-color: #111111;
 }
 
-a,
-a:link,
-a:visited {
-  color: #c9c9c9;
+.flash {
+  color: #222222;
 }
 
-a:hover,
-a:visited:hover,
-.actions a:visited,
+a, 
+a:link, 
 .action:visited,
-.action a:link,
-.action a:visited {
+.action a:link {
+  color: #dfdfdf;
+}
+
+a:hover, 
+a:link:hover, 
+.action:visited:hover,
+.action a:link:hover,
+.blurb h4 a:link:hover,
+.blurb h4 a:link:visited:hover,
+.listbox > .heading,
+.listbox .heading a:hover,
+.listbox .heading a:visited:hover {
   color: #f0f0f0;
+  transition: color 0.1s ease-in-out, color 0.2s ease-in-out; 
 }
 
 /* HEADER */
@@ -88,18 +97,6 @@ label.action:hover,
 .action:focus {
   box-shadow: none;
 }
-
-/* search button */
-.actions a, 
-.actions a:link, 
-.action, .action:link, 
-.actions input, input[type="submit"], 
-button, 
-.current, 
-.actions label {
-  color: #f0f0f0;
-  background-image: linear-gradient(#404040 2%,#2a2a2a 95%,#111111 100%);
-}
 /* END HEADER */
 
 /* HOME PAGE */
@@ -147,13 +144,6 @@ form blockquote.userstuff,
 fieldset fieldset.listbox {
   background-color: transparent;
 }
-
-#main ol.index.group li.blurb.group, 
-#main ul.index.group li.blurb.group,
-.listbox, 
-fieldset fieldset.listbox {
-  border: 1px solid #3e3c3c;
-}
 /* END COMMENTS & FORMS */
 
 /* BUTTONS */
@@ -171,12 +161,29 @@ fieldset fieldset.listbox {
 #main p.actions a,
 #main ol.actions li a,
 #main .actions li label,
-#main dd form input {
-  border: 0.5px solid;
+#main dd form input,
+.listbox, 
+fieldset fieldset.listbox,
+.actions a, 
+.actions a:link, 
+.action, .action:link, 
+.actions input, input[type="submit"], 
+button, 
+.current, 
+.actions label  {
+  border: 1px solid #3e3c3c;
+  color: #f0f0f0;
+  background-image: linear-gradient(#2e2e2e 2%,#222 95%,#111 100%);
+}
+
+#main ol.index.group li.blurb.group, 
+#main ul.index.group li.blurb.group {
+  border: 1px solid #3e3c3c;
+  color: #f0f0f0;
 }
 
 /* ~accent color~ */
-#header .actions input:hover
+#header .actions input:hover,
 #main .actions ul li a:not(.selected, .current):hover,
 #main .actions ul li form input:not(.selected, .current):hover,
 #main .actions li input:not(.selected, .current):hover,
@@ -199,7 +206,9 @@ fieldset fieldset.listbox {
 .listbox .heading a,
 .listbox .heading a:visited,
 .splash .module h3 {
+  box-shadow: none;
   color: #649c55;
+  transition: color 0.1s ease-in-out, color 0.2s ease-in-out;  
 }
 
 /* ~accent color~ but background */
@@ -219,6 +228,7 @@ a.tag:hover,
   background-color: #133909;
   box-shadow: none;
   color: #f0f0f0;
+  transition: all 0.1s ease-in-out, color 0.2s ease-in-out; 
 }
 /* END BUTTONS */
 

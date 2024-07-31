@@ -23,6 +23,22 @@ span {
 }
 
 /*** DEFAULTS ***/
+a:visited {
+  color: inherit;
+}
+
+.notice, 
+.comment_notice, 
+.kudos_notice, 
+ul.notes, 
+.caution, 
+.error, 
+.comment_error, 
+.kudos_error, 
+.alert.flash {
+  box-shadow: none;
+}
+
 li .disabled {
   display: none;
 }
@@ -41,7 +57,7 @@ p, li, dd, hr {
   margin: 0.25rem 0;
 }
 
-.wrapper {
+.wrapper:not(#outer) {
   box-shadow: none;
   box-sizing: border-box;
   margin: 0.5rem 0;
@@ -103,6 +119,10 @@ p.muted.notice {
 #main .actions li label,
 #main dd form input {
   border: 1px solid #bbb;
+  background: unset;
+  background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
   cursor: pointer;
   font-size: 0.85rem;
   line-height: 1.3;
@@ -468,8 +488,8 @@ p.muted.notice {
 #main ul.index.group li.blurb.group {
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem 1.75rem;
-  overflow: none;
+  padding: 1.25rem;
+  overflow: hidden;
 
   clear: none;
 }
@@ -500,10 +520,18 @@ p.muted.notice {
 #main ul.index.group:not(.news) .header.module h4 {
   border: none;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin: 0 0 0.25rem 65px;
 
   max-width: 80%;
+}
+
+#main ol.index.group .header.module h4 a:first-of-type,
+#main ul.index.group .header.module h4 a:first-of-type  {
+  display: block;
+
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
 }
 
 #main ol.index.group .header.module h4 a,
@@ -602,6 +630,37 @@ p.muted.notice {
 #main ol.index.group .stats dd,
 #main ul.index.group .stats dd {
   padding: 0 0.5 0 0;
+}
+
+/* bookmark/private/rec + number icons */
+#main.bookmarks-index ol.bookmark.index.group p.status {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: inherit;
+  
+  top: 0;
+  right: 0;
+
+  width: 53px;
+}
+
+#main.bookmarks-index ol.bookmark.index.group p.status .count  {
+  line-height: 1;
+  text-align: center;
+
+  position: unset;
+  top: 0;
+  left: 0;
+}
+
+#main.bookmarks-index ol.bookmark.index.group p.status .count a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.85rem;
 }
 /*** END (IN INDEX) WORK CONTAINERS ***/
 
@@ -1088,7 +1147,9 @@ form.filters fieldset {
 
 /* comment action buttons container */
 #main ul.comment li.comment.group .actions,
-#main ol.comment li.comment.group .actions {
+#main ol.comment li.comment.group .actions,
+#main ol.thread li.comment.group .actions,
+#main ul.thread li.comment.group .actions {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -1096,21 +1157,23 @@ form.filters fieldset {
   /*   gap: 0.2rem; */
 
   margin: 0;
-  padding: 0 1rem 0.5rem 0;
+  padding: 0 1rem 0.5rem 1rem;
 }
 
 /* comments on work pages */
-#main ol.thread li.comment h4::after {
+#main ol.thread li.comment h4::after,
+#main ul.thread li.comment h4::after {
   content: none;
 }
 
 /* comment editted date */
-#main ol.thread li.comment .userstuff p.edited {
+#main ol.thread li.comment p.edited,
+#main ul.thread li.comment p.edited {
   font-size: 0.85rem;
   hyphens: auto;
   line-height: 1.5;
   margin: 0;
-  padding: inherit;
+  padding: 1rem 1rem 0.75rem 1rem;
   text-align: justify;
 }
 /*** END COMMENTS ***/
@@ -1129,6 +1192,7 @@ form.filters fieldset {
 /* fixes strange overflow bug on news post comment */
 ol.thread li.comment,
 ul.thread li.comment {
+  margin: 0.5rem 0 0;
   overflow: hidden;
 }
 /* END NEWS POSTS */
@@ -1215,4 +1279,4 @@ ul.thread li.comment {
 }
 /*** END FOOTER ***/
 
-/*** TODO: bookmark specific, comment margins, work header (like mobile), last editted text on comments ***/
+/*** todo: buttons on forms, forms, darkmode: bottom part of containers, wrapper inside color ***/
