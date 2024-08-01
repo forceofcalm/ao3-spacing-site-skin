@@ -1,7 +1,7 @@
 /*********************************************
  * Dark Mode
  * 
- * background: #111111;
+ * background: #091312;
  * text: #f0f0f0;
  * border color: #f0f0f0;
  * group headers: #3e3c3c;
@@ -11,112 +11,37 @@
  * link hover: #eeeeee;
 *************************************************/
 
-html, body {
+html, body,
+#main ol.index.group .tags.commas a,
+#main ul.index.group .tags.commas a,
+#dashboard ul.navigation.actions li a, 
+#dashboard ul.navigation.actions li span,
+.filters .expander,
+.listbox.group h3, 
+.statistics .listbox.group h5 {
   color: #f0f0f0;
 }
 
-#header { 
+#header,
+#outer,
+#inner,
+#inner #main .favorite.module ul li a,
+#main ol.index.group, 
+#main ul.index.group,
+#main ol.index.group .stats, 
+#main ul.index.group .stats {
+  box-shadow: none;
   background-color: #111111;
 }
 
-#outer {
-  background-color: #111111;
-}
-
-#inner {
-  background-color: #111111;
-}
-
-.flash {
-  color: #222222;
-}
-
-a, 
-a:link, 
-.action:visited,
-.action a:link {
-  color: #dfdfdf;
-}
-
-a:hover, 
-a:link:hover, 
-.action:visited:hover,
-.action a:link:hover,
-.blurb h4 a:link:hover,
-.blurb h4 a:link:visited:hover,
-.listbox > .heading,
-.listbox .heading a:hover,
-.listbox .heading a:visited:hover {
-  color: #f0f0f0;
-  transition: color 0.1s ease-in-out, color 0.2s ease-in-out; 
-}
-
-/* HEADER */
-#header .heading a {
-  color: #f0f0f0;
-}
-
-/* header user actions */
-#header ul.dropdown-menu li,
-#header .actions a:hover,
-#header .dropdown:hover a,
-#header .actions a:focus, 
-#header .open a {
-  background-color: #171718;
-}
-
-#header ul.dropdown-menu li a,
-#header ul.user.actions li a {
-  color: #f0f0f0;
-}
-
-/* header fandom actions */
-#header .primary .open a, 
-#header .primary .dropdown:hover a, 
-#header .primary .dropdown a:focus {
-  background-color: #111111;
-  color: #f0f0f0;
-}
-
-#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
-  background: rgba(255,255,255,.15);
-}
-
-/* search bar */
-#header ul.primary.navigation.actions li.search input#site_search {
-  background: rgba(255,255,255,.25);
-  color: #f0f0f0;
-}
-
-.actions a:hover, 
-.actions input:hover, 
-.actions a:focus, 
-.actions input:focus, 
-label.action:hover, 
-.action:hover, 
-.action:focus {
+/* darker background */
+.listbox.group h3, 
+.statistics .listbox.group h5 { 
+  background-color: #1A1A1A;
   box-shadow: none;
 }
-/* END HEADER */
 
-/* HOME PAGE */
-#inner #main .favorite.module ul li a {
-  background-color: #222222;
-}
-
-#inner #main .favorite.module ul li:nth-of-type(2n+1) a {
-  background-color: #3e3c3c;
-}
-/* END HOME PAGE */
-
-/* COMMENTS & FORMS */
-#main ul.comment li.comment.group h4,
-#main ol.comment li.comment.group h4,
-#main ol.thread li.comment.group h4 {
-  background-color: #3e3c3c;
-  color: #f0f0f0;
-}
-
+/* median background */
 #main ul.comment li.comment.group,
 #main ol.comment li.comment.group,
 #main ol.thread li.comment.group,
@@ -134,11 +59,87 @@ form blockquote.userstuff,
   box-shadow: none;
 }
 
-#main ol.index.group, 
-#main ul.index.group {
-  background-color: #131313;
-  box-shadow: none;
+#main ul.comment li.comment.group h4,
+#main ol.comment li.comment.group h4,
+#main ol.thread li.comment.group h4 {
+  background-color: #191919;
 }
+
+/* lighter background */
+#header ul.dropdown-menu li,
+#header .actions a:hover,
+#header .dropdown:hover a,
+#header .actions a:focus, 
+#header .open a,
+#header .primary .open a, 
+#header .primary .dropdown:hover a, 
+#header .primary .dropdown a:focus,
+#inner #main .favorite.module ul li:nth-of-type(2n+1) a {
+  background-color: #242424;
+  color: #f0f0f0;
+}
+
+/* lightest background */
+#main ol.index.group .tags.commas,
+#main ul.index.group .tags.commas {
+  background-color: #3e3c3c;
+}
+
+/* LINKS & TEXT */
+.flash,
+legend {
+  color: #1A1A1A;
+}
+
+a, 
+a:link, 
+.action:visited,
+.action a:link {
+  color: #dfdfdf;
+}
+
+a:hover,
+.actions a:hover, 
+.actions input:hover, 
+.actions a:focus, 
+.actions input:focus, 
+label.action:hover, 
+.action:hover, 
+.action:focus,
+a:link:hover, 
+.action:visited:hover,
+.action a:link:hover,
+.blurb h4 a:link:hover,
+.blurb h4 a:link:visited:hover,
+.listbox > .heading,
+.listbox .heading a:hover,
+.listbox .heading a:visited:hover,
+#header ul.dropdown-menu li a,
+#header ul.user.actions li a,
+#header .primary .open a, 
+#header .primary .dropdown:hover a, 
+#header .primary .dropdown a:focus {
+  box-shadow: none;
+  color: #f0f0f0;
+
+  transition: color 0.1s ease-in-out, color 0.2s ease-in-out; 
+}
+
+/* HEADER */
+#header .heading a {
+  color: #f0f0f0;
+}
+
+#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
+  background: rgba(255,255,255,.15);
+}
+
+/* search bar */
+#header ul.primary.navigation.actions li.search input#site_search {
+  background: rgba(255,255,255,.25);
+  color: #f0f0f0;
+}
+/* END HEADER */
 
 .listbox, 
 fieldset fieldset.listbox {
@@ -170,10 +171,14 @@ fieldset fieldset.listbox,
 .actions input, input[type="submit"], 
 button, 
 .current, 
-.actions label  {
+.actions label {
   border: 1px solid #3e3c3c;
   color: #f0f0f0;
   background-image: linear-gradient(#2e2e2e 2%,#222 95%,#111 100%);
+}
+
+#outer #header #search .button {
+    border: 1px solid #272727;
 }
 
 #main ol.index.group li.blurb.group, 
@@ -198,8 +203,6 @@ button,
 #main ol.actions li a:not(.selected, .current):hover,
 #main .actions li label:not(.selected, .current):hover,
 #main dd form input:not(.selected, .current):hover,
-#dashboard ul.navigation.actions a:hover,
-#dashboard ul.navigation.actions li:hover,
 .blurb h4 a:link,
 .blurb h4 a:link:visited,
 .listbox > .heading,
@@ -207,8 +210,17 @@ button,
 .listbox .heading a:visited,
 .splash .module h3 {
   box-shadow: none;
-  color: #649c55;
+  color: #33AC91;
   transition: color 0.1s ease-in-out, color 0.2s ease-in-out;  
+}
+
+#dashboard ul.navigation.actions li:has(:not(.current)) a:hover,
+#dashboard ul.navigation.actions li:has(:not(.current)):hover {
+  background-color: #33AC91;
+  border-radius: 0.25em;
+  box-shadow: none;
+  color: #f0f0f0;
+  transition: all 0.1s ease-in-out, color 0.2s ease-in-out; 
 }
 
 /* ~accent color~ but background */
@@ -221,41 +233,19 @@ button,
 #main ul.index.group .tags .relationships .tag,
 #main ol.index.group .tags .relationships .tag:hover, 
 #main ul.index.group .tags .relationships .tag:hover,
+#inner #dashboard.region ul.navigation.actions li .current,
 a.tag:hover, 
 .listbox .heading a.tag:hover,
 #footer {
   background-image: none;
-  background-color: #133909;
+  background-color: #132C28;
   box-shadow: none;
   color: #f0f0f0;
   transition: all 0.1s ease-in-out, color 0.2s ease-in-out; 
 }
+
+#inner #dashboard.region {
+  border-bottom: 0.5rem solid #132C28;
+  border-top: 0.5rem solid #132C28;
+} 
 /* END BUTTONS */
-
-/* WORKS */
-#main ol.index.group .tags.commas,
-#main ul.index.group .tags.commas {
-  background-color: #3e3c3c;
-}
-
-#main ol.index.group .tags.commas a,
-#main ul.index.group .tags.commas a,
-#dashboard ul.navigation.actions li a, 
-#dashboard ul.navigation.actions li span,
-.filters .expander,
-.listbox.group h3, 
-.statistics .listbox.group h5 {
-  color: #f0f0f0;
-}
-
-#main ol.index.group .stats, 
-#main ul.index.group .stats,
-.listbox.group h3, 
-.statistics .listbox.group h5 {
-  background-color: #0a0a0a;
-}
-
-/*** LEGENDS ***/
-legend {
-  color: #111111;
-}

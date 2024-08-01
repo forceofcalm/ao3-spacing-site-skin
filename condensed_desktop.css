@@ -1344,8 +1344,12 @@ ul.thread li.comment {
   width: 100%;
 }
 
-#main .listbox ul.actions {
-  padding: 0 0.75rem 0.25rem 0;
+#main .listbox ul.actions[role='navigation']:not(.index) {
+  padding: 0.25rem 0.75rem 0.25rem 0;
+}
+
+#main .listbox ul.actions[role='navigation']:not(.index) li {
+  margin: 0;
 }
 /*** END INDEX CONTAINERS ***/
 
@@ -1403,4 +1407,4 @@ ul.thread li.comment {
 }
 /*** END FOOTER ***/
 
-/*** todo: buttons on forms, forms, wrapper inside color, filter in general ***/
+/*** todo: buttons on forms, forms, wrapper inside color, fix filter sticky & margins, histroy tab, works button on bottom of index, margins on works mobile, edit button margins on own works  ***/

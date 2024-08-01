@@ -356,6 +356,8 @@ body:has(.wrapper.filtering) {
 }
 
 #inner #main {
+  padding: 1rem 1.25rem;
+
   /* this is so we can set top: 0 on the filters */
   position: unset;
 }
