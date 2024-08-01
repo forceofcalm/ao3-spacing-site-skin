@@ -4,9 +4,11 @@ body {
   letter-spacing: 0.0025rem;
   word-spacing: 0.0rem;
 
-  overflow-x: hidden;
-
   height: 100%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 html,
@@ -18,7 +20,8 @@ h3,
 h4,
 h5,
 p,
-span {
+span,
+.splash .module h3 {
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
 }
 
@@ -39,6 +42,46 @@ ul.notes,
   box-shadow: none;
 }
 
+.splash h3 {
+  text-transform: capitalize;
+}
+
+/* help icon */
+a.modal.help,
+.heading a.question {
+  display: inline-flex;
+
+  cursor: help;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+span.symbol.help {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 0 0.25rem;
+
+  width: 1rem;
+  height: 1rem;
+}
+
+span.symbol span {
+  box-sizing: border-box;
+  padding: .1rem .3rem;
+}
+
+span.question {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: none;
+  margin: 0 0 0 0.25rem;
+}
+
 li .disabled {
   display: none;
 }
@@ -55,6 +98,11 @@ h2.heading {
 
 p, li, dd, hr {
   margin: 0.25rem 0;
+}
+
+.splash .link a {
+  text-decoration: none;
+  border: none;
 }
 
 .wrapper:not(#outer) {
@@ -108,7 +156,7 @@ p.muted.notice {
 #main .actions ul li form input,
 #main .actions li input,
 #main .actions li span.current,
-#main .actions ul li span,
+#main .actions ul li:not(:has(a.rss)) span,
 #main .actions ul li span.current,
 #main .actions li span.unread,
 #main .actions li span.replied,
@@ -117,7 +165,8 @@ p.muted.notice {
 #main p.actions a,
 #main ol.actions li a,
 #main .actions li label,
-#main dd form input {
+#main dd form input,
+#main .filters .submit input {
   border: 1px solid #bbb;
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
@@ -143,7 +192,8 @@ p.muted.notice {
 #main p.actions a:not(.selected, .current):hover,
 #main ol.actions li a:not(.selected, .current):hover,
 #main .actions li label:not(.selected, .current):hover,
-#main dd form input:not(.selected, .current):hover {
+#main dd form input:not(.selected, .current):hover,
+#main .filters .submit input:hover {
   color: #900;
   box-shadow: inset 2px 2px 2px #bbb;
 }
@@ -179,6 +229,7 @@ p.muted.notice {
 #main ol.pagination li a,
 #main ol.pagination li span.current {
   font-size: 0.85rem;
+  margin: 0 0 0.5rem;
   padding: 0.5rem 0.75rem;
 }
 /*** END BUTTONS ***/
@@ -475,6 +526,16 @@ p.muted.notice {
   white-space: nowrap;
 }
 /*** END HEADER ***/
+
+/*** HOME PAGE ***/
+.favorite ul li a.tag {
+  padding: 0.5rem 0.75rem;
+}
+
+ul.abbreviated.comment.group li.comment:not(:first-of-type) {
+  margin: 0.5rem 0 0;
+}
+/*** END HOME PAGE ***/
 
 /*** (IN INDEX) WORK CONTAINERS ***/
 #main ol.index.group,
@@ -866,7 +927,58 @@ form.filters fieldset {
   box-shadow: unset;
 
   margin: 0;
-  padding: 0.75rem;
+  padding: 0.25rem 0.75rem 0.75rem;
+}
+
+form.filters fieldset dt,
+form.filters fieldset dd,
+form.filters fieldset dl {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+form.filters fieldset dl {
+  margin: 0 0 1.25rem;
+}
+
+form.filters fieldset input,
+form.filters fieldset select {
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+}
+
+form.filters fieldset .submit.actions {
+  margin: 0.5rem 0;
+}
+
+form.filters fieldset dt label,
+form.filters fieldset dt.search
+form.filters fieldset dt.heading,
+form.filters fieldset dt.heading h4 {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin: 0;
+
+  max-width: fit-content;
+}
+
+form.filters fieldset dt.search {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+form.filters fieldset dt.search label {
+  font-size: 0.9rem;
+  margin: 0.05rem 0;
 }
 /*** END WORKS FILTER ***/
 
@@ -1291,4 +1403,4 @@ ul.thread li.comment {
 }
 /*** END FOOTER ***/
 
-/*** todo: buttons on forms, forms, darkmode: bottom part of containers, wrapper inside color ***/
+/*** todo: buttons on forms, forms, wrapper inside color, filter in general ***/
