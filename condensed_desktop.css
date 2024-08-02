@@ -156,6 +156,10 @@ p.muted.notice {
   padding: 0 0 0 0.5rem;
 }
 
+#main #inbox-form fieldset.actions ul li {
+  margin: 0 0 0.25rem;
+}
+
 #main .actions ul li a,
 #main .actions ul li form input,
 #main .actions li input,
@@ -181,7 +185,6 @@ p.muted.notice {
   cursor: pointer;
   font-size: 0.85rem;
   line-height: 1.3;
-  margin: 0;
   padding: 0.5rem 0.75rem;
 }
 
@@ -1429,8 +1432,3 @@ ul.thread li.comment {
   max-width: 25ch;
 }
 /*** END FOOTER ***/
-
-/*** todo: 
-buttons on forms, 
-forms, 
-wrapper inside color ***/

@@ -12,7 +12,12 @@ form fieldset.actions ul {
   justify-content: flex-end;
   flex-wrap: wrap;
 }
+
+#main ul.actions {
+  margin: 0.25rem 0;
+}
 /*** END BUTTONS ***/
+
 /*** HEADER ***/
 #header {
   display: flex;
@@ -106,10 +111,6 @@ form fieldset.actions ul {
 /* buttons */
 #greeting ul.navigation.actions li {
   margin: 0 0.15rem;
-}
-
-#greeting ul.navigation.actions li:last-of-type {
-  margin: 0 0 0 0.15rem;
 }
 
 #greeting ul.navigation.actions a {
@@ -337,6 +338,7 @@ form fieldset.actions ul {
 #main ul.index.group:not(.news) .header.module h4 {
   font-size: 0.85rem;
   margin: 0 0 0.25rem 60px;
+  padding: 0 4.5rem 0 0;
 }
 
 #main ol.index.group .header.module h5,

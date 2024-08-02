@@ -11,17 +11,21 @@
  * link hover: #eeeeee;
 *************************************************/
 
-html, body,
+html,
+body,
 #main ol.index.group .tags.commas a,
 #main ul.index.group .tags.commas a,
 #dashboard ul.navigation.actions li a, 
 #dashboard ul.navigation.actions li span,
 .filters .expander,
 .listbox.group h3, 
-.statistics .listbox.group h5 {
+.statistics .listbox.group h5,
+fieldset .required {
   color: #f0f0f0;
 }
 
+html,
+body,
 #header,
 #outer,
 #inner,
@@ -53,7 +57,9 @@ fieldset fieldset dl dl,
 dd.hideme,
 form blockquote.userstuff,
 #main ol.index.group li.blurb.group, 
-#main ul.index.group li.blurb.group {
+#main ul.index.group li.blurb.group,
+#main fieldset,
+#main fieldset ul.index.concise {
   background-color: #222222;
   border: 1px solid #3e3c3c;
   box-shadow: none;
@@ -74,7 +80,9 @@ form blockquote.userstuff,
 #header .primary .open a, 
 #header .primary .dropdown:hover a, 
 #header .primary .dropdown a:focus,
-#inner #main .favorite.module ul li:nth-of-type(2n+1) a {
+#inner #main .favorite.module ul li:nth-of-type(2n+1) a,
+.subscription.index.group dt:nth-of-type(2n), 
+.subscription.index.group dd:nth-of-type(2n) {
   background-color: #242424;
   color: #f0f0f0;
 }
@@ -93,7 +101,6 @@ legend {
 
 a, 
 a:link, 
-.action:visited,
 .action a:link {
   color: #dfdfdf;
 }
@@ -118,7 +125,8 @@ a:link:hover,
 #header ul.user.actions li a,
 #header .primary .open a, 
 #header .primary .dropdown:hover a, 
-#header .primary .dropdown a:focus {
+#header .primary .dropdown a:focus,
+a:visited:hover {
   box-shadow: none;
   color: #f0f0f0;
 
@@ -168,17 +176,21 @@ fieldset fieldset.listbox,
 .actions a, 
 .actions a:link, 
 .action, .action:link, 
-.actions input, input[type="submit"], 
+.actions input, 
+input[type="submit"], 
 button, 
 .current, 
-.actions label {
+.actions label,
+#main .filters .submit input,
+#main p.submit input,
+#main legend a.action {
   border: 1px solid #3e3c3c;
   color: #f0f0f0;
   background-image: linear-gradient(#2e2e2e 2%,#222 95%,#111 100%);
 }
 
 #outer #header #search .button {
-    border: 1px solid #272727;
+  border: 1px solid #272727;
 }
 
 #main ol.index.group li.blurb.group, 
@@ -204,11 +216,23 @@ button,
 #main .actions li label:not(.selected, .current):hover,
 #main dd form input:not(.selected, .current):hover,
 .blurb h4 a:link,
+.blurb h4 a:visited,
 .blurb h4 a:link:visited,
 .listbox > .heading,
 .listbox .heading a,
 .listbox .heading a:visited,
-.splash .module h3 {
+.splash .module h3,
+.actions a:hover, 
+.actions a:link:hover, 
+.action, .action:link:hover, 
+.actions input:hover,
+input[type="submit"]:hover, 
+button:hover, 
+.current:hover, 
+.actions label:hover,
+#main .filters .submit input:hover,
+#main p.submit input:hover,
+#main legend a.action:hover {
   box-shadow: none;
   color: #33AC91;
   transition: color 0.1s ease-in-out, color 0.2s ease-in-out;  
