@@ -5,6 +5,14 @@ body:has(.wrapper.filtering) {
   overflow-y: hidden;
 }
 
+/*** BUTTONS ***/
+form fieldset.actions ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+/*** END BUTTONS ***/
 /*** HEADER ***/
 #header {
   display: flex;
@@ -289,6 +297,7 @@ body:has(.wrapper.filtering) {
 #inner #dashboard ul.navigation.actions li {
   display: inline-block;
   margin: 0.125rem 0;
+  text-align: center;
   padding: 0;
 }
 
@@ -386,6 +395,34 @@ form.filters.narrow-hidden {
   max-height: 100vh;
 }
 
+/* inbox filter */
+#inner:has(#dashboard) #main form#inbox-filters.filters {
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 0;
+  right: -12.5rem;
+
+  width: 12.5rem;
+} 
+
+#inner:has(#dashboard) #main form#inbox-filters.filters fieldset {
+  padding: 1rem;
+} 
+
+/* user's works filters */ 
+#inner:has(#dashboard) #main form#work-filters.filters {
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 0;
+  right: -12.5rem;
+
+  width: 12.5rem;
+}
+
 p.narrow-shown {
   padding: 0;
 }
@@ -451,6 +488,12 @@ p.narrow-shown {
 .comment .icon .visitor {
   background: url(/images/imageset.png) no-repeat 0 -635px;
 }
+
+/* user inbox */
+form.inbox {
+  width: unset;
+}
+/*** END COMMENTS ***/
 
 /*** FOOTER ***/
 #footer {

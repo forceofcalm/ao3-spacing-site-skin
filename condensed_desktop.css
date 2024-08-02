@@ -21,7 +21,8 @@ h4,
 h5,
 p,
 span,
-.splash .module h3 {
+.splash .module h3,
+.reading h4.viewed {
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
 }
 
@@ -100,6 +101,10 @@ p, li, dd, hr {
   margin: 0.25rem 0;
 }
 
+fieldset {
+  margin: 0;
+}
+
 .splash .link a {
   text-decoration: none;
   border: none;
@@ -148,7 +153,6 @@ p.muted.notice {
 
 #main .actions ul li,
 #main ul.actions li {
-  margin: 0 0 0.5rem 0;
   padding: 0 0 0 0.5rem;
 }
 
@@ -166,7 +170,9 @@ p.muted.notice {
 #main ol.actions li a,
 #main .actions li label,
 #main dd form input,
-#main .filters .submit input {
+#main .filters .submit input,
+#main p.submit input,
+#main legend a.action {
   border: 1px solid #bbb;
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
@@ -193,7 +199,9 @@ p.muted.notice {
 #main ol.actions li a:not(.selected, .current):hover,
 #main .actions li label:not(.selected, .current):hover,
 #main dd form input:not(.selected, .current):hover,
-#main .filters .submit input:hover {
+#main .filters .submit input:hover,
+#main p.submit input:hover,
+#main legend a.action:hover {
   color: #900;
   box-shadow: inset 2px 2px 2px #bbb;
 }
@@ -227,7 +235,9 @@ p.muted.notice {
 }
 
 #main ol.pagination li a,
-#main ol.pagination li span.current {
+#main ol.pagination li span.current,
+#main fieldset.actions li a,
+#main fieldset.actions li input {
   font-size: 0.85rem;
   margin: 0 0 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -723,6 +733,13 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 
   font-size: 0.85rem;
 }
+
+/* reading history */
+.reading h4.viewed {
+  background: none;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
 /*** END (IN INDEX) WORK CONTAINERS ***/
 
 /*** BOOKMARK SPECIFIC RULES ***/
@@ -877,11 +894,11 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
   width: 70%;
 }
 
-#inner:has(#dashboard) #main.filtered form.filters {
-  width: 25%;
-
+#inner:has(#dashboard) #main form.filters {
   position: sticky;
   top: 0.5rem;
+
+  width: 25%;
 }
 
 /* user stats page */
@@ -1185,6 +1202,8 @@ form.filters fieldset dt.search label {
   font-size: 0.85rem;
   font-style: italic;
   margin: 0;
+
+  max-width: 80%;
 }
 
 #main ul.comment li.comment.group h4 a[href*="/works/"],
@@ -1344,11 +1363,15 @@ ul.thread li.comment {
   width: 100%;
 }
 
-#main .listbox ul.actions[role='navigation']:not(.index) {
-  padding: 0.25rem 0.75rem 0.25rem 0;
+#main .listbox ul.actions[role='navigation'] {
+  padding: 0.75rem 0.75rem 0.75rem 0;
 }
 
-#main .listbox ul.actions[role='navigation']:not(.index) li {
+#main .listbox ul.index.group ul.actions[role='navigation'] {
+  padding: 0;
+}
+
+#main .listbox ul.actions[role='navigation'] li {
   margin: 0;
 }
 /*** END INDEX CONTAINERS ***/
@@ -1407,4 +1430,7 @@ ul.thread li.comment {
 }
 /*** END FOOTER ***/
 
-/*** todo: buttons on forms, forms, wrapper inside color, fix filter sticky & margins, histroy tab, works button on bottom of index, margins on works mobile, edit button margins on own works  ***/
+/*** todo: 
+buttons on forms, 
+forms, 
+wrapper inside color ***/

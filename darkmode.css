@@ -214,8 +214,7 @@ button,
   transition: color 0.1s ease-in-out, color 0.2s ease-in-out;  
 }
 
-#dashboard ul.navigation.actions li:has(:not(.current)) a:hover,
-#dashboard ul.navigation.actions li:has(:not(.current)):hover {
+#dashboard ul.navigation.actions li:has(:not(.current)) a:hover{
   background-color: #33AC91;
   border-radius: 0.25em;
   box-shadow: none;
