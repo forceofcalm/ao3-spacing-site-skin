@@ -434,6 +434,26 @@ p.narrow-shown {
 /*** END (IN INDEX) WORK CONTAINERS ***/
 
 /*** WORK ***/
+/* work details wrapper */
+#main.works-show .wrapper {
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  padding: 1rem;
+}
+
+#main.works-show .wrapper dl.work.meta {
+  border: none;
+  padding: 0;
+}
+
+#main.works-show .wrapper dl.work.meta dt {
+  font-weight: bold;
+}
+
+/* preface text */
+#main #workskin .preface blockquote p {
+  font-size: 0.95rem;
+}
 /* title */
 #main #workskin .preface h2.title {
   font-size: 1.75rem;
