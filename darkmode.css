@@ -33,7 +33,9 @@ body,
 #main ol.index.group, 
 #main ul.index.group,
 #main ol.index.group .stats, 
-#main ul.index.group .stats {
+#main ul.index.group .stats,
+#main ol.index.group .blurb .tags.commas, 
+#main ul.index.group .blurb .tags.commas {
   box-shadow: none;
   background-color: #111111;
 }
@@ -58,7 +60,7 @@ dd.hideme,
 form blockquote.userstuff,
 #main ol.index.group li.blurb.group, 
 #main ul.index.group li.blurb.group,
-#main fieldset,
+#main fieldset:not(.actions),
 #main fieldset ul.index.concise {
   background-color: #222222;
   border: 1px solid #3e3c3c;
@@ -161,7 +163,6 @@ fieldset fieldset.listbox {
 #main .actions ul li form input,
 #main .actions li input,
 #main .actions li span.current,
-#main .actions ul li span,
 #main .actions ul li span.current,
 #main .actions li span.unread,
 #main .actions li span.replied,
@@ -183,7 +184,9 @@ button,
 .actions label,
 #main .filters .submit input,
 #main p.submit input,
-#main legend a.action {
+#main legend a.action,
+#main .actions ul li:not(:has(a.rss)) span,
+#main .actions ul.navigation.actions li span.current {
   border: 1px solid #3e3c3c;
   color: #f0f0f0;
   background-image: linear-gradient(#2e2e2e 2%,#222 95%,#111 100%);
@@ -272,3 +275,7 @@ a.tag:hover,
   border-top: 0.5rem solid #132C28;
 } 
 /* END BUTTONS */
+
+/* set filter searches to same color as main search bar */
+/* fix link hover color */
+/* other accounts' public bookmarks */

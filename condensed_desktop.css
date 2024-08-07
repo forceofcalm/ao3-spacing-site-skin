@@ -5,6 +5,7 @@ body {
   word-spacing: 0.0rem;
 
   height: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -27,6 +28,19 @@ span,
 }
 
 /*** DEFAULTS ***/
+#outer.wrapper {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:0;
+  margin:0;
+
+  overflow: auto;
+  box-sizing: border-box;
+}
+
 a:visited {
   color: inherit;
 }
@@ -45,6 +59,18 @@ ul.notes,
 
 .splash h3 {
   text-transform: capitalize;
+}
+
+.actions li a,
+.actions li input,
+.actions li input[type="submit"],
+.actions li .current,
+.actions li label {
+  margin: 0 auto;
+}
+
+dl.stats dd {
+  white-space: wrap;
 }
 
 /* help icon */
@@ -1223,7 +1249,7 @@ form.filters fieldset dt.search label {
   margin: -0.25rem 0 0;
   padding: 0;
   padding-top: inherit;
-  padding-right: inherit;
+  padding-right: 1rem;
   text-transform: uppercase;
 
   position: absolute;
@@ -1432,3 +1458,5 @@ ul.thread li.comment {
   max-width: 25ch;
 }
 /*** END FOOTER ***/
+
+/*** works -> comments button still slides to the right on laptop sized screens ***/

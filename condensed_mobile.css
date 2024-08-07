@@ -16,6 +16,10 @@ form fieldset.actions ul {
 #main ul.actions {
   margin: 0.25rem 0;
 }
+
+#main.works-show ul.actions.work.navigation {
+  justify-content: center;
+}
 /*** END BUTTONS ***/
 
 /*** HEADER ***/
@@ -353,7 +357,6 @@ form fieldset.actions ul {
   font-size: 0.95rem;
   hyphens: auto;
   margin: 0 0 0.25rem;
-  padding: 0 5.2rem 0 0;
 }
 
 #main ol.index.group .header.module .datetime,
@@ -489,6 +492,10 @@ p.narrow-shown {
 /* guest user icon */
 .comment .icon .visitor {
   background: url(/images/imageset.png) no-repeat 0 -635px;
+}
+
+.abbr.timezone {
+  display: none;
 }
 
 /* user inbox */
