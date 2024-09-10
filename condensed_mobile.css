@@ -524,6 +524,12 @@ form.inbox {
 }
 /*** END COMMENTS ***/
 
+/*** COLLECTIONS ***/
+#header h2.collections {
+  height: 150px;
+}
+/*** END COLLECTIONS ***/
+
 /*** FOOTER ***/
 #footer {
   border: none;

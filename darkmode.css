@@ -20,7 +20,9 @@ body,
 .filters .expander,
 .listbox.group h3, 
 .statistics .listbox.group h5,
-fieldset .required {
+fieldset .required,
+form dd.required,
+.post .required .warnings {
   color: #f0f0f0;
 }
 
@@ -42,7 +44,8 @@ body,
 
 /* darker background */
 .listbox.group h3, 
-.statistics .listbox.group h5 { 
+.statistics .listbox.group h5,
+dl.work.index.group dd li.relationships a { 
   background-color: #1A1A1A;
   box-shadow: none;
 }
@@ -61,7 +64,8 @@ form blockquote.userstuff,
 #main ol.index.group li.blurb.group, 
 #main ul.index.group li.blurb.group,
 #main fieldset:not(.actions),
-#main fieldset ul.index.concise {
+#main fieldset ul.index.concise,
+dl.work.index.group dd {
   background-color: #222222;
   border: 1px solid #3e3c3c;
   box-shadow: none;
@@ -133,6 +137,13 @@ a:visited:hover {
   color: #f0f0f0;
 
   transition: color 0.1s ease-in-out, color 0.2s ease-in-out; 
+}
+
+textarea,
+textarea:focus {
+  background-color: #1A1A1A;
+  box-shadow: none;
+  color: #f0f0f0;
 }
 
 /* HEADER */

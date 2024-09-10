@@ -73,6 +73,14 @@ dl.stats dd {
   white-space: wrap;
 }
 
+textarea {
+  box-sizing: border-box;
+  clear: unset;
+  margin: 0;
+
+  padding: 1rem;
+}
+
 /* help icon */
 a.modal.help,
 .heading a.question {
@@ -1404,6 +1412,23 @@ ul.thread li.comment {
   margin: 0;
 }
 /*** END INDEX CONTAINERS ***/
+
+/*** EDIT WORKS PAGE ***/
+dl.work.index.group dd {
+  margin: 0.5rem 0;
+  padding: 1rem;
+}
+/** END EDIT WORKS PAGE ***/
+
+/*** COLLECTIONS ***/
+#header h2.collections {
+  border-top: none;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+/*** END COLLECTIONS ***/
 
 /*** FOOTER ***/
 #footer {
