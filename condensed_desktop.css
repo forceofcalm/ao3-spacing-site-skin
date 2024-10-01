@@ -1173,6 +1173,27 @@ form.filters fieldset dt.search label {
 #main #kudos p.kudos {
   font-size: 0.85rem;
 }
+
+/* create bookmark form */
+#main #bookmark-form form {
+  padding: 0;
+}
+
+#main #bookmark-form fieldset {
+  padding: 1rem;
+}
+
+#main #bookmark-form fieldset fieldset {
+  border: none;
+}
+
+.autocomplete input, .autocomplete .dropdown ul li {
+  box-sizing: border-box;
+}
+
+.autocomplete .dropdown ul li p {
+  margin: 0;
+}
 /*** END ACTUAL WORK PAGE ***/
 
 /*** COMMENTS ***/

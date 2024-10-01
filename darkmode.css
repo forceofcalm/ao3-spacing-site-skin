@@ -22,7 +22,8 @@ body,
 .statistics .listbox.group h5,
 fieldset .required,
 form dd.required,
-.post .required .warnings {
+.post .required .warnings,
+#main #bookmark-form fieldset {
   color: #f0f0f0;
 }
 
