@@ -798,7 +798,9 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 }
 
 #main ol.bookmark.index.group p.status .count,
-#main ul.bookmark.index.group p.status .count {
+#main ul.bookmark.index.group p.status .count,
+#main #user-bookmarks ol.index.group p.status .count,
+#main #user-bookmarks ul.index.group p.status .count {
   line-height: 1;
   text-align: center;
 
