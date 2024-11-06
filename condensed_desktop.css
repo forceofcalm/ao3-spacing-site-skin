@@ -782,7 +782,9 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 /*** BOOKMARK SPECIFIC RULES ***/
 /* bookmark/private/rec + number icons */
 #main ol.bookmark.index.group p.status,
-#main ul.bookmark.index.group p.status {
+#main ul.bookmark.index.group p.status,
+#main #user-bookmarks ol.index.group p.status,
+#main #user-bookmarks ul.index.group p.status {
   display: flex;
   justify-content: space-between;
 
@@ -1196,7 +1198,7 @@ form.filters fieldset dt.search label {
 }
 /*** END ACTUAL WORK PAGE ***/
 
-/*** COMMENTS ***/
+/*** #region COMMENTS ***/
 /* comment heading */
 #main ul.comment li.comment.group h4,
 #main ol.comment li.comment.group h4,
@@ -1373,9 +1375,9 @@ form.filters fieldset dt.search label {
   padding: 1rem 1rem 0.75rem 1rem;
   text-align: justify;
 }
-/*** END COMMENTS ***/
+/*** #endregion END COMMENTS ***/
 
-/* NEWS POSTS */
+/*** #region NEWS POSTS ***/
 /* news posts comments */
 #main.admin_posts-show #add_comment_placeholder div.comment,
 #main.admin_posts-show #main li.comment {
@@ -1392,7 +1394,7 @@ ul.thread li.comment {
   margin: 0.5rem 0 0;
   overflow: hidden;
 }
-/* END NEWS POSTS */
+/*** #endregion END NEWS POSTS ***/
 
 /*** INDEX CONTAINERS ***/
 .listbox.group {
