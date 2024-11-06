@@ -810,7 +810,9 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 }
 
 #main ol.bookmark.index.group p.status .count a,
-#main ul.bookmark.index.group p.status .count a {
+#main ul.bookmark.index.group p.status .count a,
+#main #user-bookmarks ol.index.group p.status .count a,
+#main #user-bookmarks ul.index.group p.status .count a {
   display: flex;
   align-items: center;
   justify-content: center;
