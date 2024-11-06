@@ -27,6 +27,10 @@ form dd.required,
   color: #f0f0f0;
 }
 
+.annoucement a {
+  color: #191919;
+}
+
 html,
 body,
 #header,
@@ -291,4 +295,3 @@ a.tag:hover,
 
 /* set filter searches to same color as main search bar */
 /* fix link hover color */
-/* other accounts' public bookmarks */
