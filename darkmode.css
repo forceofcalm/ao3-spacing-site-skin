@@ -52,7 +52,6 @@ body,
 .statistics .listbox.group h5,
 dl.work.index.group dd li.relationships a { 
   background-color: #1A1A1A;
-  box-shadow: none;
 }
 
 /* median background */
@@ -79,8 +78,11 @@ dl.work.index.group dd {
 #main ul.comment li.comment.group h4,
 #main ol.comment li.comment.group h4,
 #main ol.thread li.comment.group h4,
-.draft.work {
+.draft.work,
+#dashboard .secondary.expandable {
   background-color: #191919;
+  border-color: #3e3c3c;
+  box-shadow: none;
 }
 
 /* lighter background */
