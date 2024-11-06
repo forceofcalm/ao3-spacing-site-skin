@@ -64,7 +64,7 @@ dd.hideme,
 form blockquote.userstuff,
 #main ol.index.group li.blurb.group, 
 #main ul.index.group li.blurb.group,
-#main fieldset:not(.actions),
+#main fieldset:not(.actions, .comments),
 #main fieldset ul.index.concise,
 dl.work.index.group dd {
   background-color: #222222;

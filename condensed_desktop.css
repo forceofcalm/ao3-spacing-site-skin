@@ -777,9 +777,9 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
   font-size: 0.85rem;
   margin: 1.5rem 0;
 }
-/*** END (IN INDEX) WORK CONTAINERS ***/
+/*** #endregion END (IN INDEX) WORK CONTAINERS ***/
 
-/*** BOOKMARK SPECIFIC RULES ***/
+/*** #region BOOKMARK SPECIFIC RULES ***/
 /* bookmark/private/rec + number icons */
 #main ol.bookmark.index.group p.status,
 #main ul.bookmark.index.group p.status,
@@ -844,9 +844,9 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 #main ol.bookmark.index.group .user.module.group blockquote.userstuff.notes {
   margin: 1rem 0 0;
 }
-/*** END BOOKMARK SPECIFIC RULES ***/
+/*** #endregion END BOOKMARK SPECIFIC RULES ***/
 
-/*** USER DASHBOARD ***/
+/*** #region USER DASHBOARD ***/
 /* user profile navigation */
 #dashboard,
 #dashboard.own {
@@ -904,9 +904,9 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 
   width: 100%;
 }
-/*** END USER DASHBOARD ***/
+/*** #endregion END USER DASHBOARD ***/
 
-/*** USER PAGE ***/
+/*** #region USER PAGE ***/
 .user.home {
   display: flex;
   flex-direction: column;
@@ -975,7 +975,12 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
 .primary.header.module ul.navigation.actions {
   padding: 0 0 0 100px;
 }
-/*** END USER PAGE ***/
+
+/* user inbox */
+form.inbox#inbox-form {
+  width: 72%;
+}
+/*** #endregion END USER PAGE ***/
 
 /*** WORKS FILTER ***/
 form.filters fieldset {
