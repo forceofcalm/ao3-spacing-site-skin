@@ -797,10 +797,10 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
   width: 53px;
 }
 
-#main ol.bookmark.index.group p.status .count,
-#main ul.bookmark.index.group p.status .count,
-#main #user-bookmarks ol.index.group p.status .count,
-#main #user-bookmarks ul.index.group p.status .count {
+#main ol.bookmark.index.group .count,
+#main ul.bookmark.index.group .count,
+#main #user-bookmarks ol.index.group .count,
+#main #user-bookmarks ul.index.group .count {
   line-height: 1;
   text-align: center;
 
@@ -809,10 +809,10 @@ ul.abbreviated.comment.group li.comment:not(:first-of-type) {
   left: 0;
 }
 
-#main ol.bookmark.index.group p.status .count a,
-#main ul.bookmark.index.group p.status .count a,
-#main #user-bookmarks ol.index.group p.status .count a,
-#main #user-bookmarks ul.index.group p.status .count a {
+#main ol.bookmark.index.group .count a,
+#main ul.bookmark.index.group .count a,
+#main #user-bookmarks ol.index.group .count a,
+#main #user-bookmarks ul.index.group .count a {
   display: flex;
   align-items: center;
   justify-content: center;
