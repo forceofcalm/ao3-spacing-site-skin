@@ -400,6 +400,11 @@ form.filters.narrow-hidden {
   max-height: 100vh;
 }
 
+/* user inbox */
+form.inbox#inbox-form {
+  width: 100%;
+}
+
 /* inbox filter */
 #inner:has(#dashboard) #main form#inbox-filters.filters {
   /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
