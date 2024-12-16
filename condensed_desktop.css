@@ -195,7 +195,8 @@ p.muted.notice {
 }
 
 #main .actions ul li a,
-#main .actions ul li form input,
+#main .actions li form input,
+#main .actions li form button,
 #main .actions li input,
 #main .actions li span.current,
 #main .actions ul li:not(:has(a.rss)) span,

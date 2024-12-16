@@ -23,11 +23,13 @@ body,
 fieldset .required,
 form dd.required,
 .post .required .warnings,
-#main #bookmark-form fieldset {
+#main #bookmark-form fieldset,
+li .added.tag {
   color: #f0f0f0;
 }
 
-.annoucement a {
+.annoucement a,
+.notice {
   color: #191919;
 }
 
@@ -69,7 +71,7 @@ form blockquote.userstuff,
 #main ul.index.group li.blurb.group,
 #main fieldset:not(.actions, .comments),
 #main fieldset ul.index.concise,
-dl.work.index.group dd {
+.draft .wrapper {
   background-color: #222222;
   border: 1px solid #3e3c3c;
   box-shadow: none;
@@ -109,7 +111,8 @@ dl.work.index.group dd {
 
 /* LINKS & TEXT */
 .flash,
-legend {
+legend,
+.notice a {
   color: #1A1A1A;
 }
 
@@ -148,7 +151,19 @@ a:visited:hover {
 }
 
 textarea,
-textarea:focus {
+li input,
+li textarea,
+li select,
+dd input,
+dd textarea,
+dd select,
+li input:focus,
+li textarea:focus,
+li select:focus,
+textarea:focus,
+dd input:focus,
+dd textarea:focus,
+dd select:focus {
   background-color: #1A1A1A;
   box-shadow: none;
   color: #f0f0f0;
@@ -179,8 +194,9 @@ fieldset fieldset.listbox {
 /* BUTTONS */
 /* buttons */
 #main .actions ul li a,
-#main .actions ul li form input,
+#main .actions li form input,
 #main .actions li input,
+#main .actions li form button,
 #main .actions li span.current,
 #main .actions ul li span.current,
 #main .actions li span.unread,
