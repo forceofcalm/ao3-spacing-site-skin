@@ -562,6 +562,11 @@ p.muted.notice {
   padding: 0.5rem 0.75rem;
   white-space: nowrap;
 }
+
+/* search bar tooltip */
+.search input:focus + [role="tooltip"] {
+  display: none;
+}
 /*** END HEADER ***/
 
 /*** HOME PAGE ***/

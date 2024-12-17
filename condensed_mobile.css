@@ -40,7 +40,9 @@ form fieldset.actions ul {
 }
 
 #header .heading {
-  padding: 1rem 0rem 1rem 1.5rem;
+  padding: 0.75rem 0rem 0.75rem 1.5rem;
+
+  max-width: 60px;
 
   float: none;
 }
@@ -78,9 +80,10 @@ form fieldset.actions ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /*   gap: 0.2rem; */
 
   margin: 0;
+
+  width: unset;
 
   float: none;
 }
@@ -233,7 +236,7 @@ form fieldset.actions ul {
 
 #header ul.primary.navigation.actions li.search form {
   float: none;
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
   padding: 0 0.5rem;
 
   width: 100%;
