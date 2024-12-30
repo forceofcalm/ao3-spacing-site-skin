@@ -306,11 +306,10 @@ p.muted.notice {
 }
 
 #inner #main {
-  box-sizing: border-box;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 auto;
-  padding: 1rem 1.75rem;
+  padding: 1rem 0.5rem;
 
   position: relative;
 
