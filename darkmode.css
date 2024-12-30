@@ -285,6 +285,7 @@ button:hover,
 }
 
 /* ~accent color~ but background */
+#header nav:not(#greeting),
 #header ul.primary.navigation.actions,
 #header ul.primary.navigation.actions::before,
 #header ul.primary.navigation.actions::after,
