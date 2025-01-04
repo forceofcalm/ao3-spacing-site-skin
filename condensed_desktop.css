@@ -667,45 +667,95 @@ p.muted.notice {
   margin: 0 0 0.5rem;
 }
 
+/* news post publsihed date */
 #main .splash .module ul.news.index.group li.post.group .header.module p.meta {
-  font-size: 0.75rem;
+  font-size: 0rem;
   margin: 0 0 0.25rem;
   text-transform: uppercase;
 }
 
-.splash .module ul.news.index.group li.post.group .header.module p.meta .day,
-.splash .module ul.news.index.group li.post.group .header.module p.meta .time,
-.splash .module ul.news.index.group li.post.group .header.module p.meta .timezone,
-.splash .module ul.news.index.group li.post.group .header.module p.meta .comments {
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .day,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .time,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .timezone,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .comments {
   display: none;
 }
 
-.splash .module ul.news.index.group li.post.group .header.module p.meta .date,
-.splash .module ul.news.index.group li.post.group .header.module p.meta .month,
-.splash .module ul.news.index.group li.post.group .header.module p.meta .year {
-  display: inline;
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .date,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .month,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .year {
+  cursor: default;
+  font-size: 0.75rem;
+  text-decoration: none;
 }
 
-.splash .module ul.news.index.group li.post.group .userstuff p {
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .month,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta .year {
+  margin: 0 0 0 0.25rem;
+}
+
+/* news blurb */
+#main .splash .module ul.news.index.group li.post.group .userstuff p {
   color: #4f4f4f;
   font-size: 0.85rem;
-  max-width: 75ch;
+  max-width: 70ch;
   margin: unset;
 }
 
-.splash ul.news.index.group li.post.group .userstuff p a {
+#main .splash ul.news.index.group li.post.group .userstuff p a {
   color: #900;
 }
 
-.splash ul.news.index.group li.post.group .jump {
+#main .splash ul.news.index.group li.post.group .jump {
   display: none;
 }
 
-.favorite ul li a.tag {
+/* inbox */
+#main .splash .module.latest.messages .note {
+  display: none;
+}
+
+/* favorite tags */
+#main .favorite ul li a.tag {
   padding: 0.5rem 0.75rem;
 }
 
-ul.abbreviated.comment.group li.comment:not(:first-of-type) {
+#main .splash .favorite li:nth-of-type(2n+1) a {
+  background-color: #DEDEDE;
+}
+
+/* social media links */
+#main .splash .module.social ul {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main .splash .module.social ul li,
+#main .splash .module.social ul li a ,
+#main .splash .module.social ul li a .resp-sharing-button {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+#main .splash .module.social ul li .resp-sharing-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0.25rem 0 0;
+}
+
+#main .splash .module.social ul li .resp-sharing-button__icon svg {
+  margin: 0;
+}
+
+/* comments */
+#main ul.abbreviated.comment.group li.comment:not(:first-of-type) {
   margin: 0.5rem 0 0;
 }
 /*** END HOME PAGE ***/
