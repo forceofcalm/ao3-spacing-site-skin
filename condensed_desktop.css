@@ -9,6 +9,7 @@ body {
 }
 
 body {
+  background-color: #f4f4f4;
   overflow-x: hidden;
 }
 
@@ -22,7 +23,6 @@ h4,
 h5,
 p,
 span,
-.splash .module h3,
 .reading h4.viewed {
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
 }
@@ -56,10 +56,6 @@ ul.notes,
 .alert.flash {
   box-shadow: none;
   padding: 0.5rem 0.75rem;
-}
-
-.splash h3 {
-  text-transform: capitalize;
 }
 
 .actions li a,
@@ -310,7 +306,7 @@ p.muted.notice {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 auto;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.75rem;
 
   position: relative;
 
@@ -375,9 +371,12 @@ p.muted.notice {
 #header .heading sup {
   display: inline;
 
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: bold;
   font-size: 0.75rem;
   line-height: initial;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.75rem 0.15rem;
 }
 
 /* account info */
@@ -508,13 +507,16 @@ p.muted.notice {
 
 /* dropdowns */
 #header .primary.navigation.actions li.dropdown a {
-  border-radius: 0.25rem 0.25rem 0 0;
   padding: 0.5rem 1rem;
   margin: 0;
 }
 
+#header .primary.navigation.actions li.dropdown a.dropdown-toggle {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
 #header .primary.navigation.actions li.dropdown ul {
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
   margin: 0;
   padding: 0;
 
@@ -533,6 +535,7 @@ p.muted.notice {
 }
 
 #header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
+  color: #900;
   transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -575,6 +578,129 @@ p.muted.notice {
 /*** END HEADER ***/
 
 /*** HOME PAGE ***/
+#inner #main .splash {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: auto;
+
+  max-width: 1270px;
+}
+
+.splash .module h3,
+.splash .module span.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Georgia;
+
+  text-transform: capitalize;
+  padding: 0 0 0.5rem;
+}
+
+.splash .module h3.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* module header buttons */
+.splash .module h3.heading span.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #900;
+  background-image: linear-gradient(#c40000 2%, #7c0000 95%, #730000 100%);
+  border-radius: 0.25rem;
+  color: white;
+  padding: 0.25rem 0.5rem;
+}
+
+.splash .module h3.heading span.link a {
+  color: white;
+}
+
+.logged-in .splash > .module {
+  flex-basis: 48%;
+  flex-grow: 0;
+
+  margin: 0 0 1rem;
+
+  width: unset;
+}
+
+/* news posts */
+.splash .module ul.news.index.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* gap: 0.2rem; */
+}
+
+#main .splash .module ul.news.index.group li.post.group {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+
+  border: none;
+  margin: 0 0 2rem;
+}
+
+#main .splash .module ul.news.index.group li.post.group .header.module {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  /* gap: 0.25rem; */
+
+  min-height: unset;
+}
+
+#main .splash .module ul.news.index.group li.post.group .header.module h4 {
+  margin: 0;
+}
+
+#main .splash .module ul.news.index.group li.post.group .header.module h4 a:first-of-type {
+  font-size: 1.25rem;
+  text-decoration: none;
+  margin: 0 0 0.5rem;
+}
+
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta {
+  font-size: 0.75rem;
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+}
+
+.splash .module ul.news.index.group li.post.group .header.module p.meta .day,
+.splash .module ul.news.index.group li.post.group .header.module p.meta .time,
+.splash .module ul.news.index.group li.post.group .header.module p.meta .timezone,
+.splash .module ul.news.index.group li.post.group .header.module p.meta .comments {
+  display: none;
+}
+
+.splash .module ul.news.index.group li.post.group .header.module p.meta .date,
+.splash .module ul.news.index.group li.post.group .header.module p.meta .month,
+.splash .module ul.news.index.group li.post.group .header.module p.meta .year {
+  display: inline;
+}
+
+.splash .module ul.news.index.group li.post.group .userstuff p {
+  color: #4f4f4f;
+  font-size: 0.85rem;
+  max-width: 75ch;
+  margin: unset;
+}
+
+.splash ul.news.index.group li.post.group .userstuff p a {
+  color: #900;
+}
+
+.splash ul.news.index.group li.post.group .jump {
+  display: none;
+}
+
 .favorite ul li a.tag {
   padding: 0.5rem 0.75rem;
 }
