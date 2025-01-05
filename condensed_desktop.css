@@ -1060,13 +1060,13 @@ p.muted.notice {
 
 /*** #region USER DASHBOARD ***/
 /* user info header */
-#main.users-show .primary.header.module {
+#main.dashboard .primary.header.module {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
 }
 
-#main.users-show .primary.header.module h2.heading  {
+#main.dashboard .primary.header.module h2.heading  {
   display: block;
 
   border-bottom: 1px solid;
@@ -1074,16 +1074,16 @@ p.muted.notice {
   font-style: italic;
   font-family: Georgia;
   text-align: left;
-  margin: 0 0 0 120px;
+  margin: -0.75rem 0 0 120px;
   opacity: 0.9;
 }
 
-#main.users-show .primary.header.module .icon {
+#main.dashboard .primary.header.module .icon {
   border-radius: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-#main.users-show .primary.header.module .navigation.actions {
+#main.dashboard .primary.header.module .navigation.actions {
   margin: 0;
 }
 
@@ -1228,6 +1228,98 @@ form.inbox#inbox-form {
   width: 72%;
 }
 /*** #endregion END USER PAGE ***/
+
+/*** #region PREFERENCES/FORMS ***/
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 1rem 0 0;
+
+  float: unset;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset {
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0 0 0.5rem;;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ddd;
+  box-sizing: border-box;
+  box-shadow: none;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+
+  width: 100%;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset .heading a {
+  text-decoration: none;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset ul,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset dl {
+  box-shadow: none;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset label {
+  margin: 0 0 0.25rem;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset dt {
+  margin: 0 0.75rem 0 0;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset dt label {
+  text-transform: capitalize;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset select,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset input[type="text"] {
+  box-sizing: border-box;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions a,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions input,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions button {
+  border: 1px solid #bbb;
+  background: unset;
+  background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  padding: 0.5rem 0.75rem;
+}
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .submit {
+  padding: 0 1.5rem 1rem;
+}
+/*** #endregion END PREFERENCES/FORMS ***/
 
 /*** WORKS FILTER ***/
 form.filters fieldset {

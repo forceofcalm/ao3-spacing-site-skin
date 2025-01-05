@@ -347,7 +347,7 @@ form fieldset.actions ul {
 }
 
 /* user info header */
-#main.users-show .primary.header.module {
+#main.dashboard .primary.header.module {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
@@ -369,14 +369,14 @@ form fieldset.actions ul {
   width: 100%;
 }
 
-#main.users-show .primary.header.module .icon {
+#main.dashboard .primary.header.module .icon {
   border-radius: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   position: relative;
 }
 
-#main.users-show .primary.header.module .navigation.actions {
+#main.dashboard .primary.header.module .navigation.actions {
   margin: 0 0 0.75rem;
   padding: 0 0 0 90px;
 }
