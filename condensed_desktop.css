@@ -1059,6 +1059,34 @@ p.muted.notice {
 /*** #endregion END BOOKMARK SPECIFIC RULES ***/
 
 /*** #region USER DASHBOARD ***/
+/* user info header */
+#main.users-show .primary.header.module {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+#main.users-show .primary.header.module h2.heading  {
+  display: block;
+
+  border-bottom: 1px solid;
+  font-size: 1.65rem;
+  font-style: italic;
+  font-family: Georgia;
+  text-align: left;
+  margin: 0 0 0 120px;
+  opacity: 0.9;
+}
+
+#main.users-show .primary.header.module .icon {
+  border-radius: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#main.users-show .primary.header.module .navigation.actions {
+  margin: 0;
+}
+
 /* user profile navigation */
 #dashboard,
 #dashboard.own {
