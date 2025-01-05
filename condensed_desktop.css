@@ -41,6 +41,11 @@ span,
   box-sizing: border-box;
 }
 
+a, a:link {
+  border: none;
+  text-decoration: underline;
+}
+
 a:visited {
   color: inherit;
 }
@@ -353,6 +358,8 @@ p.muted.notice {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  text-decoration: none;
 }
 
 #header .heading img.logo {
@@ -486,7 +493,7 @@ p.muted.notice {
 
   box-sizing: border-box;
   box-shadow: none;
-  padding: 0.5rem 1rem 0.5rem 0rem;
+  padding: 0.5em 1em 0.5em 0em;
 
   height: 3.25rem;
   max-width: 1270px;
@@ -589,20 +596,28 @@ p.muted.notice {
   max-width: 1270px;
 }
 
-.splash .module h3,
-.splash .module span.title {
+.splash .module h3 {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: Georgia;
 
   text-transform: capitalize;
-  padding: 0 0 0.5rem;
+  padding: 0 0 0.25rem;
+}
+
+.splash .module h3 span.title {
+  font-family: Georgia;
 }
 
 .splash .module h3.heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.splash .module h3.heading:not(:has(span.link)) {
+  padding: 0.25rem 0 0.75rem;
 }
 
 /* module header buttons */
@@ -615,11 +630,15 @@ p.muted.notice {
   background-image: linear-gradient(#c40000 2%, #7c0000 95%, #730000 100%);
   border-radius: 0.25rem;
   color: white;
-  padding: 0.25rem 0.5rem;
 }
 
 .splash .module h3.heading span.link a {
   color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: normal;
+  line-height: 1.3;
+  padding: 0.5rem 0.75rem;
 }
 
 .logged-in .splash > .module {
@@ -663,6 +682,7 @@ p.muted.notice {
 
 #main .splash .module ul.news.index.group li.post.group .header.module h4 a:first-of-type {
   font-size: 1.25rem;
+  font-weight: bold;
   text-decoration: none;
   margin: 0 0 0.5rem;
 }
@@ -670,7 +690,7 @@ p.muted.notice {
 /* news post publsihed date */
 #main .splash .module ul.news.index.group li.post.group .header.module p.meta {
   font-size: 0rem;
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.35rem;
   text-transform: uppercase;
 }
 
@@ -718,10 +738,21 @@ p.muted.notice {
 /* favorite tags */
 #main .favorite ul li a.tag {
   padding: 0.5rem 0.75rem;
+  text-decoration: none;
+
+  transition: background-color 0.1s ease-in-out;
 }
 
 #main .splash .favorite li:nth-of-type(2n+1) a {
   background-color: #DEDEDE;
+  
+}
+
+#main .favorite ul li a.tag:hover {
+  background-color: #900;
+  color: #fff;
+
+  transition: background-color 0.1s ease-in-out;
 }
 
 /* social media links */
