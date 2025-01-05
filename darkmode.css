@@ -74,7 +74,7 @@ form blockquote.userstuff,
 #main .work .wrapper .work.meta, 
 #main.works-show .wrapper .work.meta,
 #main #workskin .preface .summary blockquote, 
-#main #workskin .preface .notes blockquote 
+#main #workskin .preface .notes blockquote, 
 .draft .wrapper {
   background-color: #222222;
   border: 1px solid #3e3c3c;
