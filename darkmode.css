@@ -81,7 +81,10 @@ form blockquote.userstuff,
 #main ol.comment li.comment.group h4,
 #main ol.thread li.comment.group h4,
 .draft.work,
-#dashboard .secondary.expandable {
+#dashboard .secondary.expandable,
+#main .work .wrapper .work.meta, #main.works-show .wrapper .work.meta,
+#main #workskin .preface .summary blockquote, 
+#main #workskin .preface .notes blockquote {
   background-color: #191919;
   border-color: #3e3c3c;
   box-shadow: none;
