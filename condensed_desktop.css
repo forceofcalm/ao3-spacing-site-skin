@@ -617,7 +617,7 @@ p.muted.notice {
 }
 
 .splash .module h3.heading:not(:has(span.link)) {
-  padding: 0.25rem 0 0.75rem;
+  padding: 0.25rem 0 0.65rem;
 }
 
 /* module header buttons */
@@ -801,6 +801,7 @@ p.muted.notice {
 
 #main ol.index.group li.blurb.group,
 #main ul.index.group li.blurb.group {
+  background-color: #ffffff;
   box-sizing: border-box;
   margin: 0;
   padding: 1.25rem;
@@ -1256,14 +1257,14 @@ form.filters fieldset dt.search label {
 
 /*** ACTUAL WORK PAGE ***/
 /* work details */
-#main .work .wrapper,
+#main.chapters-show .wrapper,
 #main.works-show .wrapper {
   box-shadow: none;
   font-size: 0.85rem;
   margin: 0.75rem 0;
 }
 
-#main .work .wrapper .work.meta,
+#main.chapters-show .wrapper .work.meta,
 #main.works-show .wrapper .work.meta {
   background-color: #ededed;
   box-sizing: border-box;
@@ -1272,22 +1273,22 @@ form.filters fieldset dt.search label {
   margin: 0 auto;
 }
 
-#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']),
-#main.works-show.wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']) {
+#main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']),
+#main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']) {
   border-left: 3px solid #900;
 }
 
-#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']), 
+#main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']), 
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']) {
   border-left: 3px solid #F0881F;
 }
 
-#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']), 
+#main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']), 
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']) {
   border-left: 3px solid #E6D200;
 }
 
-#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='General']),
+#main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='General']),
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='General']) {
   border-left: 3px solid #7EB000;
 }
@@ -1329,8 +1330,8 @@ form.filters fieldset dt.search label {
   margin: 0;
 }
 
-#main #workskin .preface .summary blockquote,
-#main #workskin .preface .notes blockquote {
+#main #workskin .preface .summary blockquote.userstuff,
+#main #workskin .preface .notes blockquote.userstuff {
   background-color: #ededed;
   padding: 1.25rem 2rem;
   text-align: justify;
@@ -1340,14 +1341,14 @@ form.filters fieldset dt.search label {
   border-left: 5px solid #900;
 }
 
-#main #workskin .preface blockquote p {
+#main #workskin .preface blockquote.userstuff p {
   line-height: 1.5;
 
   width: unset;
   max-width: 100%;
 }
 
-#main #workskin .preface .notes:not(:has(blockquote)) h3 {
+#main #workskin .preface .notes:not(:has(blockquote.userstuff)) h3 {
   display: none;
 }
 
