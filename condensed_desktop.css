@@ -1256,7 +1256,7 @@ form.inbox#inbox-form {
   background-color: #ddd;
   box-sizing: border-box;
   box-shadow: none;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: bold;
   margin: 0;
   padding: 0.75rem 1.25rem;
@@ -1882,6 +1882,124 @@ form.skin fieldset dl {
   margin: 0;
   padding: 0;
 }
+/*** END FORM PAGES ***/
+
+/*** #region NEW WORK FORM ***/
+#main form#work-form {
+  box-sizing: border-box;
+  overflow: hidden;
+
+  float: unset;
+}
+
+#main form#work-form fieldset {
+  background: #fff;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  padding: 0 0 0.5rem;;
+}
+
+#main form#work-form fieldset.work.meta {
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+#main form#work-form fieldset:is(.preface, .privacy, .work.text) {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+}
+
+#main form#work-form fieldset.create {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+#main form#work-form fieldset legend {
+  display: none;
+}
+
+#main form#work-form fieldset .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ddd;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: black;
+  font-size: 1.25rem;
+  line-height: 1.125;
+  font-weight: bold;
+  margin: 0;
+  opacity: 1;
+  padding: 0.75rem 1.25rem;
+
+  width: 100%;
+  height: auto;
+}
+
+#main form#work-form fieldset .heading a {
+  text-decoration: none;
+}
+
+#main form#work-form fieldset ul,
+#main form#work-form fieldset dl,
+#main form#work-form fieldset div,
+#main form#work-form fieldset p {
+  box-shadow: none;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+#main form#work-form fieldset label {
+  margin: 0 0 0.25rem;
+}
+
+#main form#work-form fieldset dt {
+  margin: 0 0.75rem 0 0;
+}
+
+#main form#work-form fieldset dt label {
+  text-transform: capitalize;
+}
+
+#main form#work-form fieldset select,
+#main form#work-form fieldset input[type="text"] {
+  box-sizing: border-box;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+}
+
+#main form#work-form .actions {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+#main form#work-form .actions a,
+#main form#work-form .actions input,
+#main form#work-form .actions button {
+  border: 1px solid #bbb;
+  background: unset;
+  background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  padding: 0.5rem 0.75rem;
+}
+
+#main form#work-form .submit {
+  padding: 0 1.5rem 1rem;
+}
+/*** #endregion END NEW WORK FORM ***/
 
 /*** FOOTER ***/
 #footer {
