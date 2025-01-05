@@ -71,6 +71,10 @@ form blockquote.userstuff,
 #main ul.index.group li.blurb.group,
 #main fieldset:not(.actions, .comments),
 #main fieldset ul.index.concise,
+#main .work .wrapper .work.meta, 
+#main.works-show .wrapper .work.meta,
+#main #workskin .preface .summary blockquote, 
+#main #workskin .preface .notes blockquote 
 .draft .wrapper {
   background-color: #222222;
   border: 1px solid #3e3c3c;
@@ -81,10 +85,7 @@ form blockquote.userstuff,
 #main ol.comment li.comment.group h4,
 #main ol.thread li.comment.group h4,
 .draft.work,
-#dashboard .secondary.expandable,
-#main .work .wrapper .work.meta, #main.works-show .wrapper .work.meta,
-#main #workskin .preface .summary blockquote, 
-#main #workskin .preface .notes blockquote {
+#dashboard .secondary.expandable {
   background-color: #191919;
   border-color: #3e3c3c;
   box-shadow: none;
