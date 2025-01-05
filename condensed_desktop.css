@@ -1256,15 +1256,42 @@ form.filters fieldset dt.search label {
 
 /*** ACTUAL WORK PAGE ***/
 /* work details */
-#main .work .wrapper {
+#main .work .wrapper,
+#main.works-show .wrapper {
   box-shadow: none;
+  font-size: 0.85rem;
   margin: 0.75rem 0;
 }
 
-#main .work .wrapper .work.meta {
+#main .work .wrapper .work.meta,
+#main.works-show .wrapper .work.meta {
+  background-color: #ededed;
   box-sizing: border-box;
   padding: 1.75rem;
+
+  margin: 0 auto;
 }
+
+#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']),
+#main.works-show.wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']) {
+  border-left: 3px solid #900;
+}
+
+#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']), 
+#main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']) {
+  border-left: 3px solid #F0881F;
+}
+
+#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']), 
+#main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']) {
+  border-left: 3px solid #E6D200;
+}
+
+#main .work .wrapper .work.meta:has(dd.rating.tags a[href*='General']),
+#main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='General']) {
+  border-left: 3px solid #7EB000;
+}
+
 /* work title */
 #main #workskin .preface h2.title {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -1285,18 +1312,51 @@ form.filters fieldset dt.search label {
   width: 70ch;
   max-width: 100%;
 }
+
+#main #workskin .preface .module {
+  margin: 0;
+
+  min-height: unset;
+}
+
 #main #workskin .preface .module h3.heading {
-  font-size: 1.1rem;
-  line-height: 1.2;
-  margin: 1.2rem 0 0;
+  border: none;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#main #workskin .preface .summary blockquote,
+#main #workskin .preface .notes blockquote {
+  background-color: #ededed;
+  padding: 1.25rem 2rem;
+  text-align: justify;
+  font-size: 0.85rem;
+  margin: 0;
+  border: 1px solid #cccccc;
+  border-left: 5px solid #900;
 }
 
 #main #workskin .preface blockquote p {
-  font-size: 1rem;
   line-height: 1.5;
 
   width: unset;
   max-width: 100%;
+}
+
+#main #workskin .preface .notes:not(:has(blockquote)) h3 {
+  display: none;
+}
+
+#main #workskin .preface .notes .associations {
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 1rem;
 }
 
 #main #workskin .preface p.jump {
@@ -1371,6 +1431,12 @@ form.filters fieldset dt.search label {
 
   width: 65ch;
   max-width: 100%;
+}
+
+/* image within content */
+#main #workskin #chapters .userstuff img {
+  display: block;
+  margin: 0 auto;
 }
 
 /* feedback section */
