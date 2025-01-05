@@ -1132,12 +1132,19 @@ p.muted.notice {
   width: 100%;
 }
 
+#inner #main.users-show.dashboard {
+  margin: 0;
+  padding: 1rem 1rem;
+}
+
 /* user works/bookmarks/drafts/etc page (accounting for dashboard + filter) */
 #inner:has(#dashboard) {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+
+  max-width: 1270px;
 }
 
 #inner:has(#dashboard) #main.filtered .index.group {
