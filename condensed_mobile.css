@@ -384,6 +384,48 @@ form fieldset.actions ul {
 }
 /*** END DASHBOARD ***/
 
+/*** WORK INDEX ***/
+/* replace buttons with emoji */
+#main:is(.works-index, .bookmarks-index) ul.navigation li a:not(.rss),
+#main:is(.works-index, .bookmarks-index) ul.navigation li a:not(.rss) span,
+#main:is(.works-index, .bookmarks-index) ul.navigation li:not(:has(a)) span:not(.rss) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: transparent;
+  letter-spacing: -1rem;
+  line-height: 1.3rem;
+}
+
+#main:is(.works-index, .bookmarks-index) ul.navigation li a.rss span {
+  color: transparent;
+  letter-spacing: -1rem;
+  line-height: 1.3rem;
+}
+
+#main:is(.works-index, .bookmarks-index) ul.navigation li span::before,
+#main:is(.works-index, .bookmarks-index) ul.navigation li a::before {
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+#main:is(.works-index, .bookmarks-index) ul.navigation li:nth-child(1) span::before,
+#main:is(.works-index, .bookmarks-index) ul.navigation li:nth-child(1) a::before {
+  content: '📚';
+}
+
+#main:is(.works-index, .bookmarks-index) ul.navigation li:nth-child(2) span::before,
+#main:is(.works-index, .bookmarks-index) ul.navigation li:nth-child(2) a::before {
+  content: '🔖';
+}
+
+#main:is(.works-index, .bookmarks-index) ul.navigation li:nth-child(3) a::before {
+  content: '🔍';
+}
+/*** END WORK INDEX ***/
+
 /*** (IN INDEX) WORK CONTAINERS ***/
 #main ol.index.group li.blurb.group,
 #main ul.index.group li.blurb.group {

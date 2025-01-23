@@ -215,6 +215,7 @@ p.muted.notice {
 #main p.submit input,
 #main legend a.action {
   border: 1px solid #bbb;
+  border-radius: 0.25rem;
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
   background-size: cover;
@@ -244,6 +245,15 @@ p.muted.notice {
 #main legend a.action:hover {
   color: #900;
   box-shadow: inset 2px 2px 2px #bbb;
+}
+
+/* "current" button */
+#main ul li:has(.current) span,
+#main ol li:has(.current) span {
+  border: none !important;
+  background: #9A9A9A !important;
+  color: white;
+  cursor: default !important;
 }
 
 /* button with input inside (like a checkbox, for some reason) */
@@ -402,7 +412,7 @@ p.muted.notice {
   margin: 0;
 
   width: 100%;
-  max-width: 635px;
+  max-width: 640px;
 
   float: none;
 }
@@ -826,6 +836,72 @@ p.muted.notice {
 }
 /* #endregion END HOME PAGE */
 
+/* #region INDEX (SEARCH) PAGE */
+#main:is(.works-index, .bookmarks-index) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#main:is(.works-index, .bookmarks-index) .flash,
+#main:is(.works-index, .bookmarks-index) .landmark.heading {
+  display: none;
+}
+
+#main:is(.works-index, .bookmarks-index) h2.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  width: unset;
+  max-width: 635px;
+
+  float: none;
+}
+
+#main:is(.works-index, .bookmarks-index) h2.heading a {
+  overflow: hidden;
+  margin: 0 0 0 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#main:is(.works-index, .bookmarks-index) h2.heading ~ ul.navigation.actions.module {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1 0;
+
+  margin: 0;
+
+  width: unset;
+
+  float: none;
+}
+
+#main:is(.works-index, .bookmarks-index) ol.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 0;
+
+  width: 100%;
+
+  float: none;
+}
+/* #endregion END INDEX (SEARCH) PAGE */
+
 /* #region (IN INDEX) WORK CONTAINERS */
 #main ol.index.group,
 #main ul.index.group {
@@ -1099,6 +1175,7 @@ p.muted.notice {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
+  overflow: hidden;
 }
 
 #main.dashboard .primary.header.module h2.heading  {
@@ -1902,73 +1979,6 @@ dl.work.index.group dd {
   width: 100%;
 }
 /* #endregion END COLLECTIONS ***/
-
-/* #region INDEX (SEARCH) PAGE */
-#main.works-index {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#main.works-index .flash,
-#main.works-index .landmark.heading {
-  display: none;
-}
-
-#main.works-index h2.heading {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-
-  width: unset;
-  max-width: 635px;
-
-  float: none;
-}
-
-#main.works-index h2.heading a {
-  overflow: hidden;
-  margin: 0 0 0 0.5rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-#main.works-index h2.heading ~ .navigation.actions.module {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-
-  margin: 0;
-
-  width: unset;
-  max-width: 600px;
-
-  float: none;
-}
-
-#main.works-index ol.pagination {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  padding: 0;
-
-  width: 100%;
-
-  float: none;
-}
-
-/* #endregion END INDEX (SEARCH) PAGE */
 
 /* #region FORM PAGES */
 form p {
