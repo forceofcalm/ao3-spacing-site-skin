@@ -27,7 +27,7 @@ span,
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
 }
 
-/*** DEFAULTS ***/
+/* #region DEFAULTS */
 #outer.wrapper {
   position:fixed;
   top:0;
@@ -158,9 +158,9 @@ fieldset {
 p.muted.notice {
   display: none;
 }
-/*** END DEFAULTS ***/
+/* #endregion END DEFAULTS ***/
 
-/*** BUTTONS ***/
+/* #region BUTTONS */
 #main .actions ul {
   padding: 0;
   margin: 0;
@@ -282,9 +282,9 @@ p.muted.notice {
   margin: 0 0 0.5rem;
   padding: 0.5rem 0.75rem;
 }
-/*** END BUTTONS ***/
+/* #endregion END BUTTONS ***/
 
-/*** CONTAINER ***/
+/* #region CONTAINER */
 #outer {
   display: flex;
   flex-direction: column;
@@ -319,9 +319,9 @@ p.muted.notice {
   max-width: 1270px;
   min-height: unset;
 }
-/*** END CONTAINER ***/
+/* #endregion END CONTAINER */
 
-/*** HEADER ***/
+/* #region HEADER */
 #header {
   display: flex;
   flex-direction: row;
@@ -582,9 +582,9 @@ p.muted.notice {
 .search input:focus + [role="tooltip"] {
   display: none;
 }
-/*** END HEADER ***/
+/* #endregion END HEADER */
 
-/*** HOME PAGE ***/
+/* #region HOME PAGE */
 #inner #main .splash {
   display: flex;
   flex-wrap: wrap;
@@ -737,6 +737,7 @@ p.muted.notice {
 
 /* favorite tags */
 #main .favorite ul li a.tag {
+  background-color: #EDEDED;
   padding: 0.5rem 0.75rem;
   text-decoration: none;
 
@@ -789,9 +790,43 @@ p.muted.notice {
 #main ul.abbreviated.comment.group li.comment:not(:first-of-type) {
   margin: 0.5rem 0 0;
 }
-/*** END HOME PAGE ***/
 
-/*** (IN INDEX) WORK CONTAINERS ***/
+/* reply to comment box */
+/* container */
+/* todo: this is in the inbox too */
+#reply-to-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 1rem;
+}
+
+/* extra container bc ao3 loves these */
+#reply-to-comment .post.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* actual box */
+#reply-to-comment .post.comment form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  width: 100%;
+}
+/* #endregion END HOME PAGE */
+
+/* #region (IN INDEX) WORK CONTAINERS */
 #main ol.index.group,
 #main ul.index.group {
   display: flex;
@@ -810,9 +845,9 @@ p.muted.notice {
   clear: none;
 }
 
-#main ol.index.group li.blurb.group:not(:first-of-type),
-#main ul.index.group li.blurb.group:not(:first-of-type) {
-  margin: 0.75rem 0 0;
+#main ol.index.group li.blurb.group:not([style*="display:none"]),
+#main ul.index.group li.blurb.group:not([style*="display:none"]) {
+  margin: 0 0 0.75rem;
 }
 
 #main ol.index.group .header.module,
@@ -985,9 +1020,9 @@ p.muted.notice {
   font-size: 0.85rem;
   margin: 1.5rem 0;
 }
-/*** #endregion END (IN INDEX) WORK CONTAINERS ***/
+/* #endregion END (IN INDEX) WORK CONTAINERS */
 
-/*** #region BOOKMARK SPECIFIC RULES ***/
+/* #region BOOKMARK SPECIFIC RULES */
 /* bookmark/private/rec + number icons */
 #main ol.bookmark.index.group p.status,
 #main ul.bookmark.index.group p.status,
@@ -1056,9 +1091,9 @@ p.muted.notice {
 #main ol.bookmark.index.group .user.module.group blockquote.userstuff.notes {
   margin: 1rem 0 0;
 }
-/*** #endregion END BOOKMARK SPECIFIC RULES ***/
+/* #endregion END BOOKMARK SPECIFIC RULES */
 
-/*** #region USER DASHBOARD ***/
+/* #region USER DASHBOARD */
 /* user info header */
 #main.dashboard .primary.header.module {
   display: flex;
@@ -1144,9 +1179,9 @@ p.muted.notice {
 
   width: 100%;
 }
-/*** #endregion END USER DASHBOARD ***/
+/* #endregion END USER DASHBOARD */
 
-/*** #region USER PAGE ***/
+/* #region USER PAGE */
 .user.home {
   display: flex;
   flex-direction: column;
@@ -1227,10 +1262,10 @@ p.muted.notice {
 form.inbox#inbox-form {
   width: 72%;
 }
-/*** #endregion END USER PAGE ***/
+/* #endregion END USER PAGE */
 
-/*** #region PREFERENCES/FORMS ***/
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) {
+/* #region PREFERENCES/FORMS */
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, .ajax-create-destroy) {
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   overflow: hidden;
@@ -1319,9 +1354,13 @@ form.inbox#inbox-form {
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .submit {
   padding: 0 1.5rem 1rem;
 }
-/*** #endregion END PREFERENCES/FORMS ***/
+/* #endregion END PREFERENCES/FORMS */
 
-/*** WORKS FILTER ***/
+/* #region WORKS FILTER */
+form.filters {
+  align-self: flex-start;
+}
+
 form.filters fieldset {
   box-sizing: border-box;
   box-shadow: unset;
@@ -1380,9 +1419,9 @@ form.filters fieldset dt.search label {
   font-size: 0.9rem;
   margin: 0.05rem 0;
 }
-/*** END WORKS FILTER ***/
+/* #endregion END WORKS FILTER */
 
-/*** ACTUAL WORK PAGE ***/
+/* #region ACTUAL WORK PAGE */
 /* work details */
 #main.chapters-show .wrapper,
 #main.works-show .wrapper {
@@ -1394,6 +1433,7 @@ form.filters fieldset dt.search label {
 #main.chapters-show .wrapper .work.meta,
 #main.works-show .wrapper .work.meta {
   background-color: #ededed;
+  border-left: 3px solid #2a2a2a;
   box-sizing: border-box;
   padding: 1.75rem;
 
@@ -1465,7 +1505,7 @@ form.filters fieldset dt.search label {
   font-size: 0.85rem;
   margin: 0;
   border: 1px solid #cccccc;
-  border-left: 5px solid #900;
+  border-left: 3px solid #2a2a2a;
 }
 
 #main #workskin .preface blockquote.userstuff p {
@@ -1606,9 +1646,9 @@ form.filters fieldset dt.search label {
 .autocomplete .dropdown ul li p {
   margin: 0;
 }
-/*** END ACTUAL WORK PAGE ***/
+/* #endregion END ACTUAL WORK PAGE */
 
-/*** #region COMMENTS ***/
+/* #region COMMENTS */
 /* comment heading */
 #main ul.comment li.comment.group h4,
 #main ol.comment li.comment.group h4,
@@ -1785,9 +1825,9 @@ form.filters fieldset dt.search label {
   padding: 1rem 1rem 0.75rem 1rem;
   text-align: justify;
 }
-/*** #endregion END COMMENTS ***/
+/* #endregion END COMMENTS */
 
-/*** #region NEWS POSTS ***/
+/* #region NEWS POSTS */
 /* news posts comments */
 #main.admin_posts-show #add_comment_placeholder div.comment,
 #main.admin_posts-show #main li.comment {
@@ -1804,9 +1844,9 @@ ul.thread li.comment {
   margin: 0.5rem 0 0;
   overflow: hidden;
 }
-/*** #endregion END NEWS POSTS ***/
+/* #endregion END NEWS POSTS */
 
-/*** INDEX CONTAINERS ***/
+/* #region INDEX CONTAINERS */
 .listbox.group {
   box-shadow: unset;
   box-sizing: border-box;
@@ -1844,16 +1884,16 @@ ul.thread li.comment {
 #main .listbox ul.actions[role='navigation'] li {
   margin: 0;
 }
-/*** END INDEX CONTAINERS ***/
+/* #endregion END INDEX CONTAINERS */
 
-/*** EDIT WORKS PAGE ***/
+/* #region EDIT WORKS PAGE */
 dl.work.index.group dd {
   margin: 0.5rem 0;
   padding: 1rem;
 }
-/** END EDIT WORKS PAGE ***/
+/* #endregion END EDIT WORKS PAGE */
 
-/*** COLLECTIONS ***/
+/* #region COLLECTIONS */
 #header h2.collections {
   border-top: none;
   margin: 0;
@@ -1861,9 +1901,76 @@ dl.work.index.group dd {
 
   width: 100%;
 }
-/*** END COLLECTIONS ***/
+/* #endregion END COLLECTIONS ***/
 
-/*** FORM PAGES ***/
+/* #region INDEX (SEARCH) PAGE */
+#main.works-index {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#main.works-index .flash,
+#main.works-index .landmark.heading {
+  display: none;
+}
+
+#main.works-index h2.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  width: unset;
+  max-width: 635px;
+
+  float: none;
+}
+
+#main.works-index h2.heading a {
+  overflow: hidden;
+  margin: 0 0 0 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#main.works-index h2.heading ~ .navigation.actions.module {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin: 0;
+
+  width: unset;
+  max-width: 600px;
+
+  float: none;
+}
+
+#main.works-index ol.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 0;
+
+  width: 100%;
+
+  float: none;
+}
+
+/* #endregion END INDEX (SEARCH) PAGE */
+
+/* #region FORM PAGES */
 form p {
  margin: 0;
  padding: 0;
@@ -1882,9 +1989,9 @@ form.skin fieldset dl {
   margin: 0;
   padding: 0;
 }
-/*** END FORM PAGES ***/
+/* #endregion END FORM PAGES */
 
-/*** #region NEW WORK FORM ***/
+/* #region NEW WORK FORM */
 #main form#work-form {
   box-sizing: border-box;
   overflow: hidden;
@@ -1999,9 +2106,9 @@ form.skin fieldset dl {
 #main form#work-form .submit {
   padding: 0 1.5rem 1rem;
 }
-/*** #endregion END NEW WORK FORM ***/
+/* #endregion END NEW WORK FORM */
 
-/*** FOOTER ***/
+/* #region FOOTER */
 #footer {
   border: none;
   box-sizing: border-box;
@@ -2053,4 +2160,4 @@ form.skin fieldset dl {
 
   max-width: 25ch;
 }
-/*** END FOOTER ***/
+/* #endregion END FOOTER */

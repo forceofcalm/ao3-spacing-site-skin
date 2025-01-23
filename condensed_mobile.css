@@ -339,6 +339,7 @@ form fieldset.actions ul {
 /* user dashboard header */
 #main .user.home .primary.header.module {
   margin: 0;
+  overflow: hidden;
 
   clear: unset;
   float: none;
@@ -353,7 +354,8 @@ form fieldset.actions ul {
   justify-content: flex-end;
 }
 
-#main.users-show .primary.header.module h2.heading  {
+#main.users-show .primary.header.module h2.heading,
+#main.dashboard .primary.header.module h2.heading {
   display: block;
 
   border-bottom: 1px solid;
@@ -365,7 +367,7 @@ form fieldset.actions ul {
   opacity: 0.9;
 
   position: absolute;
-  top: 60%;
+  top: 70%;
   width: 100%;
 }
 
@@ -376,9 +378,9 @@ form fieldset.actions ul {
   position: relative;
 }
 
-#main.dashboard .primary.header.module .navigation.actions {
-  margin: 0 0 0.75rem;
-  padding: 0 0 0 90px;
+#main.dashboard .primary.header.module .navigation.actions,
+#main.users-show .primary.header.module .navigation.actions {
+  padding: 0;
 }
 /*** END DASHBOARD ***/
 
@@ -444,7 +446,7 @@ form.filters.narrow-hidden {
 
   position: absolute;
   top: 0;
-  right: -12.5rem;
+  right: 0rem;
 
   width: 15rem;
   max-height: 100vh;
