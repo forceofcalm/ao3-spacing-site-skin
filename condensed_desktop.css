@@ -1175,7 +1175,6 @@ p.muted.notice {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
-  overflow: hidden;
 }
 
 #main.dashboard .primary.header.module h2.heading  {
@@ -1188,6 +1187,7 @@ p.muted.notice {
   text-align: left;
   margin: -0.75rem 0 0 120px;
   opacity: 0.9;
+  overflow: hidden;
 }
 
 #main.dashboard .primary.header.module .icon {
@@ -1725,6 +1725,51 @@ form.filters fieldset dt.search label {
 }
 /* #endregion END ACTUAL WORK PAGE */
 
+/* #region COMMENT FORM */
+#main #add_comment .post.comment {
+  border: none;
+}
+
+#main #add_comment .post.comment fieldset {
+  background: #ededed;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  padding: 1.5rem 1.25rem;
+}
+
+/* comment box header */
+#main #add_comment .post.comment fieldset h4 {
+  display: unset;
+
+  background: none;
+  font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+#main #add_comment .post.comment fieldset h4 span {
+  font-family: Georgia;
+  font-style: italic;
+}
+
+/* comment empty error */
+#main #add_comment .post.comment fieldset .LV_validation_message.LV_invalid {
+  box-shadow: 1px 1px 3px;
+  padding: 0.25rem 0.5rem;
+
+  top: unset;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+/* comment button */
+#main #add_comment .post.comment fieldset .submit {
+  padding: 1rem 0 0;
+}
+/* #endregion END COMMENT FORM */
+
 /* #region COMMENTS */
 /* comment heading */
 #main ul.comment li.comment.group h4,
@@ -1905,6 +1950,16 @@ form.filters fieldset dt.search label {
 /* #endregion END COMMENTS */
 
 /* #region NEWS POSTS */
+/* news posts article list */
+#inner:has(#main.admin_posts-show) nav#dashboard.admin.region {
+  max-width: 35ch;
+}
+
+/* news posts heading */
+#main.admin_posts-show .primary.header.module .heading a {
+  text-decoration: none;
+}
+
 /* news posts comments */
 #main.admin_posts-show #add_comment_placeholder div.comment,
 #main.admin_posts-show #main li.comment {
