@@ -1,11 +1,11 @@
-/*** DEFAULTS ***/
+/* #region DEFAULTS */
 /* remove scrolling on body if filters are open */
 html:has(.wrapper.filtering),
 body:has(.wrapper.filtering) {
   overflow-y: hidden;
 }
 
-/*** BUTTONS ***/
+/* #region BUTTONS */
 form fieldset.actions ul {
   display: flex;
   align-items: center;
@@ -20,9 +20,9 @@ form fieldset.actions ul {
 #main.works-show ul.actions.work.navigation {
   justify-content: center;
 }
-/*** END BUTTONS ***/
+/* #endregion BUTTONS */
 
-/*** HEADER ***/
+/* #region HEADER */
 #header {
   display: flex;
   flex-direction: row;
@@ -266,9 +266,9 @@ form fieldset.actions ul {
   margin: 0 0 0 1rem !important;
   padding: 0.5rem 0.75rem;
 }
-/*** END HEADER ***/
+/* #endregion HEADER */
 
-/*** HOME PAGE ***/
+/* #region HOME PAGE */
 #inner #main .splash {
   display: flex;
   flex-direction: column;
@@ -278,9 +278,29 @@ form fieldset.actions ul {
   flex-basis: unset;
   flex-grow: unset;
 }
-/*** END HOME PAGE ***/
+/* #endregion HOME PAGE */
+#inner:has(#main.admin_posts-show) nav#dashboard.admin.region {
+  max-width: unset;
+}
 
-/*** DASHBOARD ***/
+#inner:has(#main.admin_posts-show) nav#dashboard.admin.region ul.navigation.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#inner:has(#main.admin_posts-show) nav#dashboard.admin.region ul.navigation.actions li {
+  font-size: 0.9rem;
+  text-align: left;
+
+  width: 100%
+}
+/* #region NEWS POSTS */
+
+/* #endregion NEWS POSTS */
+
+/* #region DASHBOARD */
 #inner:has(#dashboard) {
   flex-direction: column;
 }
@@ -385,9 +405,9 @@ form fieldset.actions ul {
 #main.users-show .primary.header.module .navigation.actions {
   padding: 0;
 }
-/*** END DASHBOARD ***/
+/* #endregion DASHBOARD */
 
-/*** WORK INDEX ***/
+/* #region WORK INDEX */
 /* replace buttons with emoji */
 #main:is(.works-index, .bookmarks-index):not(.dashboard) ul.navigation li a:not(.rss),
 #main:is(.works-index, .bookmarks-index):not(.dashboard) ul.navigation li a:not(.rss) span,
@@ -427,9 +447,9 @@ form fieldset.actions ul {
 #main:is(.works-index, .bookmarks-index):not(.dashboard) ul.navigation li:nth-child(3) a::before {
   content: '🔍';
 }
-/*** END WORK INDEX ***/
+/* #endregion WORK INDEX */
 
-/*** (IN INDEX) WORK CONTAINERS ***/
+/* #region (IN INDEX) WORK CONTAINERS */
 #main ol.index.group li.blurb.group,
 #main ul.index.group li.blurb.group {
   padding: 0.75rem;
@@ -533,9 +553,9 @@ form.inbox#inbox-form {
 p.narrow-shown {
   padding: 0;
 }
-/*** END (IN INDEX) WORK CONTAINERS ***/
+/* #endregion (IN INDEX) WORK CONTAINERS */
 
-/*** WORK ***/
+/* #region WORK */
 /* work details wrapper */
 #main.works-show .wrapper {
   border: 1px solid #ccc;
@@ -574,9 +594,9 @@ p.narrow-shown {
 #main #workskin #chapters .userstuff span {
   font-size: 1.02rem;
 }
-/*** END WORK ***/
+/* #endregion WORK */
 
-/*** COMMENTS ***/
+/* #region COMMENTS */
 #main ul.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
 #main ol.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
 #main ol.thread li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
@@ -622,15 +642,15 @@ p.narrow-shown {
 form.inbox {
   width: unset;
 }
-/*** END COMMENTS ***/
+/* #endregion COMMENTS */
 
-/*** COLLECTIONS ***/
+/* #region COLLECTIONS */
 #header h2.collections {
   height: 150px;
 }
-/*** END COLLECTIONS ***/
+/* #endregion COLLECTIONS */
 
-/*** FOOTER ***/
+/* #region FOOTER */
 #footer {
   border: none;
   box-sizing: border-box;
@@ -682,4 +702,4 @@ form.inbox {
 
   max-width: 25ch;
 }
-/*** END FOOTER ***/
+/* #endregion FOOTER */

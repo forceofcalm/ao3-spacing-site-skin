@@ -1175,6 +1175,8 @@ p.muted.notice {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
+
+  overflow: hidden;
 }
 
 #main.dashboard .primary.header.module h2.heading  {
@@ -1192,7 +1194,6 @@ p.muted.notice {
 
 #main.dashboard .primary.header.module .icon {
   border-radius: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #main.dashboard .primary.header.module .navigation.actions {
