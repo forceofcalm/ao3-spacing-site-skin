@@ -1952,22 +1952,22 @@ form.filters fieldset dt.search label {
 
 /* #region NEWS POSTS */
 /* news posts article list */
-#inner:has(#main.admin_posts-show) nav#dashboard.admin.region {
+#inner:has(#main.admin_posts-show, #main.admin_posts-index) nav#dashboard.admin.region {
   max-width: 35ch;
 }
 
 /* news posts heading */
-#main.admin_posts-show .primary.header.module .heading a {
+#main:is(.admin_posts-show, .admin_posts-index) .primary.header.module .heading a {
   text-decoration: none;
 }
 
 /* news posts comments */
-#main.admin_posts-show #add_comment_placeholder div.comment,
-#main.admin_posts-show #main li.comment {
+#main:is(.admin_posts-show, .admin_posts-index) #add_comment_placeholder div.comment,
+#main:is(.admin_posts-show, .admin_posts-index) li.comment {
   overflow: hidden;
 }
 
-#main.admin_posts-show #add_comment_placeholder .clear {
+#main:is(.admin_posts-show, .admin_posts-index) #add_comment_placeholder .clear {
   display: none;
 }
 
