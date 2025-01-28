@@ -279,18 +279,18 @@ form fieldset.actions ul {
   flex-grow: unset;
 }
 /* #endregion HOME PAGE */
-#inner:has(#main.admin_posts-show) nav#dashboard.admin.region {
+#inner:has(#main.admin_posts-show, #main.admin_posts-index) nav#dashboard.admin.region {
   max-width: unset;
 }
 
-#inner:has(#main.admin_posts-show) nav#dashboard.admin.region ul.navigation.actions {
+#inner:has(#main.admin_posts-show, #main.admin_posts-index) nav#dashboard.admin.region ul.navigation.actions {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-#inner:has(#main.admin_posts-show) nav#dashboard.admin.region ul.navigation.actions li {
+#inner:has(#main.admin_posts-show, #main.admin_posts-index) nav#dashboard.admin.region ul.navigation.actions li {
   font-size: 0.9rem;
   text-align: left;
 

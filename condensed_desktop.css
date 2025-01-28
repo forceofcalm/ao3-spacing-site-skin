@@ -1961,6 +1961,59 @@ form.filters fieldset dt.search label {
   text-decoration: none;
 }
 
+/* heading on news home page */
+#main.admin_posts-index .primary.header.module {
+  padding: 0 0 2rem;
+}
+
+#main.admin_posts-index .primary.header.module .icon {
+  top: unset;
+  bottom: 0;
+}
+
+/* filters on news home page */
+#main:is(.admin_posts-show, .admin_posts-index) .primary.header.module ul.navigation.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+#main.admin_posts-index .primary.header.module ul.navigation.actions p {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#main.admin_posts-index .primary.header.module ul.navigation.actions form {
+  border: none !important;
+}
+
+/* force line breaks on the stupid form */
+#main.admin_posts-index .primary.header.module ul.navigation.actions form select {
+  flex: 1 1 0;
+
+  min-width: 50%;
+}
+
+#main.admin_posts-index .primary.header.module ul.navigation.actions form label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: default;
+
+  min-width: 30%;
+}
+
+#main.admin_posts-index .primary.header.module ul.navigation.actions form label:hover {
+  color: inherit;
+}
+
+#main.admin_posts-index .primary.header.module ul.navigation.actions form input {
+  min-width: 100%;
+}
+
 /* news posts comments */
 #main:is(.admin_posts-show, .admin_posts-index) #add_comment_placeholder div.comment,
 #main:is(.admin_posts-show, .admin_posts-index) li.comment {
