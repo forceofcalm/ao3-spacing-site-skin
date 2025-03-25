@@ -29,15 +29,13 @@ span,
 
 /* #region DEFAULTS */
 #outer.wrapper {
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:0;
-  margin:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
 
-  overflow: auto;
   box-sizing: border-box;
 }
 
@@ -213,7 +211,8 @@ p.muted.notice {
 #main dd form input,
 #main .filters .submit input,
 #main p.submit input,
-#main legend a.action {
+#main legend a.action,
+#main .actions input[type="submit"] {
   border: 1px solid #bbb;
   border-radius: 0.25rem;
   background: unset;
@@ -224,6 +223,9 @@ p.muted.notice {
   font-size: 0.85rem;
   line-height: 1.3;
   padding: 0.5rem 0.75rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #main .actions ul li a:not(.selected, .current):hover,
@@ -1310,22 +1312,57 @@ p.muted.notice {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
 }
 
 .subscription.index.group dt,
 .subscription.index.group dd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   flex: 0 0 50%;
 
   background-color: unset;
   box-sizing: border-box;
   margin: 0;
   padding: 0.5rem;
+
+  max-width: 50%;
+}
+
+.subscription.index.group dt a,
+.subscription.index.group dd a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subscription.index.group dt a:first-of-type,
+.subscription.index.group dd a:first-of-type {
+  margin: 0 0.5ch 0 0;
+}
+
+.subscription.index.group dt a:nth-of-type(2),
+.subscription.index.group dd a:nth-of-type(2) {
+  margin: 0 0 0 0.5ch;
 }
 
 .subscription.index.group dt:nth-of-type(2n),
 .subscription.index.group dd:nth-of-type(2n) {
-  background-color: #f0f0f0;
+  background-color: #e1e1e1;
 }
+
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, .ajax-create-destroy), /* because of how ao3 has its rules... + css specificity */
+#main.dashboard .subscription.index.group dd form {
+  border: none !important;
+  margin: 0 !important;
+
+  width: 100%;
+}
+
 .subscription.index.group dd form input {
   width: 100%;
 }
