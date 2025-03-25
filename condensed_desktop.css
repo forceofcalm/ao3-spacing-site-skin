@@ -2118,6 +2118,10 @@ dl.work.index.group dd {
 
 /* #region COLLECTIONS */
 #header h2.collections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-top: none;
   margin: 0;
   padding: 0;
@@ -2214,7 +2218,7 @@ form.skin fieldset dl {
 #main form#work-form fieldset div,
 #main form#work-form fieldset p {
   box-shadow: none;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem !important;
   margin: 0;
 }
 
