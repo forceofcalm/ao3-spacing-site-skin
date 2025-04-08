@@ -358,8 +358,8 @@ p.muted.notice {
 
   padding: 0.75rem 0 0.75rem 1.5rem;
 
-  width: 100%;
-  max-width: 635px;
+  width: 635px;
+  max-width: 48%;
 
   float: none;
 }
@@ -413,8 +413,8 @@ p.muted.notice {
 
   margin: 0;
 
-  width: 100%;
-  max-width: 640px;
+  width: 640px;
+  max-width: 49%;
 
   float: none;
 }
@@ -842,9 +842,13 @@ p.muted.notice {
 #main:is(.works-index, .bookmarks-index) {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+#main:is(.works-index, .bookmarks-index) .clear,
+#main:is(.works-index, .bookmarks-index)::after {
+  display: none;
 }
 
 #main:is(.works-index, .bookmarks-index) .flash,
