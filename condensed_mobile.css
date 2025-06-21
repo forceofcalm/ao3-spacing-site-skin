@@ -29,7 +29,7 @@ form fieldset.actions ul {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  
   font-size: 1rem;
 
   /* resets */
@@ -709,7 +709,19 @@ form.inbox {
 #header h2.collections {
   height: 7rem;
 }
+
+#main.dashboard #collection-page .primary.header.module blockquote.userstuff {
+  order: 4;
+  margin: 1rem 0;
+}
 /* #endregion COLLECTIONS */
+
+/* #region FILTERS */
+#inner:has(#dashboard) #main form.filters {
+  position: absolute;
+  width: 50%;
+}
+/* #endregion FILTERS */
 
 /* #region FOOTER */
 #footer {

@@ -358,8 +358,8 @@ p.muted.notice {
 
   padding: 0.75rem 0 0.75rem 1.5rem;
 
-  width: 635px;
-  max-width: 48%;
+  width: 100%;
+  max-width: 635px;
 
   float: none;
 }
@@ -413,8 +413,8 @@ p.muted.notice {
 
   margin: 0;
 
-  width: 640px;
-  max-width: 49%;
+  width: 100%;
+  max-width: 640px;
 
   float: none;
 }
@@ -1359,7 +1359,7 @@ p.muted.notice {
   background-color: #e1e1e1;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, .ajax-create-destroy), /* because of how ao3 has its rules... + css specificity */
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters .ajax-create-destroy), /* because of how ao3 has its rules... + css specificity */
 #main.dashboard .subscription.index.group dd form {
   border: none !important;
   margin: 0 !important;
@@ -1384,7 +1384,7 @@ form.inbox#inbox-form {
 /* #endregion END USER PAGE */
 
 /* #region PREFERENCES/FORMS */
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, .ajax-create-destroy) {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters, .ajax-create-destroy) {
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   overflow: hidden;
@@ -1393,7 +1393,7 @@ form.inbox#inbox-form {
   float: unset;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset {
   background: #fff;
   border: none;
   box-shadow: none;
@@ -1401,7 +1401,7 @@ form.inbox#inbox-form {
   padding: 0 0 0.5rem;;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset .heading {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset .heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1418,31 +1418,31 @@ form.inbox#inbox-form {
   width: 100%;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset .heading a {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset .heading a {
   text-decoration: none;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset ul,
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset dl {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset ul,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset dl {
   box-shadow: none;
   padding: 1rem 1.5rem;
   margin: 0;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset label {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset label {
   margin: 0 0 0.25rem;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset dt {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset dt {
   margin: 0 0.75rem 0 0;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset dt label {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset dt label {
   text-transform: capitalize;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset select,
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) fieldset input[type="text"] {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset select,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset input[type="text"] {
   box-sizing: border-box;
   box-shadow: none;
   cursor: pointer;
@@ -1452,13 +1452,13 @@ form.inbox#inbox-form {
   padding: 0.5rem 0.75rem;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions {
   padding: 0.5rem 0 0.5rem 0;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions a,
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions input,
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .actions button {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions a,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions input,
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions button {
   border: 1px solid #bbb;
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
@@ -1470,7 +1470,7 @@ form.inbox#inbox-form {
   padding: 0.5rem 0.75rem;
 }
 
-#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters) .submit {
+#main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .submit {
   padding: 0 1.5rem 1rem;
 }
 /* #endregion END PREFERENCES/FORMS */
@@ -1766,6 +1766,12 @@ form.filters fieldset dt.search label {
   margin: 0;
 }
 /* #endregion END ACTUAL WORK PAGE */
+
+/* #region WORKS HEADER BUTTONS */
+// remove chapter index button in favor of header
+// what to do with download button? show dropdown?
+// todo: filter on bookmarks page
+/* #endregion WORKS HEADER BUTTONS */
 
 /* #region COMMENT FORM */
 #main #add_comment .post.comment {
@@ -2128,11 +2134,81 @@ dl.work.index.group dd {
 
   border-top: none;
   margin: 0;
-  padding: 0;
+  padding: 0 1.25rem;
 
   width: 100%;
 }
+
+#main.dashboard #collection-page .primary.header.module {
+  flex-direction: column;
+}
+
+#main.dashboard #collection-page .primary.header.module blockquote.userstuff,
+#main.dashboard #collection-page .primary.header.module p.type {
+  margin-left: 0;
+  margin: 0;
+}
+
+/* need to set order of things, style type */
+#main.dashboard #collection-page ul.navigation {
+  order: 1;
+}
+
+#main.dashboard #collection-page .primary.header.module h2.heading {
+  order: 2;
+  top: 5rem;
+}
+
+#main.dashboard #collection-page .primary.header.module div.icon {
+  order: 3;
+}
+
+#main.dashboard #collection-page .primary.header.module blockquote.userstuff {
+  order: 4;
+  margin: 1rem 0 1rem 120px;
+}
+
+#main.dashboard #collection-page .primary.header.module p.type {
+  order: 5;
+  background-color: #8d0000;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 /* #endregion END COLLECTIONS ***/
+
+/* #region TAG SET */
+#main .tagset ol li h4.heading {
+  display: flex;
+  align-items: center;
+
+  margin: 0.5rem 0 0;
+}
+
+#main .tagset ol li span.approved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  margin: 0 0.5rem 0 0;
+
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#main .tagset ol li ul li {
+  display: flex;
+  align-items: center;
+}
+
+#main .tagset ol li ol li {
+  display: flex;
+  align-items: center;
+}
+/* #endregion TAG SET */
 
 /* #region FORM PAGES */
 form p {
