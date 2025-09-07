@@ -1,3 +1,7 @@
+body {
+  background-color: red;
+}
+
 /* #region DEFAULTS */
 /* remove scrolling on body if filters are open */
 html:has(.wrapper.filtering),
@@ -15,6 +19,7 @@ form fieldset.actions ul {
 
 #main ul.actions {
   margin: 0.25rem 0;
+  padding: 0;
 }
 
 #main.works-show ul.actions.work.navigation {
@@ -656,6 +661,34 @@ p.narrow-shown {
   max-width: 100%;
 }
 /* #endregion WORK */
+
+/* #region WORKS HEADER BUTTONS */
+#main .work ul.actions .chapter:has(#chapter_index) {
+  position: relative;
+}
+
+#main ul.actions:has(.chapter #chapter_index) {
+  margin: 0 0 60px;
+}
+
+#main .work ul.actions #chapter_index  {
+  padding: 0;
+
+  top: 8.5rem;
+
+  width: 100%;
+}
+
+#main .work ul.actions #chapter_index li form p select {
+  width: 60%;
+}
+
+#main .work ul.actions #chapter_index li form p span.submit {
+  display: flex;
+
+  width: 30%;
+}
+/* #endregion WORKS HEADER BUTTONS */
 
 /* #region COMMENTS */
 #main ul.comment li.comment.group h4 a[href*="/users/"]:has(+ a[href*="/works/"], + span.parent),
