@@ -1,207 +1,114 @@
-/*********************************************
- * Dark Mode
- * 
- * background: #091312;
- * text: #f0f0f0;
- * border color: #f0f0f0;
- * group headers: #3e3c3c;
- * group body: #222222;
- * accent color: #133909;
- * link: #c9c9c9;
- * link hover: #eeeeee;
-*************************************************/
-
-html,
-body,
-#main ol.index.group .tags.commas a,
-#main ul.index.group .tags.commas a,
-#dashboard ul.navigation.actions li a, 
-#dashboard ul.navigation.actions li span,
-.filters .expander,
-.listbox.group h3, 
-.statistics .listbox.group h5,
-fieldset .required,
-form dd.required,
-.post .required .warnings,
-#main #bookmark-form fieldset,
-li .added.tag {
-  color: #f0f0f0;
+body {
+  background-color: #191717 !important;
+  color: #F4F2F2 !important;
 }
 
-.annoucement a,
-.notice a {
-  color: #191919;
+a,
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+.actions button,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label {
+  color: #F7F7F7 !important;
+  transition: color 0.2s ease-in-out !important;
 }
 
-html,
-body,
-#header,
-#outer,
-#inner,
-#inner #main .favorite.module ul li a,
-#main ol.index.group, 
-#main ul.index.group,
-#main ol.index.group .stats, 
-#main ul.index.group .stats,
-#main ol.index.group .blurb .tags.commas, 
-#main ul.index.group .blurb .tags.commas {
-  box-shadow: none;
-  background-color: #111111;
+a:hover {
+  color: #DFDFDF !important;
+  transition: color 0.2s ease-in-out !important;
 }
 
-/* darker background */
-.listbox.group h3, 
-.statistics .listbox.group h5,
-dl.work.index.group dd li.relationships a { 
-  background-color: #1A1A1A;
-}
-
-/* median background */
-#main ul.comment li.comment.group,
-#main ol.comment li.comment.group,
-#main ol.thread li.comment.group,
-fieldset, 
-form dl, 
-fieldset dl dl, 
-fieldset fieldset fieldset, 
-fieldset fieldset dl dl, 
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+#main .splash .favorite.module ul,
+#main ol.index.group li.blurb.group,
+#main ul.index.group li.blurb.group,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
 dd.hideme,
 form blockquote.userstuff,
-#main ol.index.group li.blurb.group, 
-#main ul.index.group li.blurb.group,
-#main fieldset:not(.actions, .comments),
-#main fieldset ul.index.concise,
-#main .work .wrapper .work.meta, 
+#main.chapters-show .wrapper .work.meta,
 #main.works-show .wrapper .work.meta,
-#main #workskin .preface .summary blockquote, 
-#main #workskin .preface .notes blockquote, 
-.draft .wrapper {
-  background-color: #222222;
-  border: 1px solid #3e3c3c;
-  box-shadow: none;
+#main #workskin .preface .summary blockquote.userstuff,
+#main #workskin .preface .notes blockquote.userstuff,
+.listbox.group,
+#main #add_comment .post.comment fieldset {
+  background-color: #262424 !important;
+  border: 1px solid #333131 !important;
 }
 
-#main ul.comment li.comment.group h4,
-#main ol.comment li.comment.group h4,
-#main ol.thread li.comment.group h4,
-.draft.work,
-#dashboard .secondary.expandable {
-  background-color: #191919;
-  border-color: #3e3c3c;
-  box-shadow: none;
+.listbox.group h3 {
+  background-color: #262424 !important;
+  color: #F4F2F2 !important;
 }
 
-/* lighter background */
-#header ul.dropdown-menu li,
-#header .actions a:hover,
-#header .dropdown:hover a,
-#header .actions a:focus, 
-#header .open a,
-#header .primary .open a, 
-#header .primary .dropdown:hover a, 
-#header .primary .dropdown a:focus,
-#inner #main .favorite.module ul li:nth-of-type(2n+1) a,
-.subscription.index.group dt:nth-of-type(2n), 
-.subscription.index.group dd:nth-of-type(2n) {
-  background-color: #242424;
-  color: #f0f0f0;
-}
-
-/* lightest background */
+.comment h4.byline,
+#main .splash .favorite li:nth-of-type(2n+1) a,
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
 #main ol.index.group .tags.commas,
-#main ul.index.group .tags.commas {
-  background-color: #3e3c3c;
-}
-
-/* LINKS & TEXT */
-.flash,
-legend,
-.notice a {
-  color: #1A1A1A;
-}
-
-a, 
-a:link, 
-.action a:link {
-  color: #dfdfdf;
-}
-
-a:hover,
-.actions a:hover, 
-.actions input:hover, 
-.actions a:focus, 
-.actions input:focus, 
-label.action:hover, 
-.action:hover, 
-.action:focus,
-a:link:hover, 
-.action:visited:hover,
-.action a:link:hover,
-.blurb h4 a:link:hover,
-.blurb h4 a:link:visited:hover,
-.listbox > .heading,
-.listbox .heading a:hover,
-.listbox .heading a:visited:hover,
-#header ul.dropdown-menu li a,
-#header ul.user.actions li a,
-#header .primary .open a, 
-#header .primary .dropdown:hover a, 
-#header .primary .dropdown a:focus,
-a:visited:hover {
-  box-shadow: none;
-  color: #f0f0f0;
-
-  transition: color 0.1s ease-in-out, color 0.2s ease-in-out; 
-}
-
-textarea,
-li input,
-li textarea,
-li select,
-dd input,
-dd textarea,
-dd select,
-li input:focus,
-li textarea:focus,
-li select:focus,
-textarea:focus,
-dd input:focus,
-dd textarea:focus,
-dd select:focus {
-  background-color: #1A1A1A;
-  box-shadow: none;
-  color: #f0f0f0;
-}
-
-/* HEADER */
-#header .heading a {
-  color: #f0f0f0;
-}
-
-#header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
-  background: rgba(255,255,255,.15);
-}
-
-/* search bar */
-#header ul.primary.navigation.actions li.search input#site_search {
-  background: rgba(255,255,255,.25);
-  color: #f0f0f0;
-}
-/* END HEADER */
-
-.listbox, 
+#main ul.index.group .tags.commas,
+#main ol.index.group .stats,
+#main ul.index.group .stats,
+.listbox .index,
+.statistics .listbox.group h5,
+.listbox,
 fieldset fieldset.listbox {
-  background-color: transparent;
+  background-color: #191717 !important;
 }
-/* END COMMENTS & FORMS */
 
-/* BUTTONS */
-/* buttons */
+#main .favorite ul li a.tag,
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a {
+  background-color: #262424 !important;
+}
+
+.listbox .index {
+  box-shadow: inset 1px 1px 5px #1e1515;
+}
+
+#main .actions ul li a:not(.selected, .current):hover, #main .actions ul li form input:not(.selected, .current):hover, #main .actions li input:not(.selected, .current):hover, #main .actions li span.current:not(.selected, .current):hover, #main .actions ul li span:not(.selected, .current):hover, #main .actions ul li span.current:not(.selected, .current):hover, #main .actions li span.unread:not(.selected, .current):hover, #main .actions li span.replied:not(.selected, .current):hover, #main ul.actions li a:not(.selected, .current):hover, #main ul.actions li form input:not(.selected, .current):hover, #main p.actions a:not(.selected, .current):hover, #main ol.actions li a:not(.selected, .current):hover, #main .actions li label:not(.selected, .current):hover, #main dd form input:not(.selected, .current):hover, #main .filters .submit input:hover, #main p.submit input:hover, #main legend a.action:hover {
+  box-shadow: inset 2px 2px 2px #1e1515;
+}
+
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+#main .splash .module ul.news.index.group li.post.group .userstuff p {
+  color: #b1aaaa !important;
+}
+
+.splash .module h3,
+#main.dashboard .primary.header.module h2.heading,
+#dashboard ul.navigation.actions:not(:last-of-type) {
+  border-bottom-color: #373434 !important;
+}
+
+.splash .module h3.heading span.link {
+  background-color: #700 !important;
+  background-image: linear-gradient(#a00000 2%, #5a0000 95%, #4d0000 100%) !important;
+}
+
 #main .actions ul li a,
 #main .actions li form input,
-#main .actions li input,
 #main .actions li form button,
+#main .actions li input,
 #main .actions li span.current,
+#main .actions ul li:not(:has(a.rss)) span,
 #main .actions ul li span.current,
 #main .actions li span.unread,
 #main .actions li span.replied,
@@ -211,110 +118,18 @@ fieldset fieldset.listbox {
 #main ol.actions li a,
 #main .actions li label,
 #main dd form input,
-.listbox, 
-fieldset fieldset.listbox,
-.actions a, 
-.actions a:link, 
-.action, .action:link, 
-.actions input, 
-input[type="submit"], 
-button, 
-.current, 
-.actions label,
 #main .filters .submit input,
 #main p.submit input,
 #main legend a.action,
-#main .actions ul li:not(:has(a.rss)) span,
-#main .actions ul.navigation.actions li span.current {
-  border: 1px solid #3e3c3c;
-  color: #f0f0f0;
-  background-image: linear-gradient(#2e2e2e 2%,#222 95%,#111 100%);
+#header #search input[type="submit"] {
+  background-image: linear-gradient(#2d2929 2%, #262424 95%, #100000 100%) !important;
+  border: 1px solid #333131 !important;
 }
 
-#outer #header #search .button {
-  border: 1px solid #272727;
-}
-
-#main ol.index.group li.blurb.group, 
-#main ul.index.group li.blurb.group {
-  border: 1px solid #3e3c3c;
-  color: #f0f0f0;
-}
-
-/* ~accent color~ */
-#header .actions input:hover,
-#main .actions ul li a:not(.selected, .current):hover,
-#main .actions ul li form input:not(.selected, .current):hover,
-#main .actions li input:not(.selected, .current):hover,
-#main .actions li span.current:not(.selected, .current):hover,
-#main .actions ul li span:not(.selected, .current):hover,
-#main .actions ul li span.current:not(.selected, .current):hover,
-#main .actions li span.unread:not(.selected, .current):hover,
-#main .actions li span.replied:not(.selected, .current):hover,
-#main ul.actions li a:not(.selected, .current):hover,
-#main ul.actions li form input:not(.selected, .current):hover,
-#main p.actions a:not(.selected, .current):hover,
-#main ol.actions li a:not(.selected, .current):hover,
-#main .actions li label:not(.selected, .current):hover,
-#main dd form input:not(.selected, .current):hover,
-.blurb h4 a:link,
-.blurb h4 a:visited,
-.blurb h4 a:link:visited,
-.listbox > .heading,
-.listbox .heading a,
-.listbox .heading a:visited,
-.splash .module h3,
-.actions a:hover, 
-.actions a:link:hover, 
-.action, .action:link:hover, 
-.actions input:hover,
-input[type="submit"]:hover, 
-button:hover, 
-.current:hover, 
-.actions label:hover,
-#main .filters .submit input:hover,
-#main p.submit input:hover,
-#main legend a.action:hover {
-  box-shadow: none;
-  color: #33AC91;
-  transition: color 0.1s ease-in-out, color 0.2s ease-in-out;  
-}
-
-#dashboard ul.navigation.actions li:has(:not(.current)) a:hover{
-  background-color: #33AC91;
-  border-radius: 0.25em;
-  box-shadow: none;
-  color: #f0f0f0;
-  transition: all 0.1s ease-in-out, color 0.2s ease-in-out; 
-}
-
-/* ~accent color~ but background */
 #header nav:not(#greeting),
-#header ul.primary.navigation.actions,
-#header ul.primary.navigation.actions::before,
-#header ul.primary.navigation.actions::after,
-#inner #main .favorite.module ul li a:hover,
-#dashboard ul.navigation.actions li .current,
-#main ol.index.group .tags .relationships .tag, 
-#main ul.index.group .tags .relationships .tag,
-#main ol.index.group .tags .relationships .tag:hover, 
-#main ul.index.group .tags .relationships .tag:hover,
-#inner #dashboard.region ul.navigation.actions li .current,
-a.tag:hover, 
-.listbox .heading a.tag:hover,
-#footer {
-  background-image: none;
-  background-color: #132C28;
-  box-shadow: none;
-  color: #f0f0f0;
-  transition: all 0.1s ease-in-out, color 0.2s ease-in-out; 
+#footer,
+#main ol.index.group .tags .relationships .tag,
+#main ul.index.group .tags .relationships .tag {
+  background-blend-mode: multiply !important;
+  background-color: rgba(146, 8, 1, 0.5) !important;
 }
-
-#inner #dashboard.region {
-  border-bottom: 0.5rem solid #132C28;
-  border-top: 0.5rem solid #132C28;
-} 
-/* END BUTTONS */
-
-/* set filter searches to same color as main search bar */
-/* fix link hover color */
