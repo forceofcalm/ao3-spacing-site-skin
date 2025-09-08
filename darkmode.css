@@ -23,7 +23,6 @@ a:hover {
   transition: color 0.2s ease-in-out !important;
 }
 
-.own,
 .draft,
 .draft .wrapper,
 .unread,
@@ -33,17 +32,19 @@ a:hover {
 #main .splash .favorite.module ul,
 #main ol.index.group li.blurb.group,
 #main ul.index.group li.blurb.group,
-fieldset dl dl,
-fieldset fieldset fieldset,
-fieldset fieldset dl dl,
 dd.hideme,
 form blockquote.userstuff,
+form:not(#search) fieldset,
+#work-filters fieldset,
+#bookmark-filters fieldset,
 #main.chapters-show .wrapper .work.meta,
 #main.works-show .wrapper .work.meta,
 #main #workskin .preface .summary blockquote.userstuff,
 #main #workskin .preface .notes blockquote.userstuff,
 .listbox.group,
-#main #add_comment .post.comment fieldset {
+#main #add_comment .post.comment fieldset,
+div.comment,
+li.comment {
   background-color: #262424 !important;
   border: 1px solid #333131 !important;
 }
@@ -64,24 +65,54 @@ form blockquote.userstuff,
 .listbox .index,
 .statistics .listbox.group h5,
 .listbox,
-fieldset fieldset.listbox {
+fieldset fieldset.listbox,
+form fieldset legend,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta {
   background-color: #191717 !important;
+}
+
+form fieldset legend {
+  border: 1px solid #333131 !important;
+  box-shadow: none !important;
 }
 
 #main .favorite ul li a.tag,
 #header .actions a:hover,
 #header .actions a:focus,
 #header .dropdown:hover a,
-#header .open a {
+#dashboard ul.navigation.actions li a:hover,
+#header .open a,
+.thread .even {
   background-color: #262424 !important;
 }
 
-.listbox .index {
-  box-shadow: inset 1px 1px 5px #1e1515;
+.listbox .index,
+dd.hideme,
+#main.skins-edit form fieldset,
+form blockquote.userstuff {
+  box-shadow: inset 1px 1px 5px #1e1515 !important;
 }
 
-#main .actions ul li a:not(.selected, .current):hover, #main .actions ul li form input:not(.selected, .current):hover, #main .actions li input:not(.selected, .current):hover, #main .actions li span.current:not(.selected, .current):hover, #main .actions ul li span:not(.selected, .current):hover, #main .actions ul li span.current:not(.selected, .current):hover, #main .actions li span.unread:not(.selected, .current):hover, #main .actions li span.replied:not(.selected, .current):hover, #main ul.actions li a:not(.selected, .current):hover, #main ul.actions li form input:not(.selected, .current):hover, #main p.actions a:not(.selected, .current):hover, #main ol.actions li a:not(.selected, .current):hover, #main .actions li label:not(.selected, .current):hover, #main dd form input:not(.selected, .current):hover, #main .filters .submit input:hover, #main p.submit input:hover, #main legend a.action:hover {
-  box-shadow: inset 2px 2px 2px #1e1515;
+#main .actions ul li a:not(.selected, .current):hover,
+#main .actions ul li form input:not(.selected, .current):hover,
+#main .actions li input:not(.selected, .current):hover,
+#main .actions li span.current:not(.selected, .current):hover,
+#main .actions ul li span:not(.selected, .current):hover,
+#main .actions ul li span.current:not(.selected, .current):hover,
+#main .actions li span.unread:not(.selected, .current):hover,
+#main .actions li span.replied:not(.selected, .current):hover,
+#main ul.actions li a:not(.selected, .current):hover,
+#main ul.actions li form input:not(.selected, .current):hover,
+#main p.actions a:not(.selected, .current):hover,
+#main ol.actions li a:not(.selected, .current):hover,
+#main .actions li label:not(.selected, .current):hover,
+#main dd form input:not(.selected, .current):hover,
+#main .filters .submit input:hover,
+#main p.submit input:hover,
+#main legend a.action:hover,
+#main ul li a.showme:hover,
+#main ul li fieldset p span a:hover {
+  box-shadow: inset 2px 2px 2px #1e1515 !important;
 }
 
 .toggled form,
@@ -121,7 +152,10 @@ fieldset fieldset.listbox {
 #main .filters .submit input,
 #main p.submit input,
 #main legend a.action,
-#header #search input[type="submit"] {
+#header #search input[type="submit"],
+#main fieldset dl dd ul li .action,
+#main ul li a.showme,
+#main ul li fieldset p span a {
   background-image: linear-gradient(#2d2929 2%, #262424 95%, #100000 100%) !important;
   border: 1px solid #333131 !important;
 }
@@ -129,7 +163,8 @@ fieldset fieldset.listbox {
 #header nav:not(#greeting),
 #footer,
 #main ol.index.group .tags .relationships .tag,
-#main ul.index.group .tags .relationships .tag {
+#main ul.index.group .tags .relationships .tag,
+#dashboard ul.navigation.actions li .current {
   background-blend-mode: multiply !important;
   background-color: rgba(146, 8, 1, 0.5) !important;
 }
