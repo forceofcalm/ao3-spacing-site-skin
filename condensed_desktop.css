@@ -1370,6 +1370,7 @@ form .notice, form ul.notes {
 .subscription.index.group dt a:first-of-type,
 .subscription.index.group dd a:first-of-type {
   margin: 0 0.5ch 0 0;
+  max-width: 19ch;
 }
 
 .subscription.index.group dt a:nth-of-type(2),
@@ -2395,6 +2396,10 @@ form.skin fieldset dl {
   height: auto;
 }
 
+#main form#work-form fieldset.preface .heading {
+  border: none !important;
+}
+
 #main form#work-form fieldset .heading a {
   text-decoration: none;
 }
@@ -2406,6 +2411,10 @@ form.skin fieldset dl {
   box-shadow: none;
   padding: 1rem 1.5rem !important;
   margin: 0;
+}
+
+#main form#work-form fieldset ul {
+  padding: 1rem 0rem !important;
 }
 
 #main form#work-form fieldset label {

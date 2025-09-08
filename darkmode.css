@@ -1,5 +1,7 @@
-body {
-  background-color: #191717 !important;
+body,
+#outer,
+.post .required .warnings {
+  background-color: #191818 !important;
   color: #F4F2F2 !important;
 }
 
@@ -13,7 +15,8 @@ a,
 input[type="submit"],
 button,
 .current,
-.actions label {
+.actions label,
+form dd.required {
   color: #F7F7F7 !important;
   transition: color 0.2s ease-in-out !important;
 }
@@ -33,8 +36,7 @@ a:hover {
 #main ol.index.group li.blurb.group,
 #main ul.index.group li.blurb.group,
 dd.hideme,
-form blockquote.userstuff,
-form:not(#search) fieldset,
+form:not(#search) fieldset:not(.comments),
 #work-filters fieldset,
 #bookmark-filters fieldset,
 #main.chapters-show .wrapper .work.meta,
@@ -44,18 +46,30 @@ form:not(#search) fieldset,
 .listbox.group,
 #main #add_comment .post.comment fieldset,
 div.comment,
-li.comment {
+li.comment,
+#main ol.bookmark.index.group .user.module.group,
+#main .user.home.profile .wrapper .meta,
+#main .wrapper .series.meta.group,
+.subscription.index.group {
   background-color: #262424 !important;
   border: 1px solid #333131 !important;
 }
 
-.listbox.group h3 {
+form#inbox-form fieldset.actions {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.listbox.group h3,
+#main form#work-form fieldset .heading {
   background-color: #262424 !important;
   color: #F4F2F2 !important;
 }
 
 .comment h4.byline,
 #main .splash .favorite li:nth-of-type(2n+1) a,
+.subscription.index.group dt:nth-of-type(2n), 
+.subscription.index.group dd:nth-of-type(2n),
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus,
 #main ol.index.group .tags.commas,
@@ -68,7 +82,7 @@ li.comment {
 fieldset fieldset.listbox,
 form fieldset legend,
 #main .splash .module ul.news.index.group li.post.group .header.module p.meta {
-  background-color: #191717 !important;
+  background-color: #191818 !important;
 }
 
 form fieldset legend {
@@ -88,8 +102,7 @@ form fieldset legend {
 
 .listbox .index,
 dd.hideme,
-#main.skins-edit form fieldset,
-form blockquote.userstuff {
+#main.skins-edit form fieldset {
   box-shadow: inset 1px 1px 5px #1e1515 !important;
 }
 
@@ -125,7 +138,9 @@ form blockquote.userstuff {
 
 .splash .module h3,
 #main.dashboard .primary.header.module h2.heading,
-#dashboard ul.navigation.actions:not(:last-of-type) {
+#dashboard ul.navigation.actions:not(:last-of-type),
+form dt,
+.home .header h2 {
   border-bottom-color: #373434 !important;
 }
 
@@ -155,7 +170,8 @@ form blockquote.userstuff {
 #header #search input[type="submit"],
 #main fieldset dl dd ul li .action,
 #main ul li a.showme,
-#main ul li fieldset p span a {
+#main ul li fieldset p span a,
+ol.fandom.index.group h3 span.action {
   background-image: linear-gradient(#2d2929 2%, #262424 95%, #100000 100%) !important;
   border: 1px solid #333131 !important;
 }
@@ -164,7 +180,26 @@ form blockquote.userstuff {
 #footer,
 #main ol.index.group .tags .relationships .tag,
 #main ul.index.group .tags .relationships .tag,
-#dashboard ul.navigation.actions li .current {
+#dashboard ul.navigation.actions li .current,
+#main.dashboard #collection-page .primary.header.module p.type {
   background-blend-mode: multiply !important;
   background-color: rgba(146, 8, 1, 0.5) !important;
+}
+
+#main #feedback #kudos_message.notice,
+#main #feedback #kudos_message.kudos_error,
+.bookmark .count a,
+.flash.notice,
+.notice,
+.notice a {
+  color: #262424 !important;
+}
+
+textarea,
+input[type="text"],
+select {
+  background-color: #191919 !important;
+  color: #F4F2F2 !important;
+  border: 1px solid #333131 !important;
+  box-shadow: none;
 }
