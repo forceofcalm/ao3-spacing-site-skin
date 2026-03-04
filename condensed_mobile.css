@@ -124,7 +124,7 @@ form fieldset.actions ul {
 #greeting ul.navigation.actions a {
   margin: 0;
   overflow: hidden;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -132,7 +132,7 @@ form fieldset.actions ul {
 }
 
 #greeting ul.navigation.actions a.dropdown-toggle {
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 #greeting ul.navigation.actions ul.dropdown-menu li a {
@@ -141,7 +141,7 @@ form fieldset.actions ul {
 
 /* user dropdowns */
 #greeting ul li ul.menu.dropdown-menu {
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   margin: 0;
   padding: 0;
 
@@ -197,12 +197,12 @@ form fieldset.actions ul {
 
 /* dropdowns */
 #header .primary.navigation.actions li.dropdown a {
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
   margin: 0;
 }
 
 #header .primary.navigation.actions li.dropdown ul {
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   margin: 0;
   padding: 0;
 
@@ -263,7 +263,7 @@ form fieldset.actions ul {
 /* search bar button */
 #header ul.primary.navigation.actions li.search span.submit input.button {
   margin: 0 0 0 1rem !important;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
 }
 /* #endregion HEADER */
 
@@ -307,12 +307,12 @@ form fieldset.actions ul {
 #inner #dashboard {
   display: block;
 
-  border-bottom: 0.5rem solid #900;
-  border-top: 0.5rem solid #900;
-  border-radius: 0.25rem;
+  border-bottom: var(--spacing-sm) solid var(--color-accent);
+  border-top: var(--spacing-sm) solid var(--color-accent);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
-  margin: 0.5rem 1rem;
-  padding: 0.5rem 0;
+  margin: var(--spacing-sm) var(--spacing-lg);
+  padding: var(--spacing-sm) 0;
 
   height: unset;
 }
@@ -341,8 +341,8 @@ form fieldset.actions ul {
 }
 
 #inner #dashboard ul.navigation.actions li .current {
-  background-color: #900;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 #inner #dashboard ul.navigation.actions li a,
@@ -352,7 +352,7 @@ form fieldset.actions ul {
   font: unset;
   line-height: 1.5;
   margin: 0;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
 }
 
 /* user dashboard header */
@@ -381,7 +381,7 @@ form fieldset.actions ul {
   display: block;
 
   border-bottom: 1px solid;
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   font-style: italic;
   font-family: Georgia;
   text-align: left;
@@ -483,8 +483,8 @@ form fieldset.actions ul {
 
 #main ol.index.group:not(.news) .header.module h4,
 #main ul.index.group:not(.news) .header.module h4 {
-  font-size: 0.85rem;
-  margin: 0 0 0.25rem 60px;
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--spacing-xs) 60px;
   padding: 0 4.5rem 0 0;
 }
 
@@ -499,7 +499,7 @@ form fieldset.actions ul {
 
   font-size: 0.95rem;
   hyphens: auto;
-  margin: 0 0 0.25rem;
+  margin: 0 0 var(--spacing-xs);
 }
 
 #main ol.index.group .header.module .datetime,
@@ -531,7 +531,7 @@ form.filters.narrow-hidden {
 }
 
 #main.filtered form.filters {
-  background: #ddd;
+  background: var(--color-gray);
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   box-sizing: border-box;
   overflow-y: scroll;
@@ -614,7 +614,7 @@ p.narrow-shown {
 }
 /* title */
 #main #workskin .preface h2.title {
-  font-size: 1.75rem;
+  font-size: var(--font-size-2xl);
 }
 
 /* author */
@@ -624,7 +624,7 @@ p.narrow-shown {
 
 /* chapter title */
 #main #workskin .preface h3.title {
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
 }
 /* actual work text */
 #main #workskin #chapters .userstuff.module {
@@ -643,11 +643,6 @@ p.narrow-shown {
 /* blockquote within text */
 #main #workskin #chapters .userstuff blockquote p {
   box-sizing: border-box;
-
-  margin: 0 0 0 0;
-
-  width: 30ch;
-  max-width: 100%;
 }
 /* #endregion WORK */
 
@@ -761,7 +756,7 @@ form.inbox {
   justify-content: space-between;
   flex-wrap: wrap;
 
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   margin: 0 auto;
   padding: 0;
 

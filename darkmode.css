@@ -50,7 +50,8 @@ li.comment,
 #main ol.bookmark.index.group .user.module.group,
 #main .user.home.profile .wrapper .meta,
 #main .wrapper .series.meta.group,
-.subscription.index.group {
+.subscription.index.group,
+.bookmark .user {
   background-color: #262424 !important;
   border: 1px solid #333131 !important;
 }
@@ -162,7 +163,6 @@ form dt,
 #main ul.actions li form input,
 #main p.actions a,
 #main ol.actions li a,
-#main .actions li label,
 #main dd form input,
 #main .filters .submit input,
 #main p.submit input,

@@ -1,0 +1,210 @@
+body,
+#outer,
+.post .required .warnings {
+  background-color: #182018 !important;
+  color: #F2F4F2 !important;
+}
+
+a,
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+.actions button,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+form dd.required {
+  color: #F7F7F7 !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+a:hover {
+  color: #DFDFDF !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+#main .splash .favorite.module ul,
+#main ol.index.group li.blurb.group,
+#main ul.index.group li.blurb.group,
+dd.hideme,
+form:not(#search) fieldset:not(.comments),
+#work-filters fieldset,
+#bookmark-filters fieldset,
+#main.chapters-show .wrapper .work.meta,
+#main.works-show .wrapper .work.meta,
+#main #workskin .preface .summary blockquote.userstuff,
+#main #workskin .preface .notes blockquote.userstuff,
+.listbox.group,
+#main #add_comment .post.comment fieldset,
+div.comment,
+li.comment,
+#main ol.bookmark.index.group .user.module.group,
+#main .user.home.profile .wrapper .meta,
+#main .wrapper .series.meta.group,
+.subscription.index.group,
+.bookmark .user {
+  background-color: #202620 !important;
+  border: 1px solid #313331 !important;
+}
+
+form#inbox-form fieldset.actions {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.listbox.group h3,
+#main form#work-form fieldset .heading {
+  background-color: #202620 !important;
+  color: #F2F4F2 !important;
+}
+
+.comment h4.byline,
+#main .splash .favorite li:nth-of-type(2n+1) a,
+.subscription.index.group dt:nth-of-type(2n), 
+.subscription.index.group dd:nth-of-type(2n),
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
+#main ol.index.group .tags.commas,
+#main ul.index.group .tags.commas,
+#main ol.index.group .stats,
+#main ul.index.group .stats,
+.listbox .index,
+.statistics .listbox.group h5,
+.listbox,
+fieldset fieldset.listbox,
+form fieldset legend,
+#main .splash .module ul.news.index.group li.post.group .header.module p.meta {
+  background-color: #0C160C !important;
+}
+
+form fieldset legend {
+  border: 1px solid #313331 !important;
+  box-shadow: none !important;
+}
+
+#main .favorite ul li a.tag,
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#dashboard ul.navigation.actions li a:hover,
+#header .open a,
+.thread .even {
+  background-color: #202620 !important;
+}
+
+.listbox .index,
+dd.hideme,
+#main.skins-edit form fieldset {
+  box-shadow: inset 1px 1px 5px #151e15 !important;
+}
+
+#main .actions ul li a:not(.selected, .current):hover,
+#main .actions ul li form input:not(.selected, .current):hover,
+#main .actions li input:not(.selected, .current):hover,
+#main .actions li span.current:not(.selected, .current):hover,
+#main .actions ul li span:not(.selected, .current):hover,
+#main .actions ul li span.current:not(.selected, .current):hover,
+#main .actions li span.unread:not(.selected, .current):hover,
+#main .actions li span.replied:not(.selected, .current):hover,
+#main ul.actions li a:not(.selected, .current):hover,
+#main ul.actions li form input:not(.selected, .current):hover,
+#main p.actions a:not(.selected, .current):hover,
+#main ol.actions li a:not(.selected, .current):hover,
+#main .actions li label:not(.selected, .current):hover,
+#main dd form input:not(.selected, .current):hover,
+#main .filters .submit input:hover,
+#main p.submit input:hover,
+#main legend a.action:hover,
+#main ul li a.showme:hover,
+#main ul li fieldset p span a:hover {
+  box-shadow: inset 2px 2px 2px #151E15 !important;
+}
+
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+#main .splash .module ul.news.index.group li.post.group .userstuff p {
+  color: #aab1aa !important;
+}
+
+.splash .module h3,
+#main.dashboard .primary.header.module h2.heading,
+#dashboard ul.navigation.actions:not(:last-of-type),
+form dt,
+.home .header h2 {
+  border-bottom-color: #343734 !important;
+}
+
+.splash .module h3.heading span.link {
+  background-color: #075700 !important;
+  background-image: linear-gradient(#0fa000 2%, #065a00 95%, #004d00 100%) !important;
+}
+
+#main .actions ul li a,
+#main .actions li form input,
+#main .actions li form button,
+#main .actions li input,
+#main .actions li span.current,
+#main .actions ul li:not(:has(a.rss)) span,
+#main .actions ul li span.current,
+#main .actions li span.unread,
+#main .actions li span.replied,
+#main ul.actions li a,
+#main ul.actions li form input,
+#main p.actions a,
+#main ol.actions li a,
+#main dd form input,
+#main .filters .submit input,
+#main p.submit input,
+#main legend a.action,
+#header #search input[type="submit"],
+#main fieldset dl dd ul li .action,
+#main ul li a.showme,
+#main ul li fieldset p span a,
+ol.fandom.index.group h3 span.action {
+  background-image: linear-gradient(#292D29 2%, #242624 95%, #001000 100%) !important;
+  border: 1px solid #313331 !important;
+}
+
+#header nav:not(#greeting),
+#footer,
+#main ol.index.group .tags .relationships .tag,
+#main ul.index.group .tags .relationships .tag,
+#dashboard ul.navigation.actions li .current,
+#main.dashboard #collection-page .primary.header.module p.type {
+  background-color: #0C160C !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.splash .module h3 {
+  color: #060;
+}
+
+#main #feedback #kudos_message.notice,
+#main #feedback #kudos_message.kudos_error,
+.bookmark .count a,
+.flash.notice,
+.notice,
+.notice a {
+  color: #202620 !important;
+}
+
+textarea,
+input[type="text"],
+select {
+  background-color: #0C160C !important;
+  color: #F2F4F2 !important;
+  border: 1px solid #313331 !important;
+  box-shadow: none !important;
+}

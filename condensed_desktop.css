@@ -1,3 +1,64 @@
+:root {
+  /* Colors - Brand */
+  --color-accent: #900;
+  --color-accent-light: #c40000;
+  --color-accent-dark: #7c0000;
+  --color-accent-darker: #730000;
+  
+  /* Colors - Grays */
+  --color-page-bg: #f4f4f4;
+  --color-white: #fff;
+  --color-gray-lightest: #f0f0f0;
+  --color-gray-lighter: #ededed;
+  --color-gray-light: #e1e1e1;
+  --color-gray: #ddd;
+  --color-gray-medium: #ccc;
+  --color-gray-dark: #bbb;
+  --color-gray-darker: #9A9A9A;
+  --color-gray-darkest: #4f4f4f;
+  --color-dark: #2a2a2a;
+  
+  /* Colors - Tags */
+  --color-tag-bg: #f0f0f0;
+  --color-tag-relationship: #d5d5d5;
+  
+  /* Colors - Ratings */
+  --color-rating-general: #7EB000;
+  --color-rating-teen: #E6D200;
+  --color-rating-mature: #F0881F;
+  --color-rating-explicit: #900;
+  
+  /* Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-sm: 0.85rem;
+  --font-size-xs: 0.75rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-reading: 1.1rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.25rem;
+  --spacing-2xl: 1.5rem;
+  
+  /* Layout */
+  --container-max-width: 1000px;
+  --content-width: 70ch;
+  --reading-width: 65ch;
+  
+  /* Border */
+  --border-radius: 0.25rem;
+  --border-radius-lg: 0.75rem;
+  --border-color: var(--color-gray-dark);
+  
+  /* Button */
+  --btn-padding: var(--spacing-sm) var(--spacing-md);
+}
+
 html,
 body {
   font-size: 16px;
@@ -9,7 +70,7 @@ body {
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: var(--color-page-bg);
   overflow-x: hidden;
 }
 
@@ -58,7 +119,7 @@ ul.notes,
 .kudos_error, 
 .alert.flash {
   box-shadow: none;
-  padding: 0.5rem 0.75rem;
+  padding: var(--spacing-sm) var(--spacing-md);
 }
 
 .actions li a,
@@ -87,7 +148,7 @@ a.modal.help,
   display: inline-flex;
 
   cursor: help;
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   line-height: 1;
 }
 
@@ -123,8 +184,8 @@ li .disabled {
 
 h2.heading {
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
+  font-size: var(--font-size-lg);
+  margin: var(--spacing-sm) 0;
 }
 
 .css.module {
@@ -203,6 +264,7 @@ form .notice, form ul.notes {
 }
 
 #main .actions ul li a,
+#main .actions li button,
 #main .actions li form input,
 #main .actions li form button,
 #main .actions li input,
@@ -223,17 +285,17 @@ form .notice, form ul.notes {
 #main .actions input[type="submit"],
 #main ul li a.showme,
 #main ul li fieldset p span a {
-  border: 1px solid #bbb;
-  border-radius: 0.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   line-height: 1.3;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -256,15 +318,15 @@ form .notice, form ul.notes {
 #main .filters .submit input:hover,
 #main p.submit input:hover,
 #main legend a.action:hover {
-  color: #900;
-  box-shadow: inset 2px 2px 2px #bbb;
+  color: var(--color-accent);
+  box-shadow: inset 2px 2px 2px var(--color-gray-dark);
 }
 
 /* "current" button */
 #main ul li:has(.current) span,
 #main ol li:has(.current) span {
   border: none !important;
-  background: #9A9A9A !important;
+  background: var(--color-gray-darker) !important;
   color: white;
   cursor: default !important;
 }
@@ -301,9 +363,9 @@ form .notice, form ul.notes {
 #main ol.pagination li span.current,
 #main fieldset.actions li a,
 #main fieldset.actions li input {
-  font-size: 0.85rem;
-  margin: 0 0 0.5rem;
-  padding: 0.5rem 0.75rem;
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--spacing-sm);
+  padding: var(--btn-padding);
 }
 /* #endregion END BUTTONS ***/
 
@@ -331,15 +393,15 @@ form .notice, form ul.notes {
 
 #inner #main {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   line-height: 1.5;
   margin: 0 auto;
-  padding: 1rem 0.75rem;
+  padding: var(--spacing-lg) var(--spacing-md);
 
   position: relative;
 
   width: 100%;
-  max-width: 1000px;
+  max-width: var(--container-max-width);
   min-height: unset;
 }
 /* #endregion END CONTAINER */
@@ -398,19 +460,19 @@ form .notice, form ul.notes {
 }
 
 #header .heading span {
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   line-height: initial;
 }
 
 #header .heading sup {
   display: inline;
 
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
   font-weight: bold;
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   line-height: initial;
-  margin: 0 0 0.75rem 0.15rem;
+  margin: 0 0 var(--spacing-md) 0.15rem;
 }
 
 /* account info */
@@ -475,17 +537,17 @@ form .notice, form ul.notes {
 }
 
 #greeting ul.navigation.actions a {
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
   margin: 0;
 }
 
 #greeting ul.navigation.actions a.dropdown-toggle {
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 /* user dropdowns */
 #greeting ul li ul.menu.dropdown-menu {
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   margin: 0;
   padding: 0;
 
@@ -499,7 +561,7 @@ form .notice, form ul.notes {
 
 #greeting ul li ul.menu.dropdown-menu li a {
   margin: 0;
-  padding: 0.75rem 1rem;
+  padding: var(--spacing-md) var(--spacing-lg);
 
   transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
 }
@@ -514,7 +576,7 @@ form .notice, form ul.notes {
   align-items: center;
   justify-content: center;
 
-  background: #900 url(/images/skins/textures/tiles/red-ao3.png);
+  background: var(--color-accent) url(/images/skins/textures/tiles/red-ao3.png);
   box-sizing: border-box;
   box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.6), inset 0 5px 5px -5px rgba(0, 0, 0, 0.6);
 
@@ -531,7 +593,7 @@ form .notice, form ul.notes {
   padding: 0.5em 1em 0.5em 0em;
 
   height: 3.25rem;
-  max-width: 1000px;
+  max-width: var(--container-max-width);
 }
 
 #header ul.primary.navigation.actions li.dropdown,
@@ -554,11 +616,11 @@ form .notice, form ul.notes {
 }
 
 #header .primary.navigation.actions li.dropdown a.dropdown-toggle {
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 #header .primary.navigation.actions li.dropdown ul {
-  border-radius: 0 0.25rem 0.25rem 0.25rem;
+  border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
   margin: 0;
   padding: 0;
 
@@ -577,7 +639,7 @@ form .notice, form ul.notes {
 }
 
 #header .primary.navigation.actions li.dropdown ul.dropdown-menu li a:hover {
-  color: #900;
+  color: var(--color-accent);
   transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -587,9 +649,9 @@ form .notice, form ul.notes {
 }
 
 #header ul.primary.navigation.actions li.search input#site_search {
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius-lg);
   margin: 0;
-  padding: 0.25rem 0.5rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 #header ul.primary.navigation.actions li.search span.submit {
@@ -598,7 +660,7 @@ form .notice, form ul.notes {
 
 #header ul.primary.navigation.actions li.search span.submit input.button {
   cursor: pointer;
-  margin: 0 0 0 0.25rem !important;
+  margin: 0 0 0 var(--spacing-xs) !important;
 
   display: inline-flex;
   flex-direction: row;
@@ -607,9 +669,9 @@ form .notice, form ul.notes {
 
   cursor: pointer;
   font: unset;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   line-height: 1.3;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
   white-space: nowrap;
 }
 
@@ -628,20 +690,20 @@ form .notice, form ul.notes {
 
   margin: auto;
 
-  max-width: 1000px;
+  max-width: var(--container-max-width);
 }
 
 .splash .module h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 
   text-transform: capitalize;
-  padding: 0 0 0.25rem;
+  padding: 0 0 var(--spacing-xs);
 }
 
 .splash .module h3 span.title {
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .splash .module h3.heading {
@@ -661,19 +723,19 @@ form .notice, form ul.notes {
   align-items: center;
   justify-content: center;
 
-  background-color: #900;
-  background-image: linear-gradient(#c40000 2%, #7c0000 95%, #730000 100%);
-  border-radius: 0.25rem;
+  background-color: var(--color-accent);
+  background-image: linear-gradient(var(--color-accent-light) 2%, var(--color-accent-dark) 95%, var(--color-accent-darker) 100%);
+  border-radius: var(--border-radius);
   color: white;
 }
 
 .splash .module h3.heading span.link a {
   color: white;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   font-weight: normal;
   line-height: 1.3;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
 }
 
 .logged-in .splash > .module {
@@ -716,10 +778,10 @@ form .notice, form ul.notes {
 }
 
 #main .splash .module ul.news.index.group li.post.group .header.module h4 a:first-of-type {
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   font-weight: bold;
   text-decoration: none;
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--spacing-sm);
 }
 
 /* news post publsihed date */
@@ -751,14 +813,14 @@ form .notice, form ul.notes {
 
 /* news blurb */
 #main .splash .module ul.news.index.group li.post.group .userstuff p {
-  color: #4f4f4f;
-  font-size: 0.85rem;
-  max-width: 70ch;
+  color: var(--color-gray-darkest);
+  font-size: var(--font-size-sm);
+  max-width: var(--content-width);
   margin: unset;
 }
 
 #main .splash ul.news.index.group li.post.group .userstuff p a {
-  color: #900;
+  color: var(--color-accent);
 }
 
 #main .splash ul.news.index.group li.post.group .jump {
@@ -772,21 +834,21 @@ form .notice, form ul.notes {
 
 /* favorite tags */
 #main .favorite ul li a.tag {
-  background-color: #EDEDED;
-  padding: 0.5rem 0.75rem;
+  background-color: var(--color-gray-lighter);
+  padding: var(--btn-padding);
   text-decoration: none;
 
   transition: background-color 0.1s ease-in-out;
 }
 
 #main .splash .favorite li:nth-of-type(2n+1) a {
-  background-color: #DEDEDE;
+  background-color: var(--color-gray);
   
 }
 
 #main .favorite ul li a.tag:hover {
-  background-color: #900;
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-white);
 
   transition: background-color 0.1s ease-in-out;
 }
@@ -941,10 +1003,10 @@ form .notice, form ul.notes {
 
 #main ol.index.group li.blurb.group,
 #main ul.index.group li.blurb.group {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-sizing: border-box;
   margin: 0;
-  padding: 1.25rem;
+  padding: var(--spacing-xl);
   overflow: hidden;
 
   clear: none;
@@ -952,7 +1014,7 @@ form .notice, form ul.notes {
 
 #main ol.index.group li.blurb.group:not([style*="display:none"]),
 #main ul.index.group li.blurb.group:not([style*="display:none"]) {
-  margin: 0 0 0.75rem;
+  margin: 0 0 var(--spacing-md);
 }
 
 #main ol.index.group .header.module,
@@ -976,8 +1038,8 @@ form .notice, form ul.notes {
 #main ul.index.group:not(.news) .header.module h4 {
   border: none;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 0.85rem;
-  margin: 0 0 0.25rem 65px;
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--spacing-xs) 65px;
 
   max-width: 80%;
 }
@@ -986,8 +1048,8 @@ form .notice, form ul.notes {
 #main ul.index.group .header.module h4 a:first-of-type  {
   display: block;
 
-  font-size: 1rem;
-  margin: 0 0 0.25rem;
+  font-size: var(--font-size-base);
+  margin: 0 0 var(--spacing-xs);
 }
 
 #main ol.index.group .header.module h4 a,
@@ -998,7 +1060,7 @@ form .notice, form ul.notes {
 
 #main ol.index.group .header.module h5,
 #main ul.index.group .header.module h5 {
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   margin: 0 0 0 65px;
 
   max-width: 80%;
@@ -1007,7 +1069,7 @@ form .notice, form ul.notes {
 #main ol.index.group .datetime,
 #main ul.index.group .datetime {
   font-family: monospace;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   letter-spacing: 0.015rem;
   text-transform: uppercase;
 }
@@ -1022,17 +1084,17 @@ form .notice, form ul.notes {
 #main ol.index.group .tags.commas,
 #main ul.index.group .tags.commas {
   /* background-color: #e2e2e2; */
-  background-color: #f0f0f0;
-  font-size: 0.85rem;
+  background-color: var(--color-tag-bg);
+  font-size: var(--font-size-sm);
   line-height: 1.8;
-  padding: 0.5rem;
+  padding: var(--spacing-sm);
   text-align: justify;
 }
 
 #main ol.index.group .tags .relationships .tag,
 #main ul.index.group .tags .relationships .tag {
   /* background-color: #a8a8a8; */
-  background-color: #d5d5d5;
+  background-color: var(--color-tag-relationship);
   /* padding: 0.25rem; */
 }
 
@@ -1047,7 +1109,7 @@ form .notice, form ul.notes {
 
 #main ol.index.group li ul.series,
 #main ul.index.group li ul.series {
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   font-weight: bold;
   margin: 0 0 1.75em 0;
   text-transform: uppercase;
@@ -1068,10 +1130,10 @@ form .notice, form ul.notes {
 
 #main ol.index.group .stats,
 #main ul.index.group .stats {
-  background-color: #f0f0f0;
-  font-size: 0.85rem;
+  background-color: var(--color-tag-bg);
+  font-size: var(--font-size-sm);
   margin: 0;
-  padding: 0.5rem;
+  padding: var(--spacing-sm);
   text-align: unset;
 
   float: none;
@@ -1116,14 +1178,14 @@ form .notice, form ul.notes {
   align-items: center;
   justify-content: center;
 
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
 }
 
 /* reading history */
 .reading h4.viewed {
   background: none;
-  font-size: 0.85rem;
-  margin: 1.5rem 0;
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2xl) 0;
 }
 /* #endregion END (IN INDEX) WORK CONTAINERS */
 
@@ -1214,7 +1276,7 @@ form .notice, form ul.notes {
   border-bottom: 1px solid;
   font-size: 1.65rem;
   font-style: italic;
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: left;
   margin: -0.75rem 0 0 120px;
   opacity: 0.9;
@@ -1259,7 +1321,7 @@ form .notice, form ul.notes {
 }
 
 #dashboard ul.navigation.actions:not(:last-of-type) {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--color-gray);
 }
 
 #dashboard ul.navigation.actions li {
@@ -1270,7 +1332,7 @@ form .notice, form ul.notes {
 }
 
 #dashboard ul.navigation.actions li .current {
-  background-color: #900;
+  background-color: var(--color-accent);
   color: white;
 }
 
@@ -1281,8 +1343,8 @@ form .notice, form ul.notes {
   box-sizing: border-box;
   font: unset;
   line-height: 1.5;
-  margin: 0 0 0.25rem;
-  padding: 0.5rem 0.75rem;
+  margin: 0 0 var(--spacing-xs);
+  padding: var(--btn-padding);
 
   width: 100%;
 }
@@ -1314,7 +1376,7 @@ form .notice, form ul.notes {
   align-items: flex-start;
   justify-content: center;
 
-  max-width: 1000px;
+  max-width: var(--container-max-width);
 }
 
 #inner:has(#dashboard) #main.filtered .index.group {
@@ -1340,8 +1402,8 @@ form .notice, form ul.notes {
   flex-direction: row;
   flex-wrap: wrap;
 
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border: 1px solid var(--color-gray-medium);
+  border-radius: var(--border-radius);
 }
 
 .subscription.index.group dt,
@@ -1355,7 +1417,7 @@ form .notice, form ul.notes {
   background-color: unset;
   box-sizing: border-box;
   margin: 0;
-  padding: 0.5rem;
+  padding: var(--spacing-sm);
 
   max-width: 50%;
 }
@@ -1380,7 +1442,7 @@ form .notice, form ul.notes {
 
 .subscription.index.group dt:nth-of-type(2n),
 .subscription.index.group dd:nth-of-type(2n) {
-  background-color: #e1e1e1;
+  background-color: var(--color-gray-light);
 }
 
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters .ajax-create-destroy), /* because of how ao3 has its rules... + css specificity */
@@ -1409,20 +1471,20 @@ form.inbox#inbox-form {
 
 /* #region PREFERENCES/FORMS */
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters, .ajax-create-destroy) {
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border: 1px solid var(--color-gray-medium);
+  border-radius: var(--border-radius);
   overflow: hidden;
-  margin: 1rem 0 0;
+  margin: var(--spacing-lg) 0 0;
 
   float: unset;
 }
 
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset {
-  background: #fff;
+  background: var(--color-white);
   border: none;
   box-shadow: none;
   margin: 0;
-  padding: 0 0 0.5rem;;
+  padding: 0 0 var(--spacing-sm);;
 }
 
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) fieldset .heading {
@@ -1431,13 +1493,13 @@ form.inbox#inbox-form {
   justify-content: space-between;
   align-items: center;
 
-  background-color: #ddd;
+  background-color: var(--color-gray);
   box-sizing: border-box;
   box-shadow: none;
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   font-weight: bold;
   margin: 0;
-  padding: 0.75rem 1.25rem;
+  padding: var(--spacing-md) var(--spacing-xl);
 
   width: 100%;
 }
@@ -1483,7 +1545,7 @@ form.inbox#inbox-form {
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions a,
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions input,
 #main.dashboard form:not(#work-filters, #inbox-form, #inbox-filters, #bookmark-filters) .actions button {
-  border: 1px solid #bbb;
+  border: 1px solid var(--color-gray-dark);
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
   background-size: cover;
@@ -1569,14 +1631,14 @@ form.filters fieldset dt.search label {
 #main.chapters-show .wrapper,
 #main.works-show .wrapper {
   box-shadow: none;
-  font-size: 0.85rem;
-  margin: 0.75rem 0;
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-md) 0;
 }
 
 #main.chapters-show .wrapper .work.meta,
 #main.works-show .wrapper .work.meta {
-  background-color: #ededed;
-  border-left: 3px solid #2a2a2a;
+  background-color: var(--color-gray-lighter);
+  border-left: 3px solid var(--color-dark);
   box-sizing: border-box;
   padding: 1.75rem;
 
@@ -1585,28 +1647,28 @@ form.filters fieldset dt.search label {
 
 #main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']),
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Explicit']) {
-  border-left: 3px solid #900;
+  border-left: 3px solid var(--color-rating-explicit);
 }
 
 #main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']), 
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Mature']) {
-  border-left: 3px solid #F0881F;
+  border-left: 3px solid var(--color-rating-mature);
 }
 
 #main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']), 
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='Teen']) {
-  border-left: 3px solid #E6D200;
+  border-left: 3px solid var(--color-rating-teen);
 }
 
 #main.chapters-show .wrapper .work.meta:has(dd.rating.tags a[href*='General']),
 #main.works-show .wrapper .work.meta:has(dd.rating.tags a[href*='General']) {
-  border-left: 3px solid #7EB000;
+  border-left: 3px solid var(--color-rating-general);
 }
 
 /* work title */
 #main #workskin .preface h2.title {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.75rem;
+  font-size: var(--font-size-2xl);
 }
 
 /* work author */
@@ -1618,9 +1680,9 @@ form.filters fieldset dt.search label {
 #main #workskin .preface {
   border: none;
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: var(--spacing-sm) 0;
 
-  width: 70ch;
+  width: var(--content-width);
   max-width: 100%;
 }
 
@@ -1634,7 +1696,7 @@ form.filters fieldset dt.search label {
   border: none;
 
   font-family: inherit;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   font-weight: bold;
   line-height: 1.5;
   margin: 0;
@@ -1642,13 +1704,13 @@ form.filters fieldset dt.search label {
 
 #main #workskin .preface .summary blockquote.userstuff,
 #main #workskin .preface .notes blockquote.userstuff {
-  background-color: #ededed;
-  padding: 1.25rem 2rem;
+  background-color: var(--color-gray-lighter);
+  padding: var(--spacing-xl) 2rem;
   text-align: justify;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   margin: 0;
-  border: 1px solid #cccccc;
-  border-left: 3px solid #2a2a2a;
+  border: 1px solid var(--color-gray-medium);
+  border-left: 3px solid var(--color-dark);
 }
 
 #main #workskin .preface blockquote.userstuff p {
@@ -1703,11 +1765,11 @@ form.filters fieldset dt.search label {
 #main #workskin #chapters #summary .userstuff,
 #main #workskin #chapters #notes .userstuff {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   margin: 0 auto;
-  padding: 0.5rem 0.75rem;
+  padding: var(--spacing-sm) var(--spacing-md);
 
-  width: 70ch;
+  width: var(--content-width);
   max-width: 100%;
 }
 
@@ -1718,7 +1780,7 @@ form.filters fieldset dt.search label {
 
 #main #workskin #chapters #summary .userstuff p,
 #main #workskin #chapters #notes .userstuff p {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   line-height: 1.5;
   text-align: left;
 
@@ -1737,14 +1799,21 @@ form.filters fieldset dt.search label {
 #main #workskin #chapters .userstuff ul,
 #main #workskin #chapters .userstuff ol,
 #main #workskin #chapters .userstuff li {
-  font-family: 'Lucida Grande','Lucida Sans Unicode', Verdana, Helvetica, sans-serif,'GNU Unifont';
-  font-size: 1.1rem;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
+  font-size: var(--font-size-reading);
   line-height: 1.5;
   text-align: justify;
   hyphens: auto;
 
-  width: 65ch;
+  width: var(--reading-width);
   max-width: 100%;
+}
+
+/* block quote size */
+#main #workskin #chapters .userstuff blockquote {
+  max-width: 90%;
+  margin: 0 auto;
+  width: var(--reading-width);
 }
 
 /* image within content */
@@ -1762,14 +1831,14 @@ form.filters fieldset dt.search label {
 #main #feedback #kudos_message.notice {
   display: block;
 
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   box-shadow: none;
-  margin: 0.75rem 0;
-  padding: 0.5rem 0.75rem;
+  margin: var(--spacing-md) 0;
+  padding: var(--btn-padding);
 }
 
 #main #kudos p.kudos {
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
 }
 
 /* create bookmark form */
@@ -1801,13 +1870,15 @@ form.filters fieldset dt.search label {
 /* remove chapter index button */
 #main .work ul.actions .chapter:has(#chapter_index) {
   padding: 0;
+  position: relative;
 }
 
 #main .work ul.actions .chapter .collapsed {
   display: none;
 }
 /* chapter index selection form */
-#main .work ul.actions #chapter_index {
+#main .work ul.actions #chapter_index,
+#main .work ul.actions #chapter_index.hidden {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1886,11 +1957,11 @@ form.filters fieldset dt.search label {
 }
 
 #main #add_comment .post.comment fieldset {
-  background: #ededed;
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
+  background: var(--color-gray-lighter);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
   box-shadow: none;
-  padding: 1.5rem 1.25rem;
+  padding: var(--spacing-2xl) var(--spacing-xl);
 }
 
 /* comment box header */
@@ -1899,13 +1970,13 @@ form.filters fieldset dt.search label {
 
   background: none;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   margin: 0;
   padding: 0;
 }
 
 #main #add_comment .post.comment fieldset h4 span {
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
 }
 
@@ -1936,9 +2007,9 @@ form.filters fieldset dt.search label {
 
   box-sizing: border-box;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   margin: 0;
-  padding: 1rem 5rem 1rem 5.5rem;
+  padding: var(--spacing-lg) 5rem var(--spacing-lg) 5.5rem;
 
   height: 4.5rem;
 }
@@ -1964,7 +2035,7 @@ form.filters fieldset dt.search label {
 #main ol.thread li.comment.group h4 span:not(.role, .posted.datetime, .date, .year, .time) {
   flex: 0 0 100%;
 
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   margin: 0;
 
   max-width: unset;
@@ -2066,7 +2137,7 @@ form.filters fieldset dt.search label {
   line-height: 1.5;
   text-align: justify;
   margin: 0;
-  padding: 1rem 1rem 0.75rem 1rem;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md) var(--spacing-lg);
 
   min-height: unset;
 }
@@ -2083,7 +2154,7 @@ form.filters fieldset dt.search label {
   /*   gap: 0.2rem; */
 
   margin: 0;
-  padding: 0 1rem 0.5rem 1rem;
+  padding: 0 var(--spacing-lg) var(--spacing-sm) var(--spacing-lg);
 }
 
 /* comments on work pages */
@@ -2095,11 +2166,11 @@ form.filters fieldset dt.search label {
 /* comment editted date */
 #main ol.thread li.comment p.edited,
 #main ul.thread li.comment p.edited {
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   hyphens: auto;
   line-height: 1.5;
   margin: 0;
-  padding: 1rem 1rem 0.75rem 1rem;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md) var(--spacing-lg);
   text-align: justify;
 }
 /* #endregion END COMMENTS */
@@ -2199,7 +2270,7 @@ ul.thread li.comment {
 
 .listbox.group h3,
 .statistics .listbox.group h5{
-  background-color: #ddd;
+  background-color: var(--color-gray);
   box-sizing: border-box;
   padding: 0.75rem;
 
@@ -2277,9 +2348,9 @@ dl.work.index.group dd {
 
 #main.dashboard #collection-page .primary.header.module p.type {
   order: 5;
-  background-color: #8d0000;
-  color: white;
-  padding: 0.5rem 0.75rem;
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+  padding: var(--btn-padding);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2347,7 +2418,7 @@ form.skin fieldset dl {
 }
 
 #main form#work-form fieldset {
-  background: #fff;
+  background: var(--color-white);
   border: none;
   box-sizing: border-box;
   box-shadow: none;
@@ -2356,18 +2427,18 @@ form.skin fieldset dl {
 }
 
 #main form#work-form fieldset.work.meta {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-gray-medium);
   border-bottom: none;
 }
 
 #main form#work-form fieldset:is(.preface, .privacy, .work.text) {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-gray-medium);
   border-top: none;
   border-bottom: none;
 }
 
 #main form#work-form fieldset.create {
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-gray-medium);
   border-top: none;
 }
 
@@ -2381,7 +2452,7 @@ form.skin fieldset dl {
   justify-content: space-between;
   align-items: center;
 
-  background-color: #ddd;
+  background-color: var(--color-gray);
   box-sizing: border-box;
   box-shadow: none;
   color: black;
@@ -2447,19 +2518,19 @@ form.skin fieldset dl {
 #main form#work-form .actions a,
 #main form#work-form .actions input,
 #main form#work-form .actions button {
-  border: 1px solid #bbb;
+  border: 1px solid var(--border-color);
   background: unset;
   background-image: linear-gradient(#fff 2%,#ddd 95%,#bbb 100%);
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   line-height: 1.3;
-  padding: 0.5rem 0.75rem;
+  padding: var(--btn-padding);
 }
 
 #main form#work-form .submit {
-  padding: 0 1.5rem 1rem;
+  padding: 0 var(--spacing-2xl) var(--spacing-lg);
 }
 /* #endregion END NEW WORK FORM */
 
@@ -2468,7 +2539,7 @@ form.skin fieldset dl {
   border: none;
   box-sizing: border-box;
   font-family: Trebuchet MS, Tahoma, Helvetica, sans-serif;
-  padding: 1rem 1.5rem;
+  padding: var(--spacing-lg) var(--spacing-2xl);
 
   float: none;
 }
@@ -2479,7 +2550,7 @@ form.skin fieldset dl {
   justify-content: space-between;
 
   box-sizing: border-box;
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   margin: 0 auto;
   padding: 0 1.75rem;
 
@@ -2487,7 +2558,7 @@ form.skin fieldset dl {
   clear: unset;
 
   width: 100%;
-  max-width: 1000px;
+  max-width: var(--container-max-width);
 }
 
 #footer ul li.module.group {
